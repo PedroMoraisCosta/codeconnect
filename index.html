@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margarida Aragão Cabeleireiro</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Secção 1: Cabeçalho com fundo ondulado na diagonal */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #D6BFAD; /* Cor base */
+            background-image:
+                url('https://iili.io/2kVnkRR.png'); /* Imagem de fundo, caso queira mostrar a imagem */
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            position: relative;
+            border-top-right-radius: 5px;
+        }
+
+        header img {
+            width: 150px;
+            border-radius: 100%;
+        }
+        .social-links a img{
+            width: 40px;
+            border-radius: 100%;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+
+        }
+
+        .secao-2 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 40px;
+            /* background-color: #D6BFAD; */
+            display: none;
+        }
+
+        .secao-2 div {
+            text-align: center;
+        }
+
+        .secao-2 img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .secao-3 {
+            display: flex;
+            background-color: #d6bfad63;
+            color: black;
+            padding: 5px 15px;
+            border-radius: 50px 50px 50px;
+            margin-left: 3px;
+        }
+
+        .secao-3 img {
+            width: 50%;
+            height: auto;
+            border-radius: 100px;
+        }
+
+        .secao-3 .texto {
+            width: 50%;
+            padding: 5px 20px;
+        }
+
+        .secao-4 img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            display: block;
+            padding: 5px;
+            border-radius: 50px;            
+        }
+
+        @media (max-width: 768px) {
+            .secao-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .secao-3 {
+                flex-direction: column;
+            }
+
+            .secao-3 img {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .secao-3 .texto {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Secção 1: Logotipo e Links -->
+    <header>
+        <img src="https://iili.io/2kVnNUJ.jpg" alt="Margarida Aragão Cabeleireiro">
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=100063591249287"><img src="https://www.windoorporto.pt/wp-content/uploads/2021/05/wd-facebook.png" alt="" ></a>
+        </div>
+    </header>
+
+    <!-- Secção 2: 3 Colunas com Imagem e Texto -->
+    <!-- <div class="secao-2">
+        <div>
+            <img src="/img/3.jpg" alt="Corte de cabelo">
+            <p>Produtos de qualidade.</p>
+        </div>
+        <div>
+            <img src="/img/2.jpg" alt="Coloração">
+            <p>Transformação de cor para um visual único.</p>
+        </div>
+        <div>
+            <img src="/img/eu.png" alt="Tratamento estético">
+            <p>Tratamentos estéticos para rejuvenescimento.</p>
+        </div>
+    </div> -->
+
+    <!-- Secção 3: Fundo Preto com Imagem e Texto -->
+    <div class="secao-3">
+        <img src="https://iili.io/2kVnvNp.png" alt="Salão de beleza">
+        <div class="texto">
+            <h2>Transforme-se conosco</h2>
+            <p>Venha conhecer os nossos serviços de cabeleireiro e estética. Oferecemos um ambiente acolhedor e profissionais altamente capacitados.</p>
+        </div>
+    </div>
+
+    <!-- Secção 4: Imagem Fixa -->
+    <div class="secao-4">
+        <img src="https://iili.io/2kVneHv.jpg" alt="Informações de contato de Margarida Aragão">
+    </div>
+
+</body>
+</html>
