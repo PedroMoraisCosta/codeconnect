@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:John Doe
+N:Doe;John;;;
+ORG:Example Company
+TITLE:Software Engineer
+TEL;TYPE=work,voice:(123) 456-7890
+EMAIL:john.doe@example.com
+ADR;TYPE=work:;;123 Main St;New York;NY;10001;USA
+URL:https://example.com
+END:VCARD
