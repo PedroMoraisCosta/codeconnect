@@ -1,11 +1,10 @@
 BEGIN:VCARD
 VERSION:3.0
-FN:John Doe
-N:Doe;John;;;
-ORG:Example Company
-TITLE:Software Engineer
-TEL;TYPE=work,voice:(123) 456-7890
-EMAIL:john.doe@example.com
-ADR;TYPE=work:;;123 Main St;New York;NY;10001;USA
-URL:https://example.com
+FN:Andre-QrCode
+N:QrCode;Andre;;;
+ORG:CodeConnect
+TITLE:Andre-QrCode
+TEL;TYPE=work,voice:(351) 939428396
+EMAIL:geral@codeconnect.pt
+URL:https://codeconnect.pt
 END:VCARD
