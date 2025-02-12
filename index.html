@@ -1,154 +1,224 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeConnect</title>
+    <title>Codeconnect</title>
     <style>
         body {
-            margin: 0;
-            font-family: Arial, sans-serif;
+                margin: 0;          
+                background-color: #f0ebeb; 
+                
+             }
+
+        table{
+            border-spacing: 0;
         }
 
-        /* Secção 1: Cabeçalho com fundo ondulado na diagonal */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        td{
+            padding: 0;
+        }
+       
+        img{
+            border: 0;
+        }
+        .wrapper{
+            width: 100%;
+            table-layout: fixed;
+            background-color: #f0ebeb;
+            padding-bottom: 1px;
+        }
+        .main{
+             background: linear-gradient(to bottom, #303468, #000000);
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1076px;
+            min-width: 300px;
+            border-spacing: 0;
+            font-family: sans-serif;
+            color: #171a1b;
+        }
+       .two-columns{
+        text-align: center;
+        font-size: 0;
+       }
+       .two-columns .column{
+        width: 100%;
+        max-width: 300px;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+       }
+        .two-columns.last{
+            padding: 15px 0;
+        }
+        .two-columns .padding{
             padding: 20px;
-            background-color: #D6BFAD; /* Cor base */
-            background-image:
-                url('https://iili.io/2kVnkRR.png'); /* Imagem de fundo, caso queira mostrar a imagem */
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-            position: relative;
-            border-top-right-radius: 5px;
         }
-
-        header img {
-            width: 150px;
-            border-radius: 100%;
+        .two-columns .content{
+            font-size: 15px;
+            line-height: 20px;
+            text-align: left;
         }
-        .social-links a img{
-            width: 40px;
-            border-radius: 100%;
-        }
-
-        .social-links a {
-            margin: 0 10px;
+         
+        .button-custom{
+            background-color: rgb(251,219,59);
+            color: #171a1b;
             text-decoration: none;
-            color: #333;
-
-        }
-
-        .secao-2 {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            padding: 40px;
-            /* background-color: #D6BFAD; */
-            display: none;
-        }
-
-        .secao-2 div {
+            padding: 10px 20px;
+            font-weight: bold;
+            border-radius: 5px;
             text-align: center;
+            font-size: 16px;
+            display: inline-block;
         }
 
-        .secao-2 img {
+        .tdsectionspace{
+            background-color: black;
+            padding-top: 10px;
+        }
+        .tdsectionwithoutspace{
+            background-color: black;
+        }
+        .stars{
+            width:75%; 
+            max-width: 100%;
+        }
+        .tdHand1{
+            max-width: 100px;
+            margin-left: 15vw;
+        }
+        .hand1{
+            width:80%;
+            max-width: 100%;
+        }
+
+        .tdHand2{
+            max-width: 100px;
+            margin-left: 65%;
+        }
+        .hand2{
+            width:90%;
+            max-width: 100%;
+        }
+        .text{
+            width:75%; 
+            max-width: 100%;
+        }
+        .logotext {
             width: 100%;
-            max-width: 300px;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .secao-3 {
-            display: flex;
-            background-color: #d6bfad63;
-            color: black;
-            padding: 5px 15px;
-            border-radius: 50px 50px 50px;
-            margin-left: 3px;
-        }
-
-        .secao-3 img {
-            width: 50%;
-            height: auto;
-            border-radius: 100px;
-        }
-
-        .secao-3 .texto {
-            width: 50%;
-            padding: 5px 20px;
-        }
-
-        .secao-4 img {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            display: block;
-            padding: 5px;
-            border-radius: 50px;            
-        }
-
-        @media (max-width: 768px) {
-            .secao-2 {
-                grid-template-columns: 1fr;
-            }
-
-            .secao-3 {
-                flex-direction: column;
-            }
-
-            .secao-3 img {
-                width: 100%;
-                margin-bottom: 20px;
-            }
-
-            .secao-3 .texto {
-                width: 100%;
-            }
+            text-align: center;
+            font-size: 25px;
+            color: white;
+            margin: 20px 0;
         }
     </style>
 </head>
 <body>
+   <center class="wrapper">
+        <table class="main" width="100%">
+         <!--top border -->
+        <tr>
+            <td  height="8px" style="background-color: #171a1b;"></td>
+        </tr>
+        <!--logo Section  -->
+        <tr >
+            <td style="padding: 14px 0px 4px;">
+                <table width="100%">
+                    <tr>
+                        <td class="two-columns">   
+                            <table class="column">
+                                <tr>
+                                    <td >
+                                        <a href="https://www.codeconnect.pt/">
+                                            <img  src="img/logo.png" alt="" width="100%" >
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!-- <table class="column">
+                                <tr>
+                                    <td style="padding: 10px 110px;">    
+                                        <a href="https://www.facebook.com/wdporto/" > <img src="https://www.windoorporto.pt/wp-content/uploads/2021/05/wd-facebook.png" alt="" width="40"></a>
+                                        <a href="https://www.instagram.com/windoor_porto/"> <img src="https://www.windoorporto.pt/wp-content/uploads/2021/05/wd-instagram.png" alt="" width="40"></a>
+                                    </td>
+                                </tr>
+                            </table> -->
+                        </td>
+                    </tr>
+               </table>
+            </td>
+        </tr>
+        <!--Stars Section  -->
+        <tr>
+            <td class="tdsectionspace">
+                 <table  style="max-width: 100%; margin: auto;">
+                      <tr>
+                        <td style="text-align: center;">
+                                <img src="https://www.windoorbraga.pt/wp-content/uploads/2025/01/5estrelas.png" alt="" class="stars">
+                        </td>
+                    </tr> 
+                </table> 
+            </td>
+        </tr>
+        <!--Hand 1 Section  -->
+        <tr>
+            <td class="tdsectionspace">
+                <table class="tdHand1" >
+                    <tr>
+                        <td >
+                                <img src="https://www.windoorbraga.pt/wp-content/uploads/2025/01/hand2.png" alt="" class="hand1" >
+                        </td>
+                    </tr> 
+                </table> 
+            </td>
+        </tr>
+        <!--Text Section  -->
+        <tr>
+            <td class="tdsectionwithoutspace">
+                <table  style="max-width: 100%; margin: auto;">
+                    <tr>
+                        <td style="text-align: center;">
+                                <img src="img/placa.png" alt="" class="text">
+                        </td>
+                    </tr> 
+                </table> 
+            </td>
+        </tr>
+        <!--Hand 2 Section  -->
+        <tr>
+            <td class="tdsectionwithoutspace">
+                <table class="tdHand2" >
+                    <tr>
+                        <td >
+                                <img src="https://www.windoorbraga.pt/wp-content/uploads/2025/01/hand1.png" alt="" class="hand2">
+                        </td>
+                    </tr> 
+                </table> 
+            </td>
+        </tr>
+        <!--Button Section  -->
+        <!-- <tr>
+            <td class="tdshared">
+                <table class="column" style="max-width: 100%; margin: auto; padding-bottom: 10px;">
+                    <tr>
+                        <td style="text-align: center;">
+                            <a href="https://search.google.com/local/writereview?placeid=ChIJQ8qQSyVnJA0RTD_KpWRjgmI" class="button-custom">
+                                Clique Aqui
+                            </a>
+                        </td>
+                    </tr> 
+                </table> 
+            </td>
+        </tr> -->
 
-    <!-- Secção 1: Logotipo e Links -->
-    <header>
-        <img src="https://iili.io/2kVnNUJ.jpg" alt="CodeConnect">
-        <div class="social-links">
-            <a href="https://www.facebook.com/profile.php?id=10006359124928"><img src="https://www.windoorporto.pt/wp-content/uploads/2021/05/wd-facebook.png" alt="" ></a>
-        </div>
-    </header>
-
-    <!-- Secção 2: 3 Colunas com Imagem e Texto -->
-    <!-- <div class="secao-2">
-        <div>
-            <img src="/img/3.jpg" alt="Corte de cabelo">
-            <p>Produtos de qualidade.</p>
-        </div>
-        <div>
-            <img src="/img/2.jpg" alt="Coloração">
-            <p>Transformação de cor para um visual único.</p>
-        </div>
-        <div>
-            <img src="/img/eu.png" alt="Tratamento estético">
-            <p>Tratamentos estéticos para rejuvenescimento.</p>
-        </div>
-    </div> -->
-
-    <!-- Secção 3: Fundo Preto com Imagem e Texto -->
-    <div class="secao-3">
-        <img src="https://iili.io/2kVnvNp.png" alt="CodeConnect">
-        <div class="texto">
-            <h2>Transforme-se conosco</h2>
-            <p>Venha conhecer os nossos serviços de cabeleireiro e estética. Oferecemos um ambiente acolhedor e profissionais altamente capacitados.</p>
-        </div>
-    </div>
-
-    <!-- Secção 4: Imagem Fixa -->
-    <div class="secao-4">
-        <img src="https://iili.io/2kVneHv.jpg" alt="Informações de contato de CodeConnect">
-    </div>
-
+       </table>
+   </center>
 </body>
 </html>
+
+
+
+
+
