@@ -7,9 +7,9 @@
     <title>Codeconnect</title>
     <style>
         body {
-                margin: 0;          
-                background-color: #f0ebeb; 
-                
+                margin: 0;
+                background-color: #f0ebeb;
+
              }
 
         table{
@@ -19,7 +19,7 @@
         td{
             padding: 0;
         }
-       
+
         img{
             border: 0;
         }
@@ -61,7 +61,7 @@
             line-height: 20px;
             text-align: left;
         }
-         
+
         .button-custom{
             background-color: rgb(251,219,59);
             color: #171a1b;
@@ -82,7 +82,7 @@
             background-color: black;
         }
         .stars{
-            width:75%; 
+            width:75%;
             max-width: 100%;
         }
         .tdHand1{
@@ -103,7 +103,7 @@
             max-width: 100%;
         }
         .text{
-            width:75%; 
+            width:75%;
             max-width: 100%;
         }
         .logotext {
@@ -114,19 +114,20 @@
             margin: 20px 0;
         }
         .video-container {
-            min-height: 250px;
             min-width: 280px;
             height: auto; /* Let the height adjust dynamically */
             aspect-ratio: 16 / 9; /* Maintains a 16:9 aspect ratio */
-            margin: auto; /* Centers the video */
+            margin: auto;
             display: flex;
             justify-content: center;
             align-items: center;
+            background-color:red
         }
 
     .video-container iframe {
-        width: 100%;
+        width: 98%;
         height: 100%;
+        border-radius: 40px;
     }
     </style>
 </head>
@@ -142,7 +143,7 @@
             <td style="padding: 14px 0px 4px;">
                 <table width="100%">
                     <tr>
-                        <td class="two-columns">   
+                        <td class="two-columns">
                             <table class="column">
                                 <tr>
                                     <td >
@@ -154,7 +155,7 @@
                             </table>
                             <!-- <table class="column">
                                 <tr>
-                                    <td style="padding: 10px 110px;">    
+                                    <td style="padding: 10px 110px;">
                                         <a href="https://www.facebook.com/wdporto/" > <img src="https://www.windoorporto.pt/wp-content/uploads/2021/05/wd-facebook.png" alt="" width="40"></a>
                                         <a href="https://www.instagram.com/windoor_porto/"> <img src="https://www.windoorporto.pt/wp-content/uploads/2021/05/wd-instagram.png" alt="" width="40"></a>
                                     </td>
@@ -166,37 +167,145 @@
             </td>
         </tr>
         <!-- Video Section -->
+         <!-- src="https://www.youtube.com/embed/anap39TcJrI?autoplay=1&mute=1&loop=1&playlist=anap39TcJrI&modestbranding=1&controls=1&showinfo=0" -->
         <tr>
             <td class="tdsectionspace">
-                <table style="max-width: 100%; margin: auto; text-align: center;"">
+                <table  width="100%">
                     <tr>
                         <td>
-                            <div class="video-container">
-                               <!-- <iframe src="https://www.youtube.com/embed/anap39TcJrI?autoplay=1&mute=1" 
-                                title="Codeconnect movie" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen>
-                            </iframe> -->
-                            <!-- <iframe src="https://www.youtube.com/embed/anap39TcJrI?autoplay=1&mute=1" 
-                            title="YouTube video player" 
-                            frameborder="0" 
-                            allow="autoplay; encrypted-media" 
-                            allowfullscreen>
-                        </iframe> -->
-                        <iframe src="https://www.youtube.com/embed/anap39TcJrI?autoplay=1&mute=1&loop=1&playlist=anap39TcJrI" 
-                            title="YouTube video player" 
-                            frameborder="0" 
-                            allow="autoplay; encrypted-media" 
-                            allowfullscreen>
-                        </iframe>
-                        </div>
+                            <div class="video-container" id="videoContainer">
+                                <iframe id="youtubePlayer"  
+                                src="https://www.youtube.com/embed/anap39TcJrI?autoplay=1&mute=0&rel=0&showinfo=0&iv_load_policy=3"
+                                    title="YouTube video player"
+                                    frameborder="5"
+                                    allow="autoplay; encrypted-media; picture-in-picture"
+                                    allowfullscreen 
+                                    style="pointer-events: none;">
+                                    
+                                </iframe>
+                                
+                            </div>
                         </td>
-                    </tr> 
-                </table> 
+                    </tr>
+                </table>
             </td>
         </tr>
-
+        <script>
+            // Global player variable
+            var player;
+        
+            // This function is automatically called when YouTube API is loaded
+            function onYouTubeIframeAPIReady() {
+                console.log("YouTube API is ready.");
+        
+                // Check if iframe with correct ID exists
+                var iframeElement = document.getElementById('youtubePlayer');
+                if (!iframeElement) {
+                    console.log("Iframe not found. Cannot create player.");
+                    return;
+                }
+                
+                // Now, create the player
+                console.log("Creating YouTube player.");
+                player = new YT.Player('youtubePlayer', {
+                    events: {
+                        'onReady': function(event) {
+                            console.log("Player is ready.");
+                            // Attempt to unmute the video
+                            player.unMute();
+                            console.log("Video unmuted.");
+                            player.playVideo(); // Play video if desired
+                            console.log("Video started playing.");
+                        },
+                        'onStateChange': function(event) {
+                            console.log("Player state changed:", event.data);
+                            if (event.data === YT.PlayerState.PLAYING) {
+                                console.log("Video is playing.");
+                            } else if (event.data === YT.PlayerState.ENDED) {
+                                console.log("Video has ended.");
+                            } else if (event.data === YT.PlayerState.PAUSED) {
+                                console.log("Video is paused.");
+    }
+                        }
+                    }
+                });
+            }
+        
+            // Dynamically load the YouTube API script
+            function loadYouTubeAPI() {
+                if (typeof YT === 'undefined' || typeof YT.Player === 'undefined') {
+                    console.log("YouTube API is not loaded. Loading the script now.");
+                    var script = document.createElement('script');
+                    script.src = "https://www.youtube.com/iframe_api";
+                    script.onload = function() {
+                        console.log("YouTube API script has loaded successfully.");
+                        checkAPIReady();  // Check if the API is ready after loading
+                    };
+                    document.body.appendChild(script);
+                } else {
+                    console.log("YouTube API is already loaded.");
+                    checkAPIReady(); // Check if the API is ready
+                }
+            }
+        
+            // Function to check if API is ready
+            function checkAPIReady() {
+                if (typeof YT !== 'undefined' && YT.Player) {
+                    console.log("YouTube API is ready.");
+                    createPlayer();  // Create player after confirming API readiness
+                } else {
+                    console.log("API is not ready yet. Retrying...");
+                    setTimeout(checkAPIReady, 500);  // Retry in 500ms
+                }
+            }
+        
+            // Create the player after confirming the API is ready
+            function createPlayer() {
+                console.log("Creating YouTube player.");
+                var iframeElement = document.getElementById('youtubePlayer');
+                if (!iframeElement) {
+                    console.log("Iframe not found. Cannot create player.");
+                    return;
+                }
+                
+                // Now, create the player
+                player = new YT.Player('youtubePlayer', {
+                    events: {
+                        'onReady': function(event) {
+                            console.log("Player is ready.");
+                            player.unMute(); // Unmute the video
+                            console.log("Video unmuted.");
+                            player.playVideo(); // Play video
+                            console.log("Video started playing.");
+                        },
+                        'onStateChange': function(event) {
+                            console.log("Player state changed:", event.data);
+                            if (event.data === YT.PlayerState.PLAYING) {
+                                console.log("Video is playing.");
+                            } else if (event.data === YT.PlayerState.ENDED) {
+                                console.log("Video has ended.");
+                            }
+                        }
+                    }
+                });
+            }
+        
+            // Run the API loading process
+            loadYouTubeAPI();
+        
+            // Check if player is ready periodically (debugging purpose)
+            window.onload = function() {
+                console.log("Window Loaded.");
+                setInterval(function() {
+                    if (player) {
+                        console.log("Player is initialized.");
+                    } else {
+                        console.log("Checking again if player is initialized...still not ready.");
+                    }
+                }, 2000); // Check every 2 seconds
+            };
+        </script>
+        
         <!--Stars Section  -->
         <tr>
             <td class="tdsectionspace">
@@ -205,8 +314,8 @@
                         <td style="text-align: center;">
                                 <img src="https://www.windoorbraga.pt/wp-content/uploads/2025/01/5estrelas.png" alt="" class="stars">
                         </td>
-                    </tr> 
-                </table> 
+                    </tr>
+                </table>
             </td>
         </tr>
         <!--Hand 1 Section  -->
@@ -217,8 +326,8 @@
                         <td >
                                 <img src="https://www.windoorbraga.pt/wp-content/uploads/2025/01/hand2.png" alt="" class="hand1" >
                         </td>
-                    </tr> 
-                </table> 
+                    </tr>
+                </table>
             </td>
         </tr>
         <!--Text Section  -->
@@ -229,8 +338,8 @@
                         <td style="text-align: center;">
                                 <img src="img/Placa.png" alt="" class="text">
                         </td>
-                    </tr> 
-                </table> 
+                    </tr>
+                </table>
             </td>
         </tr>
         <!--Hand 2 Section  -->
@@ -241,8 +350,8 @@
                         <td >
                                 <img src="https://www.windoorbraga.pt/wp-content/uploads/2025/01/hand1.png" alt="" class="hand2">
                         </td>
-                    </tr> 
-                </table> 
+                    </tr>
+                </table>
             </td>
         </tr>
         <!--Button Section  -->
@@ -255,14 +364,15 @@
                                 Clique Aqui
                             </a>
                         </td>
-                    </tr> 
-                </table> 
+                    </tr>
+                </table>
             </td>
         </tr> -->
 
        </table>
    </center>
 </body>
+
 </html>
 
 
