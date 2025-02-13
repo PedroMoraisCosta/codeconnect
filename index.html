@@ -121,8 +121,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color:red
-        }
+       }
 
     .video-container iframe {
         width: 98%;
@@ -167,20 +166,20 @@
             </td>
         </tr>
         <!-- Video Section -->
-         <!-- src="https://www.youtube.com/embed/anap39TcJrI?autoplay=1&mute=1&loop=1&playlist=anap39TcJrI&modestbranding=1&controls=1&showinfo=0" -->
+         
         <tr>
             <td class="tdsectionspace">
                 <table  width="100%">
                     <tr>
                         <td>
                             <div class="video-container" id="videoContainer">
-                                <iframe id="youtubePlayer"  
-                                src="https://www.youtube.com/embed/anap39TcJrI?autoplay=1&mute=0&rel=0&showinfo=0&iv_load_policy=3"
+                                <iframe id="youtubePlayer" 
+                                src="https://www.youtube.com/embed/anap39TcJrI?autoplay=1&mute=1&loop=1&rel=0&playlist=anap39TcJrI&modestbranding=1&controls=1&showinfo=0&iv_load_policy=3"
                                     title="YouTube video player"
                                     frameborder="5"
                                     allow="autoplay; encrypted-media; picture-in-picture"
                                     allowfullscreen 
-                                    style="pointer-events: none;">
+                                    >
                                     
                                 </iframe>
                                 
@@ -190,122 +189,6 @@
                 </table>
             </td>
         </tr>
-        <script>
-            // Global player variable
-            var player;
-        
-            // This function is automatically called when YouTube API is loaded
-            function onYouTubeIframeAPIReady() {
-                console.log("YouTube API is ready.");
-        
-                // Check if iframe with correct ID exists
-                var iframeElement = document.getElementById('youtubePlayer');
-                if (!iframeElement) {
-                    console.log("Iframe not found. Cannot create player.");
-                    return;
-                }
-                
-                // Now, create the player
-                console.log("Creating YouTube player.");
-                player = new YT.Player('youtubePlayer', {
-                    events: {
-                        'onReady': function(event) {
-                            console.log("Player is ready.");
-                            // Attempt to unmute the video
-                            player.unMute();
-                            console.log("Video unmuted.");
-                            player.playVideo(); // Play video if desired
-                            console.log("Video started playing.");
-                        },
-                        'onStateChange': function(event) {
-                            console.log("Player state changed:", event.data);
-                            if (event.data === YT.PlayerState.PLAYING) {
-                                console.log("Video is playing.");
-                            } else if (event.data === YT.PlayerState.ENDED) {
-                                console.log("Video has ended.");
-                            } else if (event.data === YT.PlayerState.PAUSED) {
-                                console.log("Video is paused.");
-    }
-                        }
-                    }
-                });
-            }
-        
-            // Dynamically load the YouTube API script
-            function loadYouTubeAPI() {
-                if (typeof YT === 'undefined' || typeof YT.Player === 'undefined') {
-                    console.log("YouTube API is not loaded. Loading the script now.");
-                    var script = document.createElement('script');
-                    script.src = "https://www.youtube.com/iframe_api";
-                    script.onload = function() {
-                        console.log("YouTube API script has loaded successfully.");
-                        checkAPIReady();  // Check if the API is ready after loading
-                    };
-                    document.body.appendChild(script);
-                } else {
-                    console.log("YouTube API is already loaded.");
-                    checkAPIReady(); // Check if the API is ready
-                }
-            }
-        
-            // Function to check if API is ready
-            function checkAPIReady() {
-                if (typeof YT !== 'undefined' && YT.Player) {
-                    console.log("YouTube API is ready.");
-                    createPlayer();  // Create player after confirming API readiness
-                } else {
-                    console.log("API is not ready yet. Retrying...");
-                    setTimeout(checkAPIReady, 500);  // Retry in 500ms
-                }
-            }
-        
-            // Create the player after confirming the API is ready
-            function createPlayer() {
-                console.log("Creating YouTube player.");
-                var iframeElement = document.getElementById('youtubePlayer');
-                if (!iframeElement) {
-                    console.log("Iframe not found. Cannot create player.");
-                    return;
-                }
-                
-                // Now, create the player
-                player = new YT.Player('youtubePlayer', {
-                    events: {
-                        'onReady': function(event) {
-                            console.log("Player is ready.");
-                            player.unMute(); // Unmute the video
-                            console.log("Video unmuted.");
-                            player.playVideo(); // Play video
-                            console.log("Video started playing.");
-                        },
-                        'onStateChange': function(event) {
-                            console.log("Player state changed:", event.data);
-                            if (event.data === YT.PlayerState.PLAYING) {
-                                console.log("Video is playing.");
-                            } else if (event.data === YT.PlayerState.ENDED) {
-                                console.log("Video has ended.");
-                            }
-                        }
-                    }
-                });
-            }
-        
-            // Run the API loading process
-            loadYouTubeAPI();
-        
-            // Check if player is ready periodically (debugging purpose)
-            window.onload = function() {
-                console.log("Window Loaded.");
-                setInterval(function() {
-                    if (player) {
-                        console.log("Player is initialized.");
-                    } else {
-                        console.log("Checking again if player is initialized...still not ready.");
-                    }
-                }, 2000); // Check every 2 seconds
-            };
-        </script>
-        
         <!--Stars Section  -->
         <tr>
             <td class="tdsectionspace">
