@@ -45,7 +45,7 @@
        }
        .two-columns .column{
         width: 100%;
-        max-width: 300px;
+        max-width: 240px;
         display: inline-block;
         vertical-align: top;
         text-align: center;
@@ -59,21 +59,20 @@
         .two-columns .content{
             font-size: 15px;
             line-height: 20px;
-            text-align: left;
-        }
-
-        .button-custom{
-            background-color: rgb(251,219,59);
-            color: #171a1b;
-            text-decoration: none;
-            padding: 10px 20px;
-            font-weight: bold;
-            border-radius: 5px;
             text-align: center;
-            font-size: 16px;
-            display: inline-block;
+            margin-left: 30px;
         }
-
+        .top-columns{
+            text-align: center;
+            font-size: 0;
+        }
+        .top-columns .column{
+            width: 100%;
+            max-width: 300px;
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+       }
         .tdsectionspace{
             background-color: black;
             padding-top: 10px;
@@ -106,13 +105,6 @@
             width:75%;
             max-width: 100%;
         }
-        .logotext {
-            width: 100%;
-            text-align: center;
-            font-size: 25px;
-            color: white;
-            margin: 20px 0;
-        }
         .video-container {
             min-width: 280px;
             height: auto; /* Let the height adjust dynamically */
@@ -128,6 +120,87 @@
         height: 100%;
         border-radius: 40px;
     }
+    .bottomSection{
+        background-color: red;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+            display: flex;
+            margin-left: 3px;
+            border-radius: 50px 50px 50px;
+    }
+    
+    .emailText{
+        text-align: center;
+        font-size: 24px;
+        font-weight: normal; 
+        color: white;
+        margin: 5px 0;
+        display: block;
+     }
+     .namesText
+     {
+        text-align: center;
+        font-size: 14px;
+        font-weight: normal; 
+        color: white;
+        margin: 5px 0;
+        display: block;
+     }
+     .profile-picture1{
+        position: relative;
+        display: inline-flex;
+        border-radius: 50%;
+        background: url(img/Pedro.png) top center no-repeat;
+        background-size: cover;
+        /* width: clamp(4.5em, 6.5vw, 8em);
+        height: clamp(4.5em, 6.5vw, 8em); */
+        width: 130px;  /* Adjust as needed */
+        height: 130px;
+     }
+     .profile-picture2{
+        position: relative;
+        display: inline-flex;
+        border-radius: 50%;
+        background: url(img/Andre.jpg) top center no-repeat;
+        background-size: cover;
+        /* width: clamp(4.5em, 6.5vw, 8em);
+        height: clamp(4.5em, 6.5vw, 8em); */
+        width: 130px;  /* Adjust as needed */
+        height: 130px;
+     }
+
+
+     .three-columns{
+        text-align: center;
+        font-size: 0;
+        padding: 15px 0 25px;
+     }
+     .three-columns .column{
+        width: 100%;
+        max-width: 200px;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+     }
+     .three-columns .padding{
+      padding: 15px;
+     }
+     .three-columns .content{
+        font-size: 15px;
+        line-height: 20px;
+        padding: 0 5px;
+     }
+     /* WHEN IS SMALLER THEN  */
+     @media (max-width: 478px) { 
+        .emailText {
+            font-size: 16px;
+        }
+        .namesText{
+            font-size: 11px;
+        }
+    }
+
     </style>
 </head>
 <body>
@@ -142,7 +215,7 @@
             <td style="padding: 14px 0px 4px;">
                 <table width="100%">
                     <tr>
-                        <td class="two-columns">
+                        <td class="top-columns">
                             <table class="column">
                                 <tr>
                                     <td >
@@ -152,21 +225,12 @@
                                     </td>
                                 </tr>
                             </table>
-                            <!-- <table class="column">
-                                <tr>
-                                    <td style="padding: 10px 110px;">
-                                        <a href="https://www.facebook.com/wdporto/" > <img src="https://www.windoorporto.pt/wp-content/uploads/2021/05/wd-facebook.png" alt="" width="40"></a>
-                                        <a href="https://www.instagram.com/windoor_porto/"> <img src="https://www.windoorporto.pt/wp-content/uploads/2021/05/wd-instagram.png" alt="" width="40"></a>
-                                    </td>
-                                </tr>
-                            </table> -->
                         </td>
                     </tr>
                </table>
             </td>
         </tr>
-        <!-- Video Section -->
-         
+        <!-- Video Section -->         
         <tr>
             <td class="tdsectionspace">
                 <table  width="100%">
@@ -237,20 +301,120 @@
                 </table>
             </td>
         </tr>
-        <!--Button Section  -->
+        <!--Bottom Section  -->
+        <tr style="background: linear-gradient(to top, #303468, #000000);">
+            <td>
+                <table width="100%">
+                <tr>
+                    <td >
+                        <table class="column" style="margin: auto; text-align: center;">
+                            <tr>
+                                <td>
+                                    <p class="emailText" >geral@codeconnect.pt</p>
+                                </td>
+                            </tr>
+                               
+                        </table>
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td class="two-columns">
+                        <table class="column">
+                            <tr>
+                                <td class="padding">
+                                    <table class="content">
+                                        <tr>
+                                            <td>
+                                                <div class="profile-picture1"></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="namesText">Pedro Costa</p>
+                                            </td>
+                                        </tr>        
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="column">
+                            <tr>
+                                <td class="padding">
+                                    <table class="content">
+                                        <tr>
+                                            <td>
+                                                <div class="profile-picture2"></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="namesText">André Mendes</p>
+                                            </td>
+                                        </tr>        
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </td>
+        </tr>    
+
+
+        <!-- <tr style="background: linear-gradient(to top, #303468, #000000);">
+            <td>
+                <table width="100%">
+                    <tr>
+                        <td class="two-columns" style="text-align: center; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 30px;">
+                            
+                            <table class="column" style="margin: auto; text-align: center;"> 
+                                <tr>
+                                    <td>
+                                       <div class="profile-picture"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="emailText">Pedro Costa</p>
+                                    </td>
+                                </tr>
+                            </table>
+        
+                            
+                            <table class="column" style="margin: auto; text-align: center;">
+                                <tr>
+                                    <td>
+                                        <div class="profile-picture"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="emailText">André Mendes</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+               </table>
+            </td>
+        </tr> -->
+        
+        
         <!-- <tr>
             <td class="tdshared">
                 <table class="column" style="max-width: 100%; margin: auto; padding-bottom: 10px;">
                     <tr>
                         <td style="text-align: center;">
-                            <a href="https://search.google.com/local/writereview?placeid=ChIJQ8qQSyVnJA0RTD_KpWRjgmI" class="button-custom">
-                                Clique Aqui
-                            </a>
+                            <div class="bottomSection">
+                                <p>geral@codeconnect.pt</p>
+                            </div
                         </td>
                     </tr>
                 </table>
             </td>
         </tr> -->
+
 
        </table>
    </center>
