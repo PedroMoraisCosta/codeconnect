@@ -30,8 +30,7 @@
             background-color: #f0ebeb;
             padding-bottom: 1px;
         }
-        .main{
-             background: linear-gradient(to bottom, #303468, #000000);
+        .main{          
             margin: 0 auto;
             width: 100%;
             max-width: 1076px;
@@ -39,6 +38,14 @@
             border-spacing: 0;
             font-family: sans-serif;
             color: #171a1b;
+        }
+        .main-color-bottom{
+            background: linear-gradient(to bottom,  #303468, #000000);
+            
+        }
+        .main-color-up{
+        
+            background: linear-gradient(to top, #303468, #000000);
         }
        .two-columns{
         text-align: center;
@@ -201,7 +208,7 @@
 </head>
 <body>
    <center class="wrapper">
-        <table class="main" width="100%">
+        <table class="main main-color-bottom" width="100%">
          <!--top border -->
         <tr>
             <td  height="8px" style="background-color: #171a1b;"></td>
@@ -298,7 +305,7 @@
             </td>
         </tr> -->
         <!--Bottom Section  -->
-        <tr style="background: linear-gradient(to top, #303468, #000000);">
+        <tr class="main-color-up" >
             <td>
                 <table width="100%">
                 <tr>
