@@ -147,29 +147,24 @@
         margin: 5px 0;
         display: block;
      }
-     .profile-picture1{
+     .profile-picture {
         position: relative;
         display: inline-flex;
         border-radius: 50%;
-        background: url(img/Pedro.png) top center no-repeat;
+        background-position: top center;
+        background-repeat: no-repeat;
         background-size: cover;
-        /* width: clamp(4.5em, 6.5vw, 8em);
-        height: clamp(4.5em, 6.5vw, 8em); */
-        width: 130px;  /* Adjust as needed */
+        border-bottom: 3px ridge #ccc; /* Ensure proper border styling */
+        width: 130px;
         height: 130px;
-     }
-     .profile-picture2{
-        position: relative;
-        display: inline-flex;
-        border-radius: 50%;
-        background: url(img/Andre.jpg) top center no-repeat;
-        background-size: cover;
-        /* width: clamp(4.5em, 6.5vw, 8em);
-        height: clamp(4.5em, 6.5vw, 8em); */
-        width: 130px;  /* Adjust as needed */
-        height: 130px;
-     }
+    }
+    .profile-picture1 {
+        background-image: url("img/Pedro.png");
+    }
 
+    .profile-picture2 {
+        background-image: url("img/Andre.jpg");
+    }
 
      .three-columns{
         text-align: center;
@@ -326,7 +321,7 @@
                                     <table class="content">
                                         <tr>
                                             <td>
-                                                <div class="profile-picture1"></div>
+                                                <img class="profile-picture profile-picture1" alt=""></img>
                                             </td>
                                         </tr>
                                         <tr>
@@ -344,7 +339,7 @@
                                     <table class="content">
                                         <tr>
                                             <td>
-                                                <div class="profile-picture2"></div>
+                                                <img class="profile-picture profile-picture2" alt=""></img>
                                             </td>
                                         </tr>
                                         <tr>
