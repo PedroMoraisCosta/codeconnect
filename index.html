@@ -154,6 +154,10 @@
         display: block;
         font-family: Cormorant Garamond,serif;
      }
+     .descriptionDetailsText {
+        width: 83px;
+        text-align: left;
+     } 
      .namesText
      {
         text-align: center;
@@ -184,6 +188,31 @@
     .profile-picture3 {
         background-image: url("img/Tiago.jpg");
     }
+    .profile-picture4 {
+        background-image: url("img/botao.png");
+        /* position: relative; */
+        /* display: inline-flex; */
+        /* background-position: top center; */
+        /* background-repeat: no-repeat; */
+        background-size: cover;
+        /* width: 25px; */
+        /* height: 25px; */
+    }
+   
+    .button-container {
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 10px; /* Espaço entre a imagem e o texto */
+}
+   
+    .button-picture {
+        width: 20px; 
+        height: 20px;
+        border-radius: 100%; 
+    }
+
+   
 
      .three-columns{
         text-align: center;
@@ -299,31 +328,60 @@
         </tr>
           <!--Description Section  -->
           <tr>
-            <td class="tdsectionspace">
-                <table width="100%" >
+            <td class="tdsectionspace three-columns">
+                <table class="column">
                     <tr>
-                        <td >
-                                <h3 class="descriptionText">Placas com tecnologia NFC e QrCode</h3>
+                        <td class="padding">
+                            <table class="content">
+                                <tr>
+                                    <td>
+                                        <div class="button-container">
+                                            <img class="button-picture profile-picture4" alt="">
+                                            <h3 class="descriptionText descriptionDetailsText">Avaliações</h3>
+                                        </div>
+                                    </td>
+                                </tr>
+                                      
+                            </table>
                         </td>
                     </tr>
+                </table>
+                <table class="column">
                     <tr>
-                        <td >
-                                <h1 class="descriptionText">+ Avaliações</h3>
+                        <td class="padding">
+                            <table class="content">
+                                <tr>
+                                    <td>
+                                        <div class="button-container">
+                                            <img class="button-picture profile-picture4" alt="">
+                                            <h3 class="descriptionText descriptionDetailsText">Clientes</h3>
+                                        </div>
+                                    </td>
+                                </tr>
+                                      
+                            </table>
                         </td>
                     </tr>
+                </table>
+                <table class="column">
                     <tr>
-                        <td >
-                                <h2 class="descriptionText">+ Clientes</h3>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td >
-                                <h3 class="descriptionText">+ Sucesso</h3>
+                        <td class="padding">
+                            <table class="content">
+                                <tr>
+                                    <td>
+                                        <div class="button-container">
+                                            <img class="button-picture profile-picture4" alt="">
+                                            <h3 class="descriptionText descriptionDetailsText">Sucesso</h3>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
                         </td>
                     </tr>
                 </table>
             </td>
         </tr>
+         
         <!--Hand 1 Section  -->
         <!-- <tr>
             <td class="tdsectionspace">
