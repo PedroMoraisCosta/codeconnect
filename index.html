@@ -234,18 +234,25 @@
         line-height: 20px;
         padding: 0 5px;
      }
-    .model3d-container{
-            min-width: 280px;
-            margin: auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 70vw;
-            max-height: 90vw;
+     .model3d-container {
+        min-width: 280px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 65vh; 
+        max-height: 90vh; /* Adjusted max height for consistency */
+        margin-top: 5px;
+        margin-bottom: -2vh;
     }
-    #zoomVideo {
-        object-fit: cover;
-    }
+
+#zoomVideo {
+    object-fit: cover;
+    max-width: 100%; /* Ensures it doesn't exceed its container */
+    max-height: 100%; /* Keeps it within the model3d-container */
+}
+
+    
 
      /* WHEN IS SMALLER THEN  */
      @media (max-width: 478px) { 
@@ -254,6 +261,10 @@
         }
         .namesText{
             font-size: 11px;
+        }
+        .model3d-container {
+            margin-bottom: -8vh;
+            height: 45vh;
         }
     }
 
@@ -306,22 +317,21 @@
             </td>
         </tr>
         <!-- Video Section -->         
+        <!--src="https://www.youtube.com/embed/uMT9iAI9ZDc?si=L7Dqbd67JOmoYKbt?autoplay=1&mute=1&loop=1&rel=0&playlist=anap39TcJrI&modestbranding=1&controls=1&showinfo=0&iv_load_policy=3"-->
         <tr>
             <td class="tdsectionspace">
                 <table  width="100%">
                     <tr>
                         <td>
                             <div class="video-container" id="videoContainer">
-                                <iframe id="youtubePlayer" 
-                                src="https://www.youtube.com/embed/anap39TcJrI?autoplay=1&mute=1&loop=1&rel=0&playlist=anap39TcJrI&modestbranding=1&controls=1&showinfo=0&iv_load_policy=3"
-                                    title="YouTube video player"
-                                    frameborder="5"
-                                    allow="autoplay; encrypted-media; picture-in-picture"
-                                    allowfullscreen 
-                                    >
-                                    
-                                </iframe>
+                                <iframe 
                                 
+                                src="https://www.youtube.com/embed/uMT9iAI9ZDc?si=MblfbcsHMjsAkt_h&autoplay=1&mute=1&loop=1&rel=0&modestbranding=1&controls=1&showinfo=0&iv_load_policy=3" 
+                                title="Codeconnect video presentation" 
+                                frameborder="0"
+                                allow="autoplay; encrypted-media; picture-in-picture" 
+                                referrerpolicy="strict-origin-when-cross-origin" 
+                                allowfullscreen></iframe>
                             </div>
                         </td>
                     </tr>
@@ -397,13 +407,8 @@
         </tr> -->
          <!--3D Model Section  -->
          <tr>
-            <td class="tdsectionspace">
+            <td class="tdsectionwithoutspace">
                 <table width="100%">
-                    <tr>
-                        <td >
-                            <h3 class="descriptionText">Placa com tecnologia NFC e QrCode</h3>
-                        </td>
-                    </tr>
                     <tr>
                         <td >
                             <video id="zoomVideo" class="model3d-container" autoplay muted loop playsinline >
@@ -419,6 +424,11 @@
         <tr>
             <td class="tdsectionwithoutspace">
                 <table  style="max-width: 100%; margin: auto;">
+                    <tr>
+                        <td >
+                            <h3 class="descriptionText">Placa com tecnologia NFC e QrCode</h3>
+                        </td>
+                    </tr>
                     <tr>
                         <td >
                             <h3 class="descriptionText">Encomende a sua</h3>
@@ -492,7 +502,8 @@
                                             <tr>
                                                 <td>
                                                     <p class="namesText">Pedro Costa</p>
-                                                    <p class="namesText">CEO</p>
+                                                    <p class="namesText">DT</p>
+                                                    <p class="namesText">Director de Tecnologias</p>
                                                 </td>
                                             </tr>        
                                         </table>
@@ -511,7 +522,8 @@
                                             <tr>
                                                 <td>
                                                     <p class="namesText">André Mendes</p>
-                                                    <p class="namesText">Diretor de Vendas em Portugal</p>
+                                                    <p class="namesText">DECE</p>
+                                                    <p class="namesText">Diretor de Vendas, Estratégia Comercial e Expansão</p>
                                                 </td>
                                             </tr>        
                                         </table>
@@ -530,7 +542,8 @@
                                             <tr>
                                                 <td>
                                                     <p class="namesText">Tiago Pereira</p>
-                                                    <p class="namesText">Diretor de Vendas em Benelux</p>
+                                                    <p class="namesText">DE</p>
+                                                    <p class="namesText">Diretor de Vendas e Expansão em Benelux</p>
                                                 </td>
                                             </tr>        
                                         </table>
