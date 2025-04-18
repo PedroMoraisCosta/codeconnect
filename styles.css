@@ -267,7 +267,7 @@ max-height: 100%; /* Keeps it within the model3d-container */
     transform: scale(1.1);
     transition: 0.3s ease;
   }
-  .text:hover {
+  .text.aos-init.aos-animate:hover {
     transform: scale(1.1);
     transition: 0.3s ease;
   }
