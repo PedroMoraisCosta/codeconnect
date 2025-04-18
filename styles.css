@@ -136,13 +136,13 @@ font-weight: normal;
 color: white;
 margin: 5px 0;
 display: block;
-font-family: Cormorant Garamond,serif;
+font-family: 'Poppins', sans-serif;
 }
 .descriptionText {
 text-align: center;
 color: white;
 display: block;
-font-family: Cormorant Garamond,serif;
+font-family: 'Poppins', sans-serif;
 }
 .descriptionDetailsText {
 width: 83px;
@@ -153,7 +153,7 @@ text-align: center;
 color: yellow;
 font-weight: 300;
 display: block;
-font-family: Cormorant Garamond,serif;
+font-family: 'Poppins', sans-serif;
 }
 .namesText
 {
@@ -198,7 +198,7 @@ background-size: cover;
 }
 .productdescriptionText {
     color: white;
-    font-family: Cormorant Garamond,serif;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
     margin: 0 auto;
     width: 75%;
