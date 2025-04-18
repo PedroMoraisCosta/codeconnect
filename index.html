@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
 <head>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <meta  http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -68,7 +69,7 @@
                  <table  style="max-width: 100%; margin: auto;">
                     <tr>
                         <td >
-                            <h3 class="cta-button">Como encomendar a sua</h3>
+                            <h3 class="cta-button" data-aos="fade-up">Como encomendar a sua</h3>
                         </td>
                     </tr>
                     <!-- <tr>
@@ -92,7 +93,7 @@
                                 
                                  <tr>
                                     <td>
-                                        <p class="namesText">geral@codeconnect.pt</p>
+                                        <p data-aos="zoom-out" class="namesText">geral@codeconnect.pt</p>
                                     </td>
                                 </tr>             
                             </table>
@@ -105,8 +106,8 @@
                             <table class="content">
                                 <tr>
                                     <td>
-                                        <p class="namesText">+351 933 964 393</p>
-                                        <p class="namesText">Portugal</p>
+                                        <p data-aos="zoom-out" class="namesText">+351 933 964 393</p>
+                                        <p data-aos="zoom-out" class="namesText">Portugal</p>
                                     </td>
                                 </tr>                                  
                             </table>
@@ -120,8 +121,8 @@
                                
                                 <tr>
                                     <td>
-                                        <p class="namesText">+32 492 104 789</p>
-                                        <p class="namesText">Bélgica</p>
+                                        <p data-aos="zoom-out" class="namesText">+32 492 104 789</p>
+                                        <p data-aos="zoom-out" class="namesText">Bélgica</p>
                                     </td>
                                 </tr>        
                             </table>
@@ -227,7 +228,7 @@
          </tr>
          <tr>
             <td class="tdsectionspace">
-                 <p class="productdescriptionText" >
+                 <p  class="productdescriptionText" >
                                   Com um simples toque ou leitura, os seus clientes acedem instantaneamente a avaliações, menus, redes sociais ou qualquer link à sua escolha — <em>sem apps, sem complicações, sem mensalidadas</em>.
                                 </p> 
             </td>
@@ -238,7 +239,7 @@
                 <table width="100%">
                     <tr>
                         <td >
-                            <video id="zoomVideo" class="model3d-container" autoplay muted loop playsinline >
+                            <video  id="zoomVideo" class="model3d-container" autoplay muted loop playsinline >
                                 <source src="/img/placa3d.mp4" type="video/mp4">
                             </video>
                         </td>
@@ -268,17 +269,17 @@
                     </tr>
                     <tr>
                         <td class="tdsectionspace" style="text-align: center;">
-                                <img src="img/PlacaVerde.png" alt="placa qrcode verde nfc codeconnect" class="text">
+                                <img data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" src="img/PlacaVerde.png" alt="placa qrcode verde nfc codeconnect" class="text">
                         </td>
                     </tr>
                     <tr>
                         <td style="text-align: center;">
-                                <img src="img/PlacaRosa.png" alt="placa qrcode rosa nfc codeconnect" class="text">
+                                <img data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" src="img/PlacaRosa.png" alt="placa qrcode rosa nfc codeconnect" class="text">
                         </td>
                     </tr>
                     <tr>
                         <td style="text-align: center;">
-                                <img src="img/PlacaRosaDegrade.png" alt="placa qrcode rosa degrade nfc codeconnect" class="text">
+                                <img data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" src="img/PlacaRosaDegrade.png" alt="placa qrcode rosa degrade nfc codeconnect" class="text">
                         </td>
                     </tr>
                     <tr>
@@ -512,7 +513,10 @@
        </table>
    </center>
 </body>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </html>
 
 
