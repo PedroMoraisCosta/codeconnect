@@ -163,6 +163,7 @@ font-weight: normal;
 color: white;
 margin: 5px 0;
 display: block;
+font-family: 'Poppins', sans-serif;
 }
 .profile-picture {
 position: relative;
@@ -262,26 +263,47 @@ object-fit: cover;
 max-width: 100%; /* Ensures it doesn't exceed its container */
 max-height: 100%; /* Keeps it within the model3d-container */
 }
+.stars:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease;
+  }
+  .text:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease;
+  }
 
-
+  .cta-button {
+    background: #FFD700;
+    color: black;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    transition: background 0.3s;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .cta-button:hover {
+    background: #e6c200;
+  }
 
 /* WHEN IS SMALLER THEN  */
 @media (max-width: 478px) { 
-.emailText {
-font-size: 16px;
-}
-.namesText{
-font-size: 13px;
-}
-.model3d-container {
-margin-bottom: -3vh;
-height: 45vh;
-}
-.hideplacacomtecnologia{
-visibility: visible;
-}
-.text{
-    width:75%;
-    max-width: 100%; 
-}
+    .emailText {
+    font-size: 16px;
+    }
+    .namesText{
+        font-size: 13px;
+    }
+    .model3d-container {
+    margin-bottom: -3vh;
+    /* height: 45vh; */
+    }
+    .hideplacacomtecnologia{
+    visibility: visible;
+    }
+    .text{
+        width:75%;
+        max-width: 100%; 
+    }
 }
