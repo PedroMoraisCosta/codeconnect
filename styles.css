@@ -100,8 +100,8 @@ width:90%;
 max-width: 100%;
 }
 .text{
-width:75%;
-max-width: 100%;
+width:30%;
+max-width: 75%;
 }
 .video-container {
 min-width: 280px;
@@ -196,6 +196,13 @@ background-size: cover;
 /* width: 25px; */
 /* height: 25px; */
 }
+.productdescriptionText {
+    color: white;
+    font-family: Cormorant Garamond,serif;
+    text-align: center;
+    margin: 0 auto;
+    width: 75%;
+    }
 
 .button-container {
 display: flex;
@@ -272,5 +279,9 @@ height: 45vh;
 }
 .hideplacacomtecnologia{
 visibility: visible;
+}
+.text{
+    width:75%;
+    max-width: 100%; 
 }
 }
