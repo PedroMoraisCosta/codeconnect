@@ -150,7 +150,7 @@ text-align: left;
 } 
 .groupText{
 text-align: center;
-color: yellow;
+color: #facc15;
 font-weight: 300;
 display: block;
 font-family: 'Poppins', sans-serif;
@@ -285,6 +285,46 @@ max-height: 100%; /* Keeps it within the model3d-container */
   
   .cta-button:hover {
     background: #e6c200;
+  }
+
+
+  .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .contact-box {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 1rem;
+    min-width: 260px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+
+  .contact-box h3 {
+    color: #facc15;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .contact-box p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .contact-box i {
+    margin-right: 0.6rem;
+    color: #facc15;
+    font-size: 1.1rem;
+  }
+
+  .email {
+    word-break: break-word;
   }
 
 /* WHEN IS SMALLER THEN  */
