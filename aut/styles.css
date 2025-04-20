@@ -74,6 +74,9 @@ body {
     padding-bottom: 5px;
   }
 
+  .titleDescription{
+    text-align: left;
+  }
   /* h1 {
     background-color: #4CAF50;
     color: white;
