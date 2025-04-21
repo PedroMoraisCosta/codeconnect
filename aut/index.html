@@ -6,12 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
   <title>Codeconnect - Ajuda</title>
+  <!-- ?p1=Guilherme&p2=mendes&p3=01-03-2000&p4=minhaSuperChave123&p5=f1 -->
 </head>
 <body>
   <center class="wrapper">
 
-  <div class="titleName">GUILHERME MENDES</div>
+  <div class="titleName" id="title">P1 P2</div>
 
   <div class="container">
     <div class="titleAbout">Sobre mim...</div>
@@ -19,11 +21,13 @@
 
     <div class="info-box">
       <div class="imgPuzzle"></div>
-      <p class="titleDescription">Olá! Sou o Guilherme e tenho<br>dificuldade para comunicar.</p>
-      <p class="descriptionPosition"><strong>Data de nascimento:</strong></p>
-      <ul style="text-align: left; max-width: 250px; margin: auto;">
-        <li>29/06/2017</li>
-      </ul>
+      <p class="titleDescription" id="titleDescription">P3</p>
+      <div id="dtnascimento">
+        <p class="descriptionPosition"><strong>Data de nascimento:</strong></p>
+        <ul style="text-align: left; max-width: 250px; margin: auto;">
+          <li><span id="dtnasc"></span></li>
+        </ul>
+     </div>
       <p class="descriptionPosition"><strong>Como me acalmar:</strong></p>
       <ul style="text-align: left; max-width: 250px; margin: auto;">
         <li>Telemóvel com YouTube</li>
@@ -35,9 +39,10 @@
     </div>
 
     <!-- Botões de contacto -->
-    <div class="contact-button" id="pai"><span class="contact-name">📞 Pai</span> <span id="tel1">---</span></div>
-    <div class="contact-button" id="mae"><span class="contact-name">📞 Mãe</span> <span id="tel2">---</span></div>
-    <div class="contact-button" id="avo"><span class="contact-name">📞 Avó</span> <span id="tel3">---</span></div>
+    <div class="contact-button" id="pai"><span class="contact-name">📞 Pai</span> <span id="tel1">-</span></div>
+    <div class="contact-button" id="mae"><span class="contact-name">📞 Mãe</span> <span id="tel2">-</span></div>
+    <div class="contact-button" id="avo"><span class="contact-name">📞 Avó</span> <span id="tel3">-</span></div>
+    <div class="contact-button" id="avo2"><span class="contact-name">📞 Avô</span> <span id="tel4">-</span></div>
 
     <!-- Imagem de criança com puzzle (deves substituir pela imagem real se quiseres) -->
     <!-- <img src="../aut/img/crianca.png" alt="Imagem criança puzzle" class="child-image"> -->
@@ -55,14 +60,82 @@
       return params.get(nome);
     }
 
-    // Atribuir números de telefone se existirem na URL
-    const tel1 = getParametroURL("tel1");
-    const tel2 = getParametroURL("tel2");
-    const tel3 = getParametroURL("tel3");
+    const pnome = getParametroURL("p1");
+    const unome = getParametroURL("p2");
+    const dtnasc = getParametroURL("p3");
+    
+    if (pnome) 
+      document.getElementById("title").textContent = pnome.toUpperCase();
+    if (pnome && unome)  
+      document.getElementById("title").textContent = pnome.toUpperCase() +" "+ unome.toUpperCase();
+    if (pnome) 
+      document.getElementById("titleDescription").innerHTML = "Olá! Sou o " + pnome.toUpperCase() + " e tenho<br>dificuldade para comunicar.";
+    if(dtnasc)
+    {
+      document.getElementById("dtnasc").textContent = dtnasc;
+    }
+    else{
+      document.getElementById("dtnascimento").style.display = "none";
+    } 
+    
+    document.getElementById("pai").style.display = "none";
+    document.getElementById("mae").style.display = "none";
+    document.getElementById("avo").style.display = "none";
+    document.getElementById("avo2").style.display = "none";
 
-    if (tel1) document.getElementById("tel1").textContent = tel1;
-    if (tel2) document.getElementById("tel2").textContent = tel2;
-    if (tel3) document.getElementById("tel3").textContent = tel3;
+    const chave = getParametroURL("p4");
+    const file = getParametroURL("p5");
+
+    if(file && chave){
+      carregarContactos(file, chave);
+    }
+  
+    
+    function carregarContactos(file, chave) {
+    if (!file || !chave) return;
+
+    fetch(file + '.json')
+        .then(response => response.text())
+        .then(data => {
+          
+                const decrypted = CryptoJS.AES.decrypt(
+                    data,
+                    chave
+                ).toString(CryptoJS.enc.Utf8);
+
+                if (decrypted) {
+                    const contatos = JSON.parse(decrypted);
+
+                    contatos.telefones.forEach((tel, index) => {
+                        const el = document.getElementById("tel" + (index + 1));
+                        if (el && tel) {
+                            switch (index) {
+                                case 0:
+                                    if (tel > 0) document.getElementById("pai").style.display = "block";
+                                    break;
+                                case 1:
+                                    if (tel > 0) document.getElementById("mae").style.display = "block";
+                                    break;
+                                case 2:
+                                    if (tel > 0) document.getElementById("avo").style.display = "block";
+                                    break;
+                                case 3:
+                                    if (tel > 0) document.getElementById("avo2").style.display = "block";
+                                    break;
+                            }
+                            el.textContent = tel;
+                        }
+                    });
+                } 
+            
+        })
+        .catch(error => {
+            console.error("Erro ao carregar o ficheiro: ", error);
+            document.body.innerHTML = "<p>Erro ao carregar o ficheiro!</p>";
+        });
+}
+
+
   </script>
 
 </body>
