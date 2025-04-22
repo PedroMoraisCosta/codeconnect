@@ -32,10 +32,12 @@
       <ul style="text-align: left; max-width: 250px; margin: auto;">
         <li>Telemóvel com YouTube</li>
       </ul>
-      <p class="descriptionPosition"><strong>Medicação que tomo regularmente:</strong></p>
-      <ul style="text-align: left; max-width: 250px; margin: auto;">
-        <li></li>
-      </ul>
+      <div id="medicacao">
+        <p class="descriptionPosition"><strong>Medicação que tomo regularmente:</strong></p>
+        <ul id="medlist" style="text-align: left; max-width: 250px; margin: auto;">
+          <li></li>
+        </ul>
+      </div>
     </div>
 
     <!-- Botões de contacto -->
@@ -86,6 +88,8 @@
     const chave = getParametroURL("p4");
     const file = getParametroURL("p5");
 
+    document.getElementById("medicacao").style.display = "none";
+
     if(file && chave){
       carregarContactos(file, chave);
     }
@@ -104,9 +108,9 @@
                 ).toString(CryptoJS.enc.Utf8);
 
                 if (decrypted) {
-                    const contatos = JSON.parse(decrypted);
+                    const ficheiro = JSON.parse(decrypted);
 
-                    contatos.telefones.forEach((tel, index) => {
+                    ficheiro.telefones.forEach((tel, index) => {
                         const el = document.getElementById("tel" + (index + 1));
                         if (el && tel) {
                             switch (index) {
@@ -126,12 +130,24 @@
                             el.textContent = tel;
                         }
                     });
+
+                    const ul = document.getElementById("medlist");
+                    ul.innerHTML = "";  
+                    ficheiro.medicacao.forEach((med) => {
+                      document.getElementById("medicacao").style.display = "block";
+                        if (med) {
+                            const li = document.createElement("li");
+                            li.textContent = med.trim();  // adicionar o texto da medicação
+                            ul.appendChild(li);
+                        }
+                    });
+                  
                 } 
             
         })
         .catch(error => {
-            console.error("Erro ao carregar o ficheiro: ", error);
-            document.body.innerHTML = "<p>Erro ao carregar o ficheiro!</p>";
+            // console.error("Erro ao carregar o ficheiro: ", error);
+            // document.body.innerHTML = "<p>Erro ao carregar o ficheiro!</p>";
         });
 }
 
