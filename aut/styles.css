@@ -16,7 +16,7 @@ body {
     position: relative;
     height: 100vh; 
     overflow: hidden; */
-    overflow-x: hidden;
+    overflow: hidden;
     background-image: url(../aut/img/fundo.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -72,7 +72,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     width: 50px;
-    height: 50px;
+    height: 170px;
     position: relative; 
     top: 10px; 
     right: 0;     
@@ -90,7 +90,7 @@ body {
     padding-top: 1px;
     padding-bottom: 5px; 
     overflow-x: hidden;
-    max-height: 170px;
+    max-height: 70px;
     overflow-y: scroll;  
     }
 
@@ -139,7 +139,7 @@ body {
   }
 
   .footer {
-    margin: 40px 0 10px auto;
+    margin: 20px 0 10px auto;
     padding: 10px 5px;
     width: 45%;
     max-width: 200px;
@@ -156,6 +156,26 @@ body {
     max-width: 200px;
     margin: 20px auto;
   } */
+
+/* Estilo das barras de rolagem no Firefox */
+.info-box {
+  scrollbar-width: thin;  /* Torna a barra de rolagem mais fina */
+  scrollbar-color: #888 #f1f1f1;  /* Cor da barra e do fundo da barra de rolagem */
+}
+
+/* Estilo das barras de rolagem no Webkit (Chrome, Safari, etc.) */
+.info-box::-webkit-scrollbar {
+  width: 10px;  /* Largura da barra de rolagem */
+}
+
+.info-box::-webkit-scrollbar-thumb {
+  background-color: #888;  /* Cor do "polegar" da barra de rolagem */
+  border-radius: 10px;  /* Bordas arredondadas no polegar */
+}
+
+.info-box::-webkit-scrollbar-track {
+  background: #f1f1f1;  /* Cor de fundo da barra de rolagem */
+}
 
   @media (max-width: 478px) { 
     .descriptionPosition{
