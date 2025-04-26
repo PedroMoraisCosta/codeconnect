@@ -16,7 +16,7 @@ body {
     position: relative;
     height: 100vh; 
     overflow: hidden; */
-
+    overflow-x: hidden;
     background-image: url(../aut/img/fundo.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -90,7 +90,7 @@ body {
     padding-top: 1px;
     padding-bottom: 5px; 
     overflow-x: hidden;
-    max-height: 50px;
+    max-height: 5px;
     overflow-y: auto;  
     }
 
