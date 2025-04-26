@@ -90,8 +90,8 @@ body {
     padding-top: 1px;
     padding-bottom: 5px; 
     overflow-x: hidden;
-    max-height: 5px;
-    overflow-y: auto;  
+    max-height: 15px;
+    overflow-y: scroll;  
     }
 
   .titleDescription{
