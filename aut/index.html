@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
   <title>Codeconnect - Ajuda</title>
-  <!-- ?p1=Guilherme&p2=mendes&p3=01-03-2000&p4=minhaSuperChave123&p5=f1 -->
 </head>
 <body>
   <center class="wrapper">
@@ -16,11 +15,12 @@
   <div class="titleName" id="title">P1 P2</div>
 
   <div class="container">
-    <div class="titleAbout">Sobre mim...</div>
-   
+  <div class="containerTop">
+      <div class="titleAbout">Sobre mim...</div>
+      <div class="imgPuzzle"></div>
+    </div>
 
     <div class="info-box">
-      <div class="imgPuzzle"></div>
       <p class="titleDescription" id="titleDescription">P3</p>
       <div id="dtnascimento">
         <p class="descriptionPosition"><strong>Data de nascimento:</strong></p>
@@ -28,7 +28,7 @@
           <li><span id="dtnasc"></span></li>
         </ul>
      </div>
-      <p class="descriptionPosition"><strong>Como me acalmar:</strong></p>
+       <p class="descriptionPosition"><strong>Como me acalmar:</strong></p>
       <ul style="text-align: left; max-width: 250px; margin: auto;">
         <li>Telemóvel com YouTube</li>
       </ul>
@@ -70,15 +70,18 @@
       document.getElementById("title").textContent = pnome.toUpperCase();
     if (pnome && unome)  
       document.getElementById("title").textContent = pnome.toUpperCase() +" "+ unome.toUpperCase();
-    if (pnome) 
-      document.getElementById("titleDescription").innerHTML = "Olá! Sou o " + pnome.toUpperCase() + " e tenho<br>dificuldade para comunicar.";
-    if(dtnasc)
-    {
-      document.getElementById("dtnasc").textContent = dtnasc;
-    }
-    else{
-      document.getElementById("dtnascimento").style.display = "none";
+    if (pnome && dtnasc) 
+      document.getElementById("titleDescription").innerHTML = "Olá! Sou o " + pnome.toUpperCase() + " nascido a <strong>"+ dtnasc +"</strong><br>e tenho dificuldade para comunicar.";
+    else if (pnome){
+      document.getElementById("titleDescription").innerHTML = "Olá! Sou o " + pnome.toUpperCase() + " e tenho dificuldade<br>para comunicar.";
     } 
+    // if(dtnasc)
+    // {
+    //   document.getElementById("dtnasc").textContent = dtnasc;
+    // }
+    // else{
+    //   document.getElementById("dtnascimento").style.display = "none";
+    // } 
     
     document.getElementById("pai").style.display = "none";
     document.getElementById("mae").style.display = "none";
@@ -101,16 +104,75 @@
     fetch(file + '.json')
         .then(response => response.text())
         .then(data => {
-          
+                let key =GetKey(chave);
                 const decrypted = CryptoJS.AES.decrypt(
                     data,
-                    chave
+                    key
                 ).toString(CryptoJS.enc.Utf8);
 
                 if (decrypted) {
                     const ficheiro = JSON.parse(decrypted);
 
-                    ficheiro.telefones.forEach((tel, index) => {
+                    PreencherContactos(ficheiro);
+
+                    PreencherMedicacao(ficheiro);                    
+                  
+                } 
+            
+        })
+        .catch(error => {
+            // console.error("Erro ao carregar o ficheiro: ", error);
+            // document.body.innerHTML = "<p>Erro ao carregar o ficheiro!</p>";
+        });
+    }
+
+    function GetKey(chave){
+      if (!chave) return '';
+      try {
+            const key = CryptoJS.enc.Utf8.parse('1234567890123456');
+            const iv = CryptoJS.enc.Utf8.parse('6543210987654321');
+            const ciphertextWordArray = CryptoJS.enc.Base64.parse(chave);
+
+            const decifrado = CryptoJS.AES.decrypt(
+            { ciphertext: ciphertextWordArray },
+            key,
+            {
+              iv: iv,
+              mode: CryptoJS.mode.CBC,
+              padding: CryptoJS.pad.Pkcs7
+            });
+
+            if (!decifrado || decifrado.sigBytes <= 0) {
+              console.warn('Decrypt falhou: sigBytes inválido');
+              return '';
+            }
+
+              const textoOriginal=  decifrado.toString(CryptoJS.enc.Utf8);
+
+              return textoOriginal;
+          } catch (erro) {
+            console.error('Erro no GetKey:', erro);
+            return '';
+          }  
+    }
+
+    function PreencherMedicacao(ficheiro){
+      const ul = document.getElementById("medlist");
+
+      ul.innerHTML = "";  
+
+      ficheiro.medicacao.forEach((med) => {
+               if (med) {
+                  document.getElementById("medicacao").style.display = "block";
+                  const li = document.createElement("li");
+                  li.textContent = med.trim();
+                  ul.appendChild(li);
+                }
+              });
+    }
+
+    function PreencherContactos(ficheiro){
+      ficheiro.telefones.forEach((tel, index) => {
                         const el = document.getElementById("tel" + (index + 1));
                         if (el && tel) {
                             switch (index) {
@@ -130,27 +192,7 @@
                             el.textContent = tel;
                         }
                     });
-
-                    const ul = document.getElementById("medlist");
-                    ul.innerHTML = "";  
-                    ficheiro.medicacao.forEach((med) => {
-                      document.getElementById("medicacao").style.display = "block";
-                        if (med) {
-                            const li = document.createElement("li");
-                            li.textContent = med.trim();  // adicionar o texto da medicação
-                            ul.appendChild(li);
-                        }
-                    });
-                  
-                } 
-            
-        })
-        .catch(error => {
-            // console.error("Erro ao carregar o ficheiro: ", error);
-            // document.body.innerHTML = "<p>Erro ao carregar o ficheiro!</p>";
-        });
-}
-
+      }
 
   </script>
 

@@ -45,7 +45,27 @@ body {
     padding-bottom: 5px;
     text-align: left;
     height: 30px;
+    
   }
+  /* .imgPuzzle {
+    background-image: url(../aut/img/puzzle.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;  
+  } */
+  .containerTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+  }
+  
+  .containerTop.reverse {
+    justify-content: flex-end;  /* Se você quiser a imagem à direita, mude para 'flex-end' */
+  }
+  
   .imgPuzzle{
     background-image: url(../aut/img/puzzle.png);
     background-size: cover;
@@ -53,17 +73,14 @@ body {
     background-position: center;
     width: 50px;
     height: 50px;
-    position: absolute;
-    top: -25px;
-    right: 15px;
-    z-index: 1;
+    position: relative; 
+    top: 10px; 
+    right: 0;     
   }
  
-  .info-box {
-    position: relative;
+  .info-box {    
     background-color: white;
     border-radius: 10px;
-    z-index: 1;
     background: #f9f9f9;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -71,8 +88,11 @@ body {
     font-size: 0.75em;
     padding-left: 20px;
     padding-top: 1px;
-    padding-bottom: 5px;
-  }
+    padding-bottom: 5px; 
+    overflow-x: hidden;
+    max-height: 200px;
+    overflow-y: auto;  
+    }
 
   .titleDescription{
     text-align: left;
