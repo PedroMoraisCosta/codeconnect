@@ -191,10 +191,18 @@
                                     if (tel > 0) document.getElementById("avo2").style.display = "block";
                                     break;
                             }
-                            el.textContent = tel;
+                            el.textContent = formatarTelefone(tel);
                         }
                     });
       }
+
+      function formatarTelefone(tel) {
+      // Remove tudo que não for número
+      tel = tel.replace(/\D/g, '');
+
+      // Adiciona um espaço a cada 3 dígitos
+      return tel.replace(/(\d{3})(?=\d)/g, '$1 '); 
+    }
 
   </script>
 
