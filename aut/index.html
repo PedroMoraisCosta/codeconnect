@@ -29,15 +29,19 @@
         </ul>
      </div> -->
      <div id="sangue">
-        <p class="descriptionPosition"><strong>Tpo de Sangue:</strong></p>
+        <p class="descriptionPosition"><strong>Tipo de Sangue:</strong></p>
         <ul id="sanguelist" style="text-align: left; max-width: 250px; margin: auto;">
           <li></li>
         </ul>
       </div>
-      <p class="descriptionPosition"><strong>Nr. de Utente:</strong></p>
-      <ul style="text-align: left; max-width: 250px; margin: auto;">
-        <li>981365275</li>
-      </ul>
+      
+      <div id="utente">
+        <p class="descriptionPosition"><strong>Nr. de Utente:</strong></p>
+        <ul id="utentelist" style="text-align: left; max-width: 250px; margin: auto;">
+          <li></li>
+        </ul>
+      </div>
+
       <div id="medicacao">
         <p class="descriptionPosition"><strong>Medicação regular / alergias:</strong></p>
         <ul id="medlist" style="text-align: left; max-width: 250px; margin: auto;">
@@ -91,12 +95,14 @@
     document.getElementById("mae").style.display = "none";
     document.getElementById("avo").style.display = "none";
     document.getElementById("avo2").style.display = "none";
+    document.getElementById("medicacao").style.display = "none";
     document.getElementById("sangue").style.display = "none";
+    document.getElementById("utente").style.display = "none";
 
     const chave = getParametroURL("p4");
     const file = getParametroURL("p5");
 
-    document.getElementById("medicacao").style.display = "none";
+    
 
     if(file && chave){
       carregarContactos(file, chave);
@@ -123,6 +129,8 @@
                     PreencherMedicacao(ficheiro);
                     
                     PreencherSangue(ficheiro);
+
+                    PreencherUtente(ficheiro);
                   
                 } 
             
@@ -210,12 +218,11 @@
     }
 
     function PreencherSangue(ficheiro){
+      let sangue =ficheiro.sangue;
+
       const ul = document.getElementById("sanguelist");
       ul.innerHTML = "";
 
-      
-
-      let sangue =ficheiro.sangue;
       if(sangue && sangue.length>0)
       {
         const li = document.createElement("li");
@@ -224,9 +231,20 @@
 
         document.getElementById("sangue").style.display = "block";
       }
+    }
 
-     
+    function  PreencherUtente(ficheiro){
+      let utente =ficheiro.utente;
+      const ul = document.getElementById("utentelist");
+      ul.innerHTML = "";
+      if(utente && utente.length>0)
+      {
+        const li = document.createElement("li");
+        li.textContent = utente.trim();
+        ul.appendChild(li);
 
+        document.getElementById("utente").style.display = "block";
+      }
     }
 
   </script>
