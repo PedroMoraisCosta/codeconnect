@@ -28,10 +28,12 @@
           <li><span id="dtnasc"></span></li>
         </ul>
      </div> -->
-      <p class="descriptionPosition"><strong>Tpo de Sangue:</strong></p>
-      <ul style="text-align: left; max-width: 250px; margin: auto;">
-        <li>A Negativo</li>
-      </ul>
+     <div id="sangue">
+        <p class="descriptionPosition"><strong>Tpo de Sangue:</strong></p>
+        <ul id="sanguelist" style="text-align: left; max-width: 250px; margin: auto;">
+          <li></li>
+        </ul>
+      </div>
       <p class="descriptionPosition"><strong>Nr. de Utente:</strong></p>
       <ul style="text-align: left; max-width: 250px; margin: auto;">
         <li>981365275</li>
@@ -89,6 +91,7 @@
     document.getElementById("mae").style.display = "none";
     document.getElementById("avo").style.display = "none";
     document.getElementById("avo2").style.display = "none";
+    document.getElementById("sangue").style.display = "none";
 
     const chave = getParametroURL("p4");
     const file = getParametroURL("p5");
@@ -117,7 +120,9 @@
 
                     PreencherContactos(ficheiro);
 
-                    PreencherMedicacao(ficheiro);                    
+                    PreencherMedicacao(ficheiro);
+                    
+                    PreencherSangue(ficheiro);
                   
                 } 
             
@@ -196,12 +201,32 @@
                     });
       }
 
-      function formatarTelefone(tel) {
+    function formatarTelefone(tel) {
       // Remove tudo que não for número
       tel = tel.replace(/\D/g, '');
 
       // Adiciona um espaço a cada 3 dígitos
       return tel.replace(/(\d{3})(?=\d)/g, '$1 '); 
+    }
+
+    function PreencherSangue(ficheiro){
+      const ul = document.getElementById("sanguelist");
+      ul.innerHTML = "";
+
+      
+
+      let sangue =ficheiro.sangue;
+      if(sangue && sangue.length>0)
+      {
+        const li = document.createElement("li");
+        li.textContent = sangue.trim();
+        ul.appendChild(li);
+
+        document.getElementById("sangue").style.display = "block";
+      }
+
+     
+
     }
 
   </script>
