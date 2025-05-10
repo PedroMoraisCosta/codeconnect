@@ -101,12 +101,17 @@
     document.getElementById("sangue").style.display = "none";
     document.getElementById("utente").style.display = "none";
 
-    const chave = getParametroURL("p4");
+    let chave = getParametroURL("p4");
     const file = getParametroURL("p5");
-
+    
     
 
     if(file && chave){
+      if(file=="f11") //Fix Bug Cartao do Guilherme nao tem encoded
+      {
+        chave = chave.replace(" ","+")
+      }
+
       carregarContactos(file, chave);
     }
   
