@@ -326,6 +326,9 @@ max-height: 100%; /* Keeps it within the model3d-container */
   .email {
     word-break: break-word;
   }
+  .cardsize{
+    width: 15%;
+  }
 
 /* WHEN IS SMALLER THEN  */
 @media (max-width: 478px) { 
@@ -347,4 +350,7 @@ max-height: 100%; /* Keeps it within the model3d-container */
         width:75%;
         max-width: 100%; 
     }
+    .cardsize{
+    width: 45%;
+  }
 }
