@@ -68,10 +68,10 @@ background: white;
     }
 
    .footer {
-      background-color: #eee; /* example */
+      color: black; 
       padding: 10px;
-     
-      border: 1px solid #ccc;
+      background: rgba(255, 0, 0, 0.05);
+     font-size: x-large;
   }
 
   .middle-esquerda{
