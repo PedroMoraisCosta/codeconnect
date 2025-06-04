@@ -85,7 +85,6 @@ body {
     border-radius: 10px;
     margin-bottom: 20px;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    font-size: 0.75em;
     padding-left: 20px;
     padding-top: 1px;
     padding-bottom: 5px; 
@@ -124,7 +123,7 @@ body {
     justify-content: space-between;
     margin: 10px 0 10px auto; /* empurra para a direita */
     padding: 10px 5px;
-    width: 45%;
+    width: 60%;
     max-width: 200px;
     background: white;
     border: 1px solid #ccc;
@@ -180,8 +179,58 @@ body {
   background: #f1f1f1;  /* Cor de fundo da barra de rolagem */
 }
 
+
+.medicacao-container {
+  text-align: left;
+}
+
+.medicacao-list{
+  max-width: 250px;
+  margin-left: 0;
+}
+
   @media (max-width: 478px) { 
     .descriptionPosition{
       text-align: left;
+      color: blue;
     }
+     .info-box {   
+    font-size: 0.8em;
+  }
+}
+
+/*tablets >=768px*/
+@media(min-width:768px){
+   .container {
+    padding: 20px;
+    width: 50%;
+  }
+  .info-box {   
+    font-size: 0.85em;
+      max-height: 250px;
+  }
+}
+
+/*desktops >=992px*/
+@media(min-width:992px){
+ .container {
+    padding: 20px;
+    width: 35%;
+  }
+  .info-box {   
+    font-size: 0.95em;
+     max-height: 310px;
+  }
+}
+
+/*desktops >=992px*/
+@media(min-width:993px){
+ .container {
+    padding: 20px;
+    width: 35%;
+  }
+  .info-box {   
+    font-size: 1em;
+    max-height: 310px;
+  }
 }
