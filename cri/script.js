@@ -8,7 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('mae').style.display = 'none'
       document.getElementById('avo').style.display = 'none'
       document.getElementById('avo2').style.display = 'none'
-      document.getElementById('medicacao').style.display = 'none'
+      document
+        .getElementById('medicacao')
+        .style.setProperty('display', 'none', 'important')
       document.getElementById('sangue').style.display = 'none'
       document.getElementById('utente').style.display = 'none'
 
