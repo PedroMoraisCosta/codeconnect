@@ -75,8 +75,10 @@ background: white;
 
   .middle-esquerda{
      background-image: url('img/esquerda.jpg');
-      background-size: cover;
-      background-position: center;
+     /* background-size: cover;
+       background-position: center;*/
+      background-size: unset; 
+     background-position: center;
       border: 1px solid #ccc;
   }
  .middle-top{
