@@ -59,13 +59,13 @@ background: white;
     border-radius: 10px;
     margin-bottom: 5px;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    font-size: 0.75em;
     padding-left: 5px;
     padding-top: 5px;
     padding-bottom: 5px; 
     overflow-x: hidden;
      max-height: 300px; 
     overflow-y: scroll;  
+    margin: 0 auto;
     }
 
    .footer {
@@ -166,19 +166,27 @@ html, body {
   .header-opaco {
       width: 100%;
   }
+  .info-box{
+    width: 100%;
+  }
 }
 /*tablets >=768px*/
 @media(min-width:768px){
   .header-opaco {
       width: 50%;
   }
+  .info-box{
+    width: 40%;
+  }
 }
 
 /*desktops >=992px*/
 @media(min-width:992px){
   .header-opaco {
-             width: 50%;
-    justify-content: center;
+    width: 50%;
+  }
+  .info-box{
+    width: 30%;
   }
 }
 
