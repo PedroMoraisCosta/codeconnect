@@ -12,8 +12,9 @@ body , html{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5%;
+    margin: 5% auto; 
     border-radius: 43px;
+   
 }
 .header-opaco h4 {
     text-transform: uppercase;
@@ -157,8 +158,28 @@ html, body {
   border: 1px solid #ddd;
   border-radius: 8px;
 }
-@media (max-width: 576px) {
+
+
+
+/*smartphones <768px*/
+@media(max-width:768px){
+  .header-opaco {
+      width: 100%;
+  }
+}
+/*tablets >=768px*/
+@media(min-width:768px){
+  .header-opaco {
+      width: 50%;
+  }
 }
 
+/*desktops >=992px*/
+@media(min-width:992px){
+  .header-opaco {
+             width: 50%;
+    justify-content: center;
+  }
+}
 
  

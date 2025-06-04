@@ -4,11 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const file = getParametroURL('p5')
 
     if (file && chave) {
-      if (file == 'f11') {
-        //Fix Bug Cartao do Guilherme nao tem encoded
-        chave = chave.replace(' ', '+')
-      }
-
       document.getElementById('pai').style.display = 'none'
       document.getElementById('mae').style.display = 'none'
       document.getElementById('avo').style.display = 'none'
@@ -133,18 +128,24 @@ function PreencherContactos (ficheiro) {
   ficheiro.telefones.forEach((tel, index) => {
     const el = document.getElementById('tel' + (index + 1))
     if (el && tel) {
+      const telformated = Number(tel.replace(/\s+/g, ''))
       switch (index) {
         case 0:
-          if (tel > 0) document.getElementById('pai').style.display = 'block'
+          if (telformated > 0)
+            document.getElementById('pai').style.display = 'block'
+
           break
         case 1:
-          if (tel > 0) document.getElementById('mae').style.display = 'block'
+          if (telformated > 0)
+            document.getElementById('mae').style.display = 'block'
           break
         case 2:
-          if (tel > 0) document.getElementById('avo').style.display = 'block'
+          if (telformated > 0)
+            document.getElementById('avo').style.display = 'block'
           break
         case 3:
-          if (tel > 0) document.getElementById('avo2').style.display = 'block'
+          if (telformated > 0)
+            document.getElementById('avo2').style.display = 'block'
           break
       }
       el.textContent = formatarTelefone(tel)
