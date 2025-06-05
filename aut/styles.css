@@ -192,7 +192,7 @@ body {
   @media (max-width: 478px) { 
     .descriptionPosition{
       text-align: left;
-      color: blue;
+      color: lightcoral;
     }
      .info-box {   
     font-size: 0.8em;
