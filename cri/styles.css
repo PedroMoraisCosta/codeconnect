@@ -1,9 +1,10 @@
-body , html{
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0; 
-    height: 100%;
-    min-width: 200px;
+
+body, html {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden; /* para evitar scroll horizontal */
 }
 
 .header-opaco {
@@ -12,7 +13,7 @@ body , html{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5% auto; 
+    margin: 1rem auto; 
     border-radius: 43px;
    
 }
@@ -20,14 +21,7 @@ body , html{
     text-transform: uppercase;
 }
 
-/* .contact-button {
-background: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1em;
-    min-width: 160px;
-     height: 48px;
-} */
+
 
 .contact-button {
       height: 35px;
@@ -52,21 +46,18 @@ background: white;
     height: 30px;
   }
 
-   .info-box {    
-    background-color: white;
-    border-radius: 10px;
-    background: #f9f9f9;
-    border-radius: 10px;
-    margin-bottom: 5px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    padding-left: 5px;
-    padding-top: 5px;
-    padding-bottom: 5px; 
-    overflow-x: hidden;
-     max-height: 300px; 
-    overflow-y: scroll;  
-    margin: 0 auto;
-    }
+  .info-box {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  padding: 5px;
+  overflow-x: hidden;
+  max-height: 300px;
+  overflow-y: auto; 
+  margin: 0 auto;
+}
 
    .footer {
       color: black; 
@@ -96,52 +87,12 @@ background: white;
 .set-opacity{
   opacity: 0.9;
 }
-/* IN CASE OF REMOVE SCROLL
- body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
 
-main {
-  flex: 1 0 auto; 
-}
-
-.footer {
-  flex-shrink: 0;
-}
-
-.info-box {
-  max-height: none; 
-  overflow-y: auto; 
-} */
 
 .setNext{
   display: flex;
   align-items: left;
   gap:3px;
-}
-
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.main-horizontal {
-  display: flex;
-  /* height: 100vh;  */
-  width: 100%;
-   height: 340px;
-}
-
-.left-half,
-.right-half {
-  width: 50%; /* 50% width each */
-  padding: 10px;
-  box-sizing: border-box;
-  height: 100%;
-  min-width: 164px;
 }
 
 .new-div {
@@ -152,14 +103,7 @@ html, body {
  
 }
 
-.middleSection{
-  
-}
-.info-box {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-}
+
 
 .text-value{
   color:salmon
