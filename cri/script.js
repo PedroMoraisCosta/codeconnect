@@ -120,7 +120,21 @@ function PreencherMedicacao (ficheiro) {
     if (med) {
       document.getElementById('medicacao').style.display = 'block'
       const li = document.createElement('li')
-      li.textContent = med.trim()
+
+      const medText = med.trim()
+      li.textContent = medText
+
+      const normalized = medText
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase()
+
+      if (normalized.includes('alergico')) {
+        li.classList.add('text-value-bold')
+      } else {
+        li.classList.add('text-value')
+      }
+
       ul.appendChild(li)
     }
   })

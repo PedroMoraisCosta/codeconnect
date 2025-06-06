@@ -159,6 +159,14 @@ html, body {
   border-radius: 8px;
 }
 
+.text-value{
+  color:salmon
+}
+.text-value-bold{
+    font-weight: 600;
+    color: red;
+    font-size: 20px;
+}
 
 
 /*smartphones <768px*/
