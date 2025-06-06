@@ -93,7 +93,9 @@ background: white;
       background-size: cover;
       background-position: center;
   }
-
+.set-opacity{
+  opacity: 0.9;
+}
 /* IN CASE OF REMOVE SCROLL
  body {
   display: flex;
@@ -151,7 +153,7 @@ html, body {
 }
 
 .middleSection{
-  opacity: 0.9;
+  
 }
 .info-box {
   background-color: #f9f9f9;
