@@ -3,27 +3,6 @@ function getParametroURL (nome) {
   return params.get(nome)
 }
 
-const pnome = getParametroURL('p1')
-const unome = getParametroURL('p2')
-const dtnasc = getParametroURL('p3')
-
-if (pnome) document.getElementById('title').textContent = pnome.toUpperCase()
-if (pnome && unome)
-  document.getElementById('title').textContent =
-    pnome.toUpperCase() + ' ' + unome.toUpperCase()
-if (pnome && dtnasc)
-  document.getElementById('titleDescription').innerHTML =
-    'Olá! Sou o ' +
-    pnome.toUpperCase() +
-    ' nascido a <strong>' +
-    dtnasc +
-    '</strong> e tenho dificuldade para comunicar.'
-else if (pnome) {
-  document.getElementById('titleDescription').innerHTML =
-    'Olá! Sou o ' +
-    pnome.toUpperCase() +
-    ' e tenho dificuldade<br>para comunicar.'
-}
 // if(dtnasc)
 // {
 //   document.getElementById("dtnasc").textContent = dtnasc;
@@ -32,10 +11,10 @@ else if (pnome) {
 //   document.getElementById("dtnascimento").style.display = "none";
 // }
 
-document.getElementById('pai').style.display = 'none'
-document.getElementById('mae').style.display = 'none'
-document.getElementById('avo').style.display = 'none'
-document.getElementById('avo2').style.display = 'none'
+document.getElementById('contactoRow1').style.display = 'none'
+document.getElementById('contactoRow2').style.display = 'none'
+document.getElementById('contactoRow3').style.display = 'none'
+document.getElementById('contactoRow4').style.display = 'none'
 document.getElementById('medicacao').style.display = 'none'
 document.getElementById('sangue').style.display = 'none'
 document.getElementById('utente').style.display = 'none'
@@ -67,6 +46,8 @@ function carregarContactos (file, chave) {
       if (decrypted) {
         const ficheiro = JSON.parse(decrypted)
 
+        PreencherDescricao(ficheiro)
+
         PreencherContactos(ficheiro)
 
         PreencherMedicacao(ficheiro)
@@ -77,7 +58,7 @@ function carregarContactos (file, chave) {
       }
     })
     .catch(error => {
-      // console.error("Erro ao carregar o ficheiro: ", error);
+      console.error('Erro ao carregar o ficheiro: ', error)
       // document.body.innerHTML = "<p>Erro ao carregar o ficheiro!</p>";
     })
 }
@@ -131,19 +112,38 @@ function PreencherMedicacao (ficheiro) {
 function PreencherContactos (ficheiro) {
   ficheiro.telefones.forEach((tel, index) => {
     const el = document.getElementById('tel' + (index + 1))
+    const elnome = document.getElementById('contactonNameRow' + (index + 1))
     if (el && tel) {
       switch (index) {
-        case 0:
-          if (tel > 0) document.getElementById('pai').style.display = 'block'
+        case 0: //PAI
+          if (tel > 0) {
+            elnome.textContent = ficheiro.nomestelefones?.[0] || 'Pai'
+            document.getElementById('contactoRow' + (index + 1)).style.display =
+              'block'
+          }
           break
-        case 1:
-          if (tel > 0) document.getElementById('mae').style.display = 'block'
+        case 1: //MAE
+          if (tel > 0) {
+            elnome.textContent = ficheiro.nomestelefones?.[1] || 'Mãe'
+            document.getElementById('contactoRow' + (index + 1)).style.display =
+              'block'
+          }
           break
-        case 2:
-          if (tel > 0) document.getElementById('avo').style.display = 'block'
+        case 2: //AVO
+          if (tel > 0) {
+            elnome.textContent = ficheiro.nomestelefones?.[2] || 'Avó'
+            document.getElementById('contactoRow' + (index + 1)).style.display =
+              'block'
+          }
+
           break
-        case 3:
-          if (tel > 0) document.getElementById('avo2').style.display = 'block'
+        case 3: //AVó
+          if (tel > 0) {
+            elnome.textContent = ficheiro.nomestelefones?.[3] || 'Avô'
+            document.getElementById('contactoRow' + (index + 1)).style.display =
+              'block'
+          }
+
           break
       }
       el.textContent = formatarTelefone(tel)
@@ -184,5 +184,29 @@ function PreencherUtente (ficheiro) {
     ul.appendChild(li)
 
     document.getElementById('utente').style.display = 'block'
+  }
+}
+
+function PreencherDescricao (ficheiro) {
+  const pnome = getParametroURL('p1')
+  const unome = getParametroURL('p2')
+  let dtnasc = ficheiro.nascimento // getParametroURL('p3')
+
+  if (pnome) document.getElementById('title').textContent = pnome.toUpperCase()
+  if (pnome && unome)
+    document.getElementById('title').textContent =
+      pnome.toUpperCase() + ' ' + unome.toUpperCase()
+  if (pnome && dtnasc)
+    document.getElementById('titleDescription').innerHTML =
+      'Olá! Sou o ' +
+      pnome.toUpperCase() +
+      ' nascido a <strong>' +
+      dtnasc +
+      '</strong> e tenho dificuldade para comunicar.'
+  else if (pnome) {
+    document.getElementById('titleDescription').innerHTML =
+      'Olá! Sou o ' +
+      pnome.toUpperCase() +
+      ' e tenho dificuldade<br>para comunicar.'
   }
 }
