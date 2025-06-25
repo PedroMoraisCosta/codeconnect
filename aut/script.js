@@ -46,6 +46,8 @@ function carregarContactos (file, chave) {
       if (decrypted) {
         const ficheiro = JSON.parse(decrypted)
 
+        PreencherNome(ficheiro)
+
         PreencherDescricao(ficheiro)
 
         PreencherContactos(ficheiro)
@@ -91,6 +93,24 @@ function GetKey (chave) {
   } catch (erro) {
     console.error('Erro no GetKey:', erro)
     return ''
+  }
+}
+
+function PreencherNome (ficheiro) {
+  let nomeCompleto = ficheiro.primeironome + ' ' + ficheiro.ultimonome
+  document.getElementById('name').innerHTML = nomeCompleto
+
+  let nascimento = ficheiro.nascimento
+
+  const ul = document.getElementById('dtnascimento')
+  ul.innerHTML = ''
+
+  if (nascimento && nascimento.length > 0) {
+    const li = document.createElement('li')
+    li.textContent = nascimento.trim()
+    ul.appendChild(li)
+
+    document.getElementById('dtnasc').style.display = 'block'
   }
 }
 
@@ -186,8 +206,11 @@ function PreencherUtente (ficheiro) {
     document.getElementById('utente').style.display = 'block'
   }
 }
-
 function PreencherDescricao (ficheiro) {
+  document.getElementById('titleDescription').innerHTML = ficheiro.descricao
+}
+
+function PreencherDescricao2 (ficheiro) {
   const pnome = getParametroURL('p1')
   const unome = getParametroURL('p2')
   let dtnasc = ficheiro.nascimento // getParametroURL('p3')
