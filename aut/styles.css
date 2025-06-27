@@ -95,6 +95,7 @@ body {
 
   .titleDescription{
     text-align: left;
+    margin-right: 5px;
   }
 
   .fontFamily{
@@ -189,16 +190,23 @@ body {
   margin-left: 0;
 }
 
-.descriptionPosition{
+.headerTitle{
   color: lightcoral;
+}
+.headerTitleLost{
+   color: red;
+   letter-spacing: 2px;
 }
 
   @media (max-width: 478px) { 
-    .descriptionPosition{
+    .headerTitle{
       text-align: left;
     }
-     .info-box {   
-    font-size: 0.8em;
+    .headerTitleLost{
+      text-align: left;
+    }
+    .info-box {   
+      font-size: 0.8em;
   }
 }
 
