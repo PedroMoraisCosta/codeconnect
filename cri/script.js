@@ -144,6 +144,8 @@ function PreencherContactos (ficheiro) {
   ficheiro.telefones.forEach((tel, index) => {
     const el = document.getElementById('tel' + (index + 1))
     if (el && tel) {
+      const nome = ficheiro.nomestelefones[index]
+
       const telformated = Number(tel.replace(/\s+/g, ''))
       switch (index) {
         case 0:
@@ -164,17 +166,9 @@ function PreencherContactos (ficheiro) {
             document.getElementById('avo2').style.display = 'block'
           break
       }
-      el.textContent = formatarTelefone(tel)
+      el.textContent = nome + ' ' + tel
     }
   })
-}
-
-function formatarTelefone (tel) {
-  // Remove tudo que não for número
-  tel = tel.replace(/\D/g, '')
-
-  // Adiciona um espaço a cada 3 dígitos
-  return tel.replace(/(\d{3})(?=\d)/g, '$1 ')
 }
 
 function PreencherSangue (ficheiro) {
