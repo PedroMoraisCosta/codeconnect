@@ -21,7 +21,7 @@ body, html {
     text-transform: uppercase;
 }
 .contact-name{
-  color: red;
+  color: red !important;
 }
 
 .contact-button {
