@@ -109,6 +109,15 @@ function PreencherDtNascimento (ficheiro) {
 
   const ul = document.getElementById('dtnascList')
   ul.innerHTML = texto
+
+  traducao('dtnascLabel', ficheiro.traduzirdtnascimento)
+}
+
+function traducao (fieldId, name) {
+  if (name && name.length > 0) {
+    let component = document.getElementById(fieldId)
+    component.textContent = name + ':'
+  }
 }
 
 function PreencherMedicacao (ficheiro) {

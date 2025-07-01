@@ -40,7 +40,7 @@ function buildArchitecture (callback) {
         document.getElementById('phones-placeholder').innerHTML = data
       }),
 
-    fetch('middle2.html')
+    fetch('middle.html')
       .then(res => res.text())
       .then(data => {
         document.getElementById('middle-placeholder').innerHTML = data
