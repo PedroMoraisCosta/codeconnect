@@ -58,6 +58,7 @@ body, html {
   max-height: 300px;
   overflow-y: auto; 
   margin: 0 auto;
+  min-height: 10rem
 }
 
    .footer {
