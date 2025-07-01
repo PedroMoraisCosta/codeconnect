@@ -81,7 +81,7 @@ body {
   .info-box {    
     background-color: white;
     border-radius: 10px;
-    background: orange;/* #f9f9f9;*/
+    background:  #f9f9f9;
     border-radius: 10px;
     margin-bottom: 20px;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
@@ -92,7 +92,7 @@ body {
     max-height: 170px;
     overflow-y: scroll;
     scrollbar-gutter: stable;
-     min-height: 16rem  
+     min-height: 13rem  
     }
 
   .titleDescription{
