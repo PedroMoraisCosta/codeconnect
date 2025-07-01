@@ -20,7 +20,9 @@ body, html {
 .header-opaco h4 {
     text-transform: uppercase;
 }
-
+.contact-name{
+  color: red;
+}
 
 .contact-button {
     border: 1px solid black;
