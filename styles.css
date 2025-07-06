@@ -1,7 +1,7 @@
 body {
     margin: 0;
     background-color: #f0ebeb;
-
+    overflow-x: hidden;
  }
 
 table{
@@ -354,11 +354,11 @@ max-height: 100%; /* Keeps it within the model3d-container */
   .zoominandout{
     animation: zoomInOut 2s ease-in-out infinite;
   }
-/* NavBar Change color on zoom*/
+/* NavBar Change color on scroll*/
   .navbar{
     transition: all 0.5s;
     opacity: 0.9;
-    
+    background-color:rgba(0, 0, 0, 20%);
   }
 
 .navbar-scrolled{
@@ -366,9 +366,11 @@ max-height: 100%; /* Keeps it within the model3d-container */
   box-shadow: 0 3px 10px rgba(0,0,0,0.15);
 
 }
- .nav-link{
-  color:white !important;
+
+.navbar-font{
+  font-family: 'Poppins', sans-serif;
 }
+
 
 /*NavBar change button*/
 .navbar.toggler{
