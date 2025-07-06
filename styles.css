@@ -373,7 +373,7 @@ max-height: 100%; /* Keeps it within the model3d-container */
 
 
 /*NavBar change button*/
-.navbar.toggler{
+.navbar-toggler{
   border:0;
 }
 
