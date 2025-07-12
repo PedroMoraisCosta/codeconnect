@@ -203,7 +203,7 @@ body {
    color: red;
    letter-spacing: 2px;
 }
-
+/*smartphones <478*/
   @media (max-width: 478px) { 
     .headerTitle{
       text-align: left;
@@ -213,6 +213,11 @@ body {
     }
     .info-box {   
       font-size: 0.8em;
+  }
+  .contact-button{
+    width: 35%;
+    min-width: 140px;
+
   }
 }
 
