@@ -116,7 +116,6 @@ body {
 
   .container {
     padding: 20px;
-    width: 80%;
   }
   .utente{
     margin: auto;
@@ -225,7 +224,6 @@ body {
 @media(min-width:768px){
    .container {
     padding: 20px;
-    width: 50%;
   }
   .info-box {   
     font-size: 0.85em;
@@ -237,7 +235,7 @@ body {
 @media(min-width:992px){
  .container {
     padding: 20px;
-    width: 35%;
+    
   }
   .info-box {   
     font-size: 0.95em;
@@ -249,7 +247,6 @@ body {
 @media(min-width:993px){
  .container {
     padding: 20px;
-    width: 35%;
   }
   .info-box {   
     font-size: 1em;
