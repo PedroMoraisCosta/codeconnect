@@ -45,7 +45,6 @@ body {
     padding-bottom: 5px;
     text-align: left;
     height: 30px;
-    font-weight: 600;
     
   }
   /* .imgPuzzle {
@@ -125,17 +124,15 @@ body {
   
 
   .contact-button {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+   
+    
     margin: 10px 0 10px auto; /* empurra para a direita */
     padding: 10px 5px;
-    width: 60%;
-    max-width: 200px;
+   
     background: white;
     border: 1px solid #ccc;
     border-radius: 8px;
-    font-size: 1em;
+    
     min-width: 160px;
   }
 
@@ -191,18 +188,21 @@ body {
   text-align: left;
 }
 
-.medicacao-list{
-  max-width: 250px;
+.values-list{
   margin-left: 0;
+  text-align: left;
 }
 
 .headerTitle{
   color: lightcoral;
+  text-align: left;
 }
 .headerTitleLost{
    color: red;
    letter-spacing: 2px;
 }
+
+
 /*smartphones <478*/
   @media (max-width: 478px) { 
     .headerTitle{
@@ -214,11 +214,7 @@ body {
     .info-box {   
       font-size: 0.8em;
   }
-  .contact-button{
-    width: 35%;
-    min-width: 140px;
-
-  }
+  
 }
 
 /*tablets >=768px*/

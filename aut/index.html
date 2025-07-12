@@ -7,74 +7,95 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <title>Codeconnect - Ajuda</title>
 </head>
 <body>
   <center class="wrapper">
 
-  <div class="titleName" id="name">P1 P2</div>
+  <div class="fw-bold titleName" id="name">P1 P2</div>
 
-  <div class="container">
-  <div class="containerTop">
-      <div id="about" class="titleAbout">Sobre mim...</div>
-      <div class="imgPuzzle"></div>
-    </div>
-
-    <div class="info-box">
-      <p class="titleDescription" id="titleDescription"></p>
-      
+<div class="container">
+  <div class="row">
      <div class="containerTop">
-       <div id="alertaDescricao">
-          <p class="headerTitleLost"><strong>Cartão Perdido:</strong></p>
-          <ul id="alertaText" style="text-align: left; max-width: 250px; margin: auto;">
-            <li></li>
-          </ul>
+        <div id="about" class="mb-4 fw-semibold titleAbout">Sobre mim...</div>
+        <div class="imgPuzzle"></div>
+      </div>
+  </div>
+   
+  <div class="row">
+    <div class="info-box">
+        <div class="row">
+          <p class="mt-2 titleDescription" id="titleDescription"></p>
         </div>
-
-      <div id="dtnasc">
-          <p class="headerTitle"><strong>Data de Nascimento:</strong></p>
-          <ul id="dtnascimento" style="text-align: left; max-width: 250px; margin: auto;">
-            <li></li>
-          </ul>
-        </div>
-
-       <div id="sangue" class="utente">
-          <p class="headerTitle"><strong>Tipo de Sangue:</strong></p>
-          <ul id="sanguelist" style="text-align: left; max-width: 250px; margin: auto;">
-            <li></li>
-          </ul>
+        <div class="row">
+          <div>
+             <div id="alertaDescricao">
+                  <div class="headerTitleLost"><strong>Cartão Perdido:</strong></div>
+                  <ul id="alertaText" class="values-list">
+                    <li></li>
+                  </ul>
+                </div>
+          </div>
+          <div class="col-7 col-sm-6 col-md-6 col-lg-3">
+              <div id="dtnasc">
+                  <div class="headerTitle"><strong>Data de Nascimento:</strong></div>
+                  <ul id="dtnascimento" class="values-list">
+                    <li></li>
+                  </ul>
+              </div>
+          </div>
+           <div class="col-5 col-sm-6 col-md-6 col-lg-3">
+               <div id="sangue" class="utente">
+                    <div class="headerTitle"><strong>Tipo de Sangue:</strong></div>
+                    <ul id="sanguelist" class="values-list">
+                      <li></li>
+                    </ul>
+                </div>
+           </div>
+            
+             <div class="col-7 col-sm-6 col-md-6 col-lg-3">
+                  <div id="medicacao" class="mt-2  medicacao-container">
+                    <div class="headerTitle"><strong>Medicação regular / alergias:</strong></div>
+                    <ul id="medlist" class="values-list">
+                      <li></li>
+                    </ul>
+                  </div>
+             </div>
+             <div class="col-5 col-sm-6 col-md-6 col-lg-3">
+                <div id="utente" class="mt-2 utente">
+                    <div class="headerTitle"><strong>Nr. de Utente:</strong></div>
+                    <ul id="utentelist" class="values-list">
+                      <li></li>
+                    </ul>
+                  </div>
+            </div>          
         </div>
         
-        <div id="utente" class="utente">
-          <p class="headerTitle"><strong>Nr. de Utente:</strong></p>
-          <ul id="utentelist" style="text-align: left; max-width: 250px; margin: auto;">
-            <li></li>
-          </ul>
-        </div>
-      </div>
-
-      <div id="medicacao" class="medicacao-container">
-        <p class="headerTitle"><strong>Medicação regular / alergias:</strong></p>
-        <ul id="medlist" class="medicacao-list">
-          <li></li>
-        </ul>
-      </div>
     </div>
-
-    <!-- Botões de contacto -->
-    <div class="contact-button" id="contactoRow1"><span id="contactonNameRow1" class="contact-name">📞</span> <span id="tel1">-</span></div>
-    <div class="contact-button" id="contactoRow2"><span id="contactonNameRow2" class="contact-name">📞</span> <span id="tel2">-</span></div>
-    <div class="contact-button" id="contactoRow3"><span id="contactonNameRow3" class="contact-name">📞</span> <span id="tel3">-</span></div> 
-    <div class="contact-button" id="contactoRow4"><span id="contactonNameRow4" class="contact-name">📞</span> <span id="tel4">-</span></div> 
-    
-
-    
-    
-    <div class="footer footerTamanho1">Obrigado...</div>
-    <div class="footer footerTamanho2">www.codeconnect.pt</div>
-
-
   </div>
+  <div class="row"> 
+      <!-- Botões de contacto -->
+      <div class="mt-2 me-2 col-auto fw-semibold contact-button" id="contactoRow1"><span id="contactonNameRow1" class="contact-name">📞</span> <span id="tel1">-</span></div>
+  </div>
+   <div class="row">
+      <div class="mt-2 me-2 col-auto fw-semibold contact-button" id="contactoRow2"><span id="contactonNameRow2" class="contact-name">📞</span> <span id="tel2">-</span></div>
+   </div>
+    <div class="row">
+      <div class="mt-2 me-2 col-auto fw-semibold contact-button" id="contactoRow3"><span id="contactonNameRow3" class="contact-name">📞</span> <span id="tel3">-</span></div> 
+    </div>
+     <div class="row">
+      <div class="mt-2 me-2 col-auto fw-semibold contact-button" id="contactoRow4"><span id="contactonNameRow4" class="contact-name">📞</span> <span id="tel4">-</span></div>
+     </div>   
+       
+  
+  <div class="row justify-content-end">
+      <div class="mt-3 fw-bold col-auto">Obrigado...</div>
+  </div>
+  <div class="row justify-content-end">
+      <div class="mt-3 col-auto">www.codeconnect.pt</div>
+  </div>
+</div>
  </center>
  <script src="script.js"></script>  
   
