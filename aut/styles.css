@@ -85,7 +85,7 @@ body {
     border-radius: 10px;
     margin-bottom: 20px;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    padding-left: 20px;
+    padding-left: 5px;
     padding-top: 1px;
     padding-bottom: 5px; 
     overflow-x: hidden;
@@ -115,7 +115,7 @@ body {
   } */
 
   .container {
-    padding: 20px;
+    padding: 10px;
   }
   .utente{
     margin: auto;
@@ -222,34 +222,30 @@ body {
 
 /*tablets >=768px*/
 @media(min-width:768px){
-   .container {
-    padding: 20px;
-  }
+  
   .info-box {   
     font-size: 0.85em;
       max-height: 250px;
+       padding-left: 10px;
   }
 }
 
 /*desktops >=992px*/
 @media(min-width:992px){
- .container {
-    padding: 20px;
-    
-  }
+ 
   .info-box {   
     font-size: 0.95em;
      max-height: 310px;
+      padding-left: 10px;
   }
 }
 
 /*desktops >=992px*/
 @media(min-width:993px){
- .container {
-    padding: 20px;
-  }
+ 
   .info-box {   
     font-size: 1em;
     max-height: 310px;
+    padding-left: 10px;
   }
 }
