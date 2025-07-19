@@ -3,14 +3,7 @@ function getParametroURL (nome) {
   return params.get(nome)
 }
 
-// if(dtnasc)
-// {
-//   document.getElementById("dtnasc").textContent = dtnasc;
-// }
-// else{
-//   document.getElementById("dtnascimento").style.display = "none";
-// }
-
+document.getElementById('anexosRow').style.display = 'none'
 document.getElementById('contactoRow1').style.display = 'none'
 document.getElementById('contactoRow2').style.display = 'none'
 document.getElementById('contactoRow3').style.display = 'none'
@@ -108,6 +101,10 @@ function GetKey (chave) {
 function PreencherNome (ficheiro) {
   let nomeCompleto = ficheiro.primeironome + ' ' + ficheiro.ultimonome
   document.getElementById('name').innerHTML = nomeCompleto
+
+  if (nomeCompleto.startsWith('Rita')) {
+    document.getElementById('anexosRow').style.display = 'flex'
+  }
 }
 
 function PreencherDataNascimento (ficheiro) {

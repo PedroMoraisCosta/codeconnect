@@ -136,6 +136,17 @@ body {
     min-width: 160px;
   }
 
+  .attachment-button{
+   
+    padding: 10px 5px;
+   
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    
+    min-width: 160px;
+  }
+
   .contact-button i {
     margin-right: 10px;
   }
