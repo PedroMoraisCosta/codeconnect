@@ -243,3 +243,12 @@ function PreencherUtente (ficheiro) {
 function PreencherDescricao (ficheiro) {
   document.getElementById('titleDescription').innerHTML = ficheiro.descricao
 }
+
+const modalEl = document.getElementById('imageModal')
+
+modalEl.addEventListener('hide.bs.modal', () => {
+  const activeEl = document.activeElement
+  if (modalEl.contains(activeEl)) {
+    activeEl.blur() // remove focus from any focused element inside modal
+  }
+})

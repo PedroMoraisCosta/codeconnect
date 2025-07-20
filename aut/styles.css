@@ -213,6 +213,11 @@ body {
    letter-spacing: 2px;
 }
 
+.modal.show {
+  display: flex !important;
+  align-items: center;       /* Alinha verticalmente */
+  justify-content: center;   /* Alinha horizontalmente */
+}
 
 /*smartphones <478*/
   @media (max-width: 478px) { 
