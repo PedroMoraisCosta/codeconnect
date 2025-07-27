@@ -59,6 +59,8 @@ function carregarContactos (file, chave) {
           PreencherSangue(ficheiro)
 
           PreencherUtente(ficheiro)
+
+          PreencherAnexo(ficheiro)
         }
       }
     })
@@ -98,13 +100,17 @@ function GetKey (chave) {
   }
 }
 
+function PreencherAnexo (ficheiro) {
+  let anexo = ficheiro.mostraranexo
+
+  if (anexo) {
+    document.getElementById('anexosRow').style.display = 'flex'
+  }
+}
+
 function PreencherNome (ficheiro) {
   let nomeCompleto = ficheiro.primeironome + ' ' + ficheiro.ultimonome
   document.getElementById('name').innerHTML = nomeCompleto
-
-  if (nomeCompleto.startsWith('Rita')) {
-    document.getElementById('anexosRow').style.display = 'flex'
-  }
 }
 
 function PreencherDataNascimento (ficheiro) {
