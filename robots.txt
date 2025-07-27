@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /aut/
+Disallow: /cri/
+
+Sitemap: https://www.codeconnect.pt/sitemap.xml
