@@ -172,6 +172,8 @@ function PreencherContactos (ficheiro) {
   ficheiro.telefones.forEach((tel, index) => {
     const el = document.getElementById('tel' + (index + 1))
     const elnome = document.getElementById('contactonNameRow' + (index + 1))
+    const contactLink = document.getElementById('contactNameRow' + (index + 1))
+
     if (el && tel) {
       switch (index) {
         case 0: //PAI
@@ -179,6 +181,10 @@ function PreencherContactos (ficheiro) {
             elnome.textContent = ficheiro.nomestelefones?.[0] || 'Pai'
             document.getElementById('contactoRow' + (index + 1)).style.display =
               'block'
+            contactLink.href = 'tel:' + tel
+            contactLink.title = `Ligar para ${
+              elnome.textContent
+            } (${formatarTelefone(tel)})`
           }
           break
         case 1: //MAE
@@ -186,6 +192,10 @@ function PreencherContactos (ficheiro) {
             elnome.textContent = ficheiro.nomestelefones?.[1] || 'Mãe'
             document.getElementById('contactoRow' + (index + 1)).style.display =
               'block'
+            contactLink.href = 'tel:' + tel
+            contactLink.title = `Ligar para ${
+              elnome.textContent
+            } (${formatarTelefone(tel)})`
           }
           break
         case 2: //AVO
@@ -193,6 +203,10 @@ function PreencherContactos (ficheiro) {
             elnome.textContent = ficheiro.nomestelefones?.[2] || 'Avó'
             document.getElementById('contactoRow' + (index + 1)).style.display =
               'block'
+            contactLink.href = 'tel:' + tel
+            contactLink.title = `Ligar para ${
+              elnome.textContent
+            } (${formatarTelefone(tel)})`
           }
 
           break
@@ -201,6 +215,10 @@ function PreencherContactos (ficheiro) {
             elnome.textContent = ficheiro.nomestelefones?.[3] || 'Avô'
             document.getElementById('contactoRow' + (index + 1)).style.display =
               'block'
+            contactLink.href = 'tel:' + tel
+            contactLink.title = `Ligar para ${
+              elnome.textContent
+            } (${formatarTelefone(tel)})`
           }
 
           break
