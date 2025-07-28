@@ -173,6 +173,43 @@ function PreencherContactos (ficheiro) {
     const el = document.getElementById('tel' + (index + 1))
     const elnome = document.getElementById('contactonNameRow' + (index + 1))
     const contactLink = document.getElementById('contactNameRow' + (index + 1))
+    const contactoRow = document.getElementById('contactoRow' + (index + 1))
+
+    if (el && tel > 0) {
+      const nome =
+        ficheiro.nomestelefones?.[index] || ['Pai', 'Mãe', 'Avó', 'Avô'][index]
+      elnome.textContent = nome
+      el.textContent = formatarTelefone(tel)
+      contactoRow.style.display = 'block'
+
+      // Guarda o número num data-atributo
+      contactLink.setAttribute('data-tel', tel)
+      contactLink.setAttribute(
+        'title',
+        `Ligar para ${nome} (${formatarTelefone(tel)})`
+      )
+
+      // Adiciona evento de clique (uma vez só)
+      contactLink.addEventListener(
+        'click',
+        function (e) {
+          e.preventDefault()
+          const numero = contactLink.getAttribute('data-tel')
+          if (numero) {
+            window.location.href = 'tel:' + numero
+          }
+        },
+        { once: true }
+      ) // adiciona só uma vez
+    }
+  })
+}
+
+function PreencherContactosOld (ficheiro) {
+  ficheiro.telefones.forEach((tel, index) => {
+    const el = document.getElementById('tel' + (index + 1))
+    const elnome = document.getElementById('contactonNameRow' + (index + 1))
+    const contactLink = document.getElementById('contactNameRow' + (index + 1))
 
     if (el && tel) {
       switch (index) {
