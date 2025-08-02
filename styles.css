@@ -388,7 +388,6 @@ max-height: 100%; /* Keeps it within the model3d-container */
 .toggler-icon{
     width: 30px;
     height: 3px;
-    background-color: black;
     display: block;
     transition: all 0.2s;
 }
@@ -411,9 +410,9 @@ max-height: 100%; /* Keeps it within the model3d-container */
 }
 
 .navbar-toggler .bottom-bar {
-    transform: rotate(-45deg);
-    transform-origin: 10% 90%;
-     background-color: red;
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+  background-color: red;
 }
 
 .navbar-toggler.collapsed .top-bar {
@@ -422,7 +421,7 @@ max-height: 100%; /* Keeps it within the model3d-container */
 
 /* Color of Toggler when collapsed */
 .navbar-toggler.collapsed .toggler-icon {
-    background-color: black;
+    background-color: white;
 }
 
 .navbar-toggler.collapsed .middle-bar {
