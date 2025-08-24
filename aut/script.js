@@ -105,6 +105,10 @@ function PreencherAnexo (ficheiro) {
 
   if (anexo) {
     document.getElementById('anexosRow').style.display = 'flex'
+    let img = document.querySelector('#anexosRow img')
+    if (img) {
+      img.src = '/aut/attachments/' + file + '/' + file + '.jpg'
+    }
   }
 }
 
