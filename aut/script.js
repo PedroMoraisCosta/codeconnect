@@ -61,6 +61,8 @@ function carregarContactos (file, chave) {
           PreencherUtente(ficheiro)
 
           PreencherAnexo(ficheiro)
+
+          PreencherFundo(ficheiro)
         }
       }
     })
@@ -97,6 +99,18 @@ function GetKey (chave) {
   } catch (erro) {
     console.error('Erro no GetKey:', erro)
     return ''
+  }
+}
+
+function PreencherFundo (ficheiro) {
+  let fundo = ficheiro.fundoadultos
+  let el = document.getElementById('backgroundId')
+
+  if (fundo) {
+    el.style.backgroundImage = `url('../aut/img/adultos.png')`
+    document.getElementById('puzzleId').style.display = 'none'
+  } else {
+    el.style.backgroundImage = `url('../aut/img/fundo.png')`
   }
 }
 

@@ -6,18 +6,8 @@ body {
   }
 
   .wrapper{
-    /* background-image: url("../aut/img/fundo.png");
-    background-size: cover; 
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    table-layout: fixed;
-    background-color: #f0ebeb;
-    position: relative;
-    height: 100vh; 
-    overflow: hidden; */
     overflow: hidden;
-    background-image: url(../aut/img/fundo.png);
+    /* background-image: url(../aut/img/fundo.png); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -47,15 +37,7 @@ body {
     height: 30px;
     
   }
-  /* .imgPuzzle {
-    background-image: url(../aut/img/puzzle.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 50px;
-    height: 50px;
-    margin-left: 10px;  
-  } */
+  
   .containerTop {
     display: flex;
     align-items: center;
@@ -105,27 +87,19 @@ body {
   }
 
   .contact-name{
-  color: lightcoral !important;
-}
-  /* h1 {
-    background-color: #4CAF50;
-    color: white;
-    margin: 0;
-    padding: 15px;
-  } */
-
+    color: lightcoral !important;
+  }
+   
   .container {
     padding: 10px;
   }
+
   .utente{
     margin: auto;
     padding-right: 10px;
   }
   
-
   .contact-button {
-   
-    
     margin: 10px 0 10px auto; /* empurra para a direita */
     padding: 10px 5px;
    
