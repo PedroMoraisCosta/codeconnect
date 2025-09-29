@@ -105,9 +105,13 @@ function GetKey (chave) {
 function PreencherFundo (ficheiro) {
   let fundo = ficheiro.fundoadultos
   let el = document.getElementById('backgroundId')
+  let elobrigado = document.getElementById('obrigadoId')
+  let elmarca = document.getElementById('marcaId')
 
   if (fundo) {
     el.style.backgroundImage = `url('../aut/img/adultos.png')`
+    elobrigado.style.color = 'white'
+    elmarca.style.color = 'white'
     document.getElementById('puzzleId').style.display = 'none'
   } else {
     el.style.backgroundImage = `url('../aut/img/fundo.png')`
@@ -155,8 +159,25 @@ function PreencherMedicacao (ficheiro) {
     if (med) {
       document.getElementById('medicacao').style.display = 'block'
       const li = document.createElement('li')
-      li.textContent = med.trim()
+
+      const medText = med.trim()
+      li.textContent = medText
+
+      const normalized = medText
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase()
+
+      if (normalized.includes('alergic')) {
+        li.classList.add('text-value-bold')
+      } else {
+        li.classList.add('text-value')
+      }
+
       ul.appendChild(li)
+
+      // li.textContent = med.trim()
+      // ul.appendChild(li)
     }
   })
 }

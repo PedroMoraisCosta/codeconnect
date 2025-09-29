@@ -85,7 +85,12 @@ body {
   .fontFamily{
 
   }
-
+.obrigado{
+  font-color:black
+}
+.marcaId{
+  font-color:black
+}
   .contact-name{
     color: lightcoral !important;
   }
@@ -171,6 +176,15 @@ body {
 
 .medicacao-container {
   text-align: left;
+}
+
+.text-value{
+  color:salmon
+}
+.text-value-bold{
+    font-weight: 600;
+    color: red;
+    font-size: 1.1rem;
 }
 
 .values-list{
