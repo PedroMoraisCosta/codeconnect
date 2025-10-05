@@ -1,0 +1,30 @@
+.profile-picture1 {
+background-image: url("../img/PedroV3.png");
+transform: rotate(0deg) scaleX(-1);
+}
+
+.profile-picture2 {
+background-image: url("../img/Andre.jpg");
+transform: rotate(0deg) scaleX(-1);
+}
+.profile-picture3 {
+background-image: url("../img/Tiago.jpg");
+transform: rotate(0deg) scaleX(-1);
+}
+.profile-picture4 {
+background-image: url("../img/AnaRita.png");
+
+}
+
+
+.profile-picture {
+position: relative;
+display: inline-flex;
+border-radius: 50%;
+background-position: top center;
+background-repeat: no-repeat;
+background-size: cover;
+border-bottom: 3px ridge #ccc; /* Ensure proper border styling */
+width: 130px;
+height: 130px;
+}

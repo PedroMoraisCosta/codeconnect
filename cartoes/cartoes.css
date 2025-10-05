@@ -1,0 +1,11 @@
+
+
+.cardsize{
+    width: 15%;
+  }
+
+@media (max-width: 478px) { 
+.cardsize{
+    width: 45%;
+  }
+}

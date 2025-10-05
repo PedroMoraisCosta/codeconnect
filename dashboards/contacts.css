@@ -1,0 +1,80 @@
+.contact-box {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 1rem;
+    min-width: 260px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+
+  .contact-box h3 {
+    color: #facc15;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+
+
+
+/* Center all namesText paragraphs */
+.contact-box .namesText {
+  text-align: center !important;
+  width: 100%;
+  display: block;
+}
+.contact-box .namesText a {
+  color: inherit;       /* Take the color of the parent */
+  text-decoration: underline; /* Optional: underline on hover if you like */
+}
+
+.contact-box .namesText a:hover {
+  color: inherit;       /* Keep same color on hover */
+  
+}
+
+
+  .contact-box p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .contact-box i {
+    margin-right: 0.6rem;
+    color: #facc15;
+    font-size: 1.1rem;
+  }
+.callText{
+    text-align: center;
+    font-size: 14px !important;
+    font-weight: normal; 
+    color: white;
+    margin: 5px 0;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+@media (max-width: 478px) { 
+    .emailText {
+    font-size: 16px;
+    }
+    .callText{
+        font-size: 9px !important;
+    }
+
+}
+
+@media (max-width: 478px) { 
+    .emailText {
+    font-size: 16px;
+    }
+    
+
+}
+
+@media (max-width: 991.98px) {
+.callText{
+        font-size: 9px !important;
+    }
+}
