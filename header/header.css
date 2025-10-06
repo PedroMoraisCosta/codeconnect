@@ -76,3 +76,50 @@
 .navbar-toggler.collapsed .bottom-bar {
     transform: rotate(0);
 }
+
+
+/* ====== POSICIONAMENTO DO CONTEÚDO ====== */
+
+/* Desktop: redes sociais à esquerda, menu à direita */
+#redesSociais {
+  display: flex;
+  align-items: center;
+}
+
+/* Ícones suaves */
+#redesSociais img {
+  transition: transform 0.2s ease;
+}
+#redesSociais img:hover {
+  transform: scale(1.1);
+}
+
+/* Mobile: inverter posições */
+@media (max-width: 991.98px) {
+  .navbar .container-fluid {
+    justify-content: space-between;
+  }
+
+  /* redes sociais à direita */
+  #redesSociais {
+    order: 2;
+  }
+
+  /* botão hamburguer à esquerda */
+  .navbar-toggler {
+    order: 1;
+  }
+
+  /* menu colapsado ocupa toda a largura */
+  .navbar-collapse {
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.9);
+    margin-top: 10px;
+    padding-left: 40px;
+    border-radius: 10px;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 5px 0;
+  }
+}

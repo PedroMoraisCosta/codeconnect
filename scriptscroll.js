@@ -61,7 +61,11 @@
     function updateNavLinkColor () {
       const isScrolled = navbar.classList.contains('navbar-scrolled')
       navLinks.forEach(link => {
-        link.style.color = isScrolled ? 'black' : 'white'
+        link.style.setProperty(
+          'color',
+          isScrolled ? 'white' : 'white',
+          'important'
+        )
       })
     }
 
