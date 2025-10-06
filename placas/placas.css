@@ -5,23 +5,18 @@
  
 
 .text{
-width:40%;
+width:50%;
 max-width: 75%;
 }
 
 @media (max-width: 478px) { 
-.text{
-      width:100%;
-      max-width: 100%; 
-    }
-.cardsize{
+  .cardsize{
     width: 45%;
   }
 }
 
-  @media (max-width: 952px) { 
+@media (max-width: 952px) { 
   .text{
     width:75%;
-    max-width: 75%;
   }
 }
