@@ -1,2 +1,9 @@
 {
+  "nav": {
+    "cards": "Cartes",
+    "child_safety": "Sécurité Enfant",
+    "autism_safety": "Sécurité Autisme",
+    "signs": "Panneaux",
+    "about_us": "À Propos"
+  }
 }

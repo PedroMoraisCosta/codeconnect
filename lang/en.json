@@ -1,2 +1,9 @@
 {
+  "nav": {
+    "cards": "Cards",
+    "child_safety": "Child Safety",
+    "autism_safety": "Autism Safety",
+    "signs": "Stand tables",
+    "about_us": "About Us"
+  }
 }
