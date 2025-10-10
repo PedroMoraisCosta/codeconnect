@@ -5,5 +5,48 @@
     "autism_safety": "Autism Safety",
     "signs": "Stand tables",
     "about_us": "About Us"
+  },
+  "cta": {
+    "leave_review": "Leave us your feedback on Google",
+     "email": "Request information by email",
+    "whatsapp": "Chat with us on WhatsApp",
+    "call_cost_pt": "(cost of a call to an international mobile number)",
+    "call_cost_international": "(cost of a call to an international mobile number)"
+  },
+   "cartoes": {
+    "card_range": "Card Range",
+    "offer_description": "When purchasing one of our customizable QR Code and NFC cards, <strong>we offer a card holder with neck strap</strong>.",
+     "child_safety": "Child Safety",
+     "child_safety_description": "Ideal for outdoor activities, <strong>Child Safety</strong> cards are designed to protect the little ones. These cards allow a quick response in case of loss or emergency. Through QR Code and NFC, access (Blood Type, Health Number, Regular Medication, Additional Contacts).",
+     "autism_title": "Autism",
+     "autism_description": "Designed with inclusion in mind, our <strong>Autism</strong> cards for people on the autism spectrum include identification, emergency contact, and through QR Code or NFC, it is possible to quickly access additional information that may be crucial in stressful or emergency situations (Blood Type, Health Number, Regular Medication, Additional Contacts, Medical Report).",
+     "after_qr_nfc": "After scanning the QR Code or using NFC",
+      "business_title": "Businesses",
+      "business_description": "Add technological professionalism with the <strong>Customizable Card</strong>, you can now also receive feedback outside the establishment, or even provide contact for a potential customer." 
+
+  },
+  "placas": {
+    "title": "Our Signs",
+    "model_3d": "Our 3D Model",
+    "description": "With a simple touch or scan, your customers instantly access reviews, menus, social media, or any link of your choice — fast, easy, and with no monthly fees.",
+    "premium_range": "Premium Range",
+    "premium_description": "Highlight your business with the <strong>Customizable Sign</strong>, the premium version of our signs, allowing you to customize the entire sign with icons that reflect your brand's style and identity.",
+    "connect_hub_range": "Connect Hub Range",
+    "connect_hub_description": "Take the first step in digitizing your business with the <strong>Connect Hub</strong>, ideal for businesses looking to centralize all networks into a single point of contact.",
+    "superior_range": "Superior Range",
+    "superior_description": "Highlight your business with the <strong>Duo Color</strong>, the superior version of our signs, allowing you to customize the circle color and background color to create a unique combination that reflects your brand's style and identity.",
+    "classic_range": "Classic Range",
+    "classic_description": "Take the first step in digitizing your business with the <strong>Ring Color</strong>, customize the circle color to match your space's environment and show a touch of visual identity."
+  },
+   "about_us": {
+    "title": "About Us",
+    "tech_director": "Technology Director",
+    "tech_director_initials": "TD",
+    "sales_director_title": "Sales, Business Strategy and Expansion Director",
+    "sales_director_initials": "SBSED",
+    "benelux_director_title": "Sales and Expansion Director in Benelux",
+    "benelux_director_initials": "SED",
+    "marketing_director_title": "Marketing and Social Media Director",
+    "marketing_director_initials": "MMSD"  
   }
 }

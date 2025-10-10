@@ -5,5 +5,47 @@
     "autism_safety": "Segurança Autismo",
     "signs": "Placas",
     "about_us": "Quem Somos"
-  }
+  },
+   "cta": {
+    "leave_review": "Deixe-nos a sua opinião no Google",
+    "email": "Solicitar informações por email",
+     "whatsapp": "Fale connosco no whatsapp",
+     "call_cost_pt": "(custo de uma chamada para número móvel nacional)",
+     "call_cost_international": "(custo de uma chamada para número móvel internacional)"
+  },
+  "cartoes": {
+    "card_range": "Gama de Cartões",
+    "offer_description": "Na compra de um dos nossos cartões com Qr Code e NFC personalizáveis, <strong>ofereçemos um porta cartões com fita para pescoço</strong>.",
+    "child_safety": "Segurança Infantil",
+    "child_safety_description": "Ideais para atividades ao ar livre, os cartões de <strong>Segurança Infantil</strong> foram pensados para proteger os mais pequenos. Estes cartões permitem uma resposta rápida em caso de perda ou emergência. Através do QR Code e NFC, tenha acesso a (Tipo de Sangue, Nr. de Utente, Medicação Regular, Contatos Extra)",
+    "autism_title": "Autismo",
+     "autism_description": "Pensados na inclusão, os nossos cartões <strong>Autismo</strong> para pessoas incluídas no espectro de autismo incluem identificação, contato de emergência e através do QR Code ou NFC, é possível aceder rapidamente a informações adicionais que podem ser cruciais em situações de stress ou emergência (Tipo de Sangue, Nr. de Utente, Medicação Regular, Contatos Extra, Relatório Médico)",
+     "after_qr_nfc": "Após leitura de Qr Code ou NFC",
+      "business_title": "Empresas",
+      "business_description": "Acrescente profissionalismo tecnológico com o <strong>Cartão Personalizável</strong>, agora também pode receber comentários fora do estabelecimento, ou até fornecer o contato para um possível cliente."
+  },
+  "placas": {
+    "title": "As Nossas Placas",
+    "model_3d": "O Nosso Modelo 3D",
+    "description": "Com um simples toque ou leitura, os seus clientes acedem instantaneamente a avaliações, menus, redes sociais ou qualquer link à sua escolha — rápido, fácil e sem mensalidades.",
+    "premium_range": "Gama Premium",
+    "premium_description": "Destaque o seu negócio com a <strong>Placa Personalizável</strong>, a versão premium das nossas placas, permite-lhe personalizar toda a placa com ícones que refletem o estilo e a identidade da sua marca.",
+    "connect_hub_range": "Gama Connect Hub",
+    "connect_hub_description": "Dê o primeiro passo na digitalização do seu negócio com a <strong>Connect Hub</strong>, ideal para negócios que querem centralizar todas as redes num único ponto de contato.",
+    "superior_range": "Gama Superior",
+    "superior_description": "Destaque o seu negócio com a <strong>Duo Color</strong>, a versão superior das nossas placas, permite-lhe personalizar a cor do círculo e a cor de fundo criando uma combinação única que reflete o estilo e a identidade da sua marca.",
+    "classic_range": "Gama Clássico",
+    "classic_description": "Dê o primeiro passo na digitalização do seu negócio com a <strong>Ring Color</strong>, personalize a cor do círculo para combinar com o ambiente do seu espaço e mostrar um toque de identidade visual."
+  },
+   "about_us": {
+    "title": "Quem Somos",
+    "tech_director": "Diretor de Tecnologias",
+    "tech_director_initials": "DT",
+    "sales_director_title": "Diretor de Vendas, Estratégia Comercial e Expansão",
+    "sales_director_initials": "DECE",
+    "benelux_director_title": "Diretor de Vendas e Expansão em Benelux",
+    "benelux_director_initials": "DE",
+    "marketing_director_title": "Diretora de Marketing e Redes Sociais",
+    "marketing_director_initials": "DMS"
+    }
 }

@@ -5,5 +5,49 @@
     "autism_safety": "Sécurité Autisme",
     "signs": "Panneaux",
     "about_us": "À Propos"
+  },
+  "cta": {
+    "leave_review": "Laissez-nous votre avis sur Google",
+     "email": "Demander des informations par email",
+     "whatsapp": "Parlez-nous sur WhatsApp",
+     "call_cost_pt": "(coût d'un appel vers un numéro mobile international)",
+     "call_cost_international": "(coût d'un appel vers un numéro mobile national)"
+  },
+   "cartoes": {
+    "card_range": "Gamme de Cartes",
+    "offer_description": "Lors de l'achat de l'une de nos cartes personnalisables avec QR Code et NFC, <strong>nous offrons un porte-cartes avec cordon</strong>.",
+    "child_safety": "Sécurité Infantile",
+    "child_safety_description": "Idéales pour les activités en plein air, les cartes de <strong>Sécurité Infantile</strong> sont conçues pour protéger les plus petits. Ces cartes permettent une réponse rapide en cas de perte ou d'urgence. Grâce au QR Code et au NFC, accédez à (Groupe Sanguin, Numéro d'Utilisateur, Médication Régulière, Contacts Supplémentaires).",
+    "autism_title": "Autisme",
+    "autism_description": "Conçues dans un esprit d'inclusion, nos cartes <strong>Autisme</strong> pour les personnes du spectre autistique incluent l'identification, un contact d'urgence et, via le QR Code ou le NFC, il est possible d'accéder rapidement à des informations supplémentaires qui peuvent être cruciales en cas de stress ou d'urgence (Groupe Sanguin, Numéro d'Utilisateur, Médication Régulière, Contacts Supplémentaires, Rapport Médical).",
+    "after_qr_nfc": "Après lecture du QR Code ou utilisation du NFC",
+    "business_title": "Entreprises",
+    "business_description": "Ajoutez du professionnalisme technologique avec la <strong>Carte Personnalisable</strong>, vous pouvez désormais également recevoir des commentaires en dehors de l'établissement, ou même fournir un contact pour un client potentiel."
+
+  },
+  "placas": {
+    "title": "Nos Panneaux",
+    "model_3d": "Notre Modèle 3D",
+    "description": "Avec un simple toucher ou une lecture, vos clients accèdent instantanément aux avis, menus, réseaux sociaux ou tout lien de votre choix — rapide, facile et sans frais mensuels.",
+    "premium_range": "Gamme Premium",
+    "premium_description": "Mettez en valeur votre entreprise avec le <strong>Panneau Personnalisable</strong>, la version premium de nos panneaux, qui vous permet de personnaliser l'ensemble du panneau avec des icônes reflétant le style et l'identité de votre marque.",
+    "connect_hub_range": "Gamme Connect Hub",
+    "connect_hub_description": "Faites le premier pas vers la digitalisation de votre entreprise avec le <strong>Connect Hub</strong>, idéal pour les entreprises qui souhaitent centraliser tous les réseaux en un seul point de contact.",
+    "superior_range": "Gamme Supérieure",
+    "superior_description": "Mettez en valeur votre entreprise avec le <strong>Duo Color</strong>, la version supérieure de nos panneaux, qui vous permet de personnaliser la couleur du cercle et la couleur de fond en créant une combinaison unique qui reflète le style et l'identité de votre marque.",
+    "classic_range": "Gamme Classique",
+    "classic_description": "Faites le premier pas vers la digitalisation de votre entreprise avec le <strong>Ring Color</strong>, personnalisez la couleur du cercle pour l'harmoniser avec l'environnement de votre espace et montrer une touche d'identité visuelle."
+  },
+  "about_us": {
+    "title": "Qui Nous Sommes",
+    "tech_director": "Directeur Technologique",
+    "tech_director_initials": "DT",
+    "sales_director_title": "Directeur des Ventes, Stratégie Commerciale et Expansion",
+    "sales_director_initials": "DECE",
+    "benelux_director_title": "Directeur des Ventes et de l'Expansion au Benelux",
+    "benelux_director_initials": "DE",
+    "marketing_director_title": "Directrice Marketing et Réseaux Sociaux",
+    "marketing_director_initials": "DMS"
+
   }
 }
