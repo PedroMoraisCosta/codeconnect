@@ -35,3 +35,12 @@ function getNestedTranslation (obj, key) {
 document.addEventListener('DOMContentLoaded', () => {
   loadLanguage(getLanguage())
 })
+
+function closeNavbar () {
+  const nav = document.querySelector('.navbar-collapse.show')
+  if (nav) {
+    const collapse =
+      bootstrap.Collapse.getInstance(nav) || new bootstrap.Collapse(nav)
+    collapse.hide()
+  }
+}
