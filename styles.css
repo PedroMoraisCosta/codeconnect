@@ -28,6 +28,7 @@ min-width: 300px;
 border-spacing: 0;
 font-family: sans-serif;
 color: #171a1b;
+overflow: hidden;
 }
 .main-color-bottom{
 background: linear-gradient(to bottom,  #303468, #000000);
