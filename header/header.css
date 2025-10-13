@@ -94,10 +94,19 @@
   transform: scale(1.1);
 }
 
+.button-size{
+  width: 22px;
+  height: 22px;
+}
+
 /* Mobile: inverter posições */
 @media (max-width: 991.98px) {
   .navbar .container-fluid {
     justify-content: space-between;
+  }
+  .button-size{
+    width: 27px;
+    height: 27px;
   }
 
   /* redes sociais à direita */
