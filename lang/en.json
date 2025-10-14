@@ -4,7 +4,8 @@
     "child_safety": "Child Safety",
     "autism_safety": "Autism Safety",
     "signs": "Stand tables",
-    "about_us": "About Us"
+    "about_us": "About Us",
+    "customers": "Clients & Partnerships"
   },
   "cta": {
     "leave_review": "Leave us your feedback on Google",
@@ -48,5 +49,9 @@
     "benelux_director_initials": "SED",
     "marketing_director_title": "Marketing and Social Media Director",
     "marketing_director_initials": "MMSD"  
-  }
+  },
+  "customers": {
+      "title": "Clients",
+      "description": "We are proud to work with a variety of clients, ranging from small local businesses to large international corporations. We appreciate the trust our clients place in us and are committed to providing high-quality solutions that meet their specific needs."
+    }
 }

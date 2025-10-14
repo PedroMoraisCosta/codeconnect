@@ -2,7 +2,7 @@ function loadLanguage (lang) {
   // Guarda a língua selecionada no armazenamento local
   localStorage.setItem('selectedLanguage', lang)
 
-  fetch(`./lang/${lang}.json`)
+  fetch(`/lang/${lang}.json`)
     .then(response => response.json())
     .then(translations => {
       // Atualiza todos os elementos com data-i18n
@@ -21,7 +21,7 @@ function getLanguage () {
 
 function getTranslationFromLangFile (key) {
   const lang = getLanguage()
-  return fetch(`./lang/${lang}.json`)
+  return fetch(`/lang/${lang}.json`)
     .then(res => res.json())
     .then(dict => getNestedTranslation(dict, key) || key)
 }

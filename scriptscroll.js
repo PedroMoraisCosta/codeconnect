@@ -62,6 +62,27 @@
     global.__setupScrollBehaviorDone = true
   }
 
+  function handleInitialHashScroll () {
+    // Wait until the page finishes loading all DOM content
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        if (window.location.hash) {
+          const target = document.querySelector(window.location.hash)
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' })
+          } else {
+            console.warn(
+              'handleInitialHashScroll: target not found for',
+              window.location.hash
+            )
+          }
+        }
+      }, 300) // Adjust delay if architecture.js takes longer
+    })
+  }
+
+  // Expose globally so you can call it when architecture.js finishes
+  global.handleInitialHashScroll = handleInitialHashScroll
   // expose
   global.setupScrollBehavior = setupScrollBehavior
 })(window)

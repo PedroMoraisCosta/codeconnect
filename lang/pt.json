@@ -4,7 +4,8 @@
     "child_safety": "Segurança Infantil",
     "autism_safety": "Segurança Autismo",
     "signs": "Gama Placas",
-    "about_us": "Quem Somos"
+    "about_us": "Quem Somos",
+    "customers": "Confiança & Parcerias"
   },
    "cta": {
     "leave_review": "Deixe-nos a sua opinião no Google",
@@ -47,5 +48,9 @@
     "benelux_director_initials": "DE",
     "marketing_director_title": "Diretora de Marketing e Redes Sociais",
     "marketing_director_initials": "DMS"
+    },
+    "customers": {
+      "title": "Clientes",
+      "description": "Orgulhamo-nos da confiança que várias empresas depositaram em nós. As nossas soluções de placas, cartões com QR code e NFC estão hoje presentes em diversos negócios que escolheram inovar connosco."
     }
 }

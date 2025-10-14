@@ -1,183 +1,192 @@
+// Determine base path depending on which HTML file is running this script
+const basePath = window.location.pathname.includes('/clientes/') ? '..' : '.'
+
 function buildArchitecture (callback) {
   const tasks = []
 
   // Header
   tasks.push(
-    fetch('header/header.html')
+    fetch(`${basePath}/header/header.html`)
       .then(res => res.text())
       .then(data => {
-        document.getElementById('header-placeholder').innerHTML = data
+        const headerEl = document.getElementById('header-placeholder')
+        if (headerEl) headerEl.innerHTML = data
       })
       .catch(err => console.error('Erro ao carregar header.html', err))
+  )
+
+  tasks.push(
+    fetch(`${basePath}/top-logo/top-logo.html`)
+      .then(res => res.text())
+      .then(data => {
+        const topLogoEl = document.getElementById('top-logo-placeholder')
+        if (topLogoEl) topLogoEl.innerHTML = data
+      })
+      .catch(err => console.error('Erro ao carregar top-logo.html', err))
   )
 
   // Index section
   const indexSectionEl = document.getElementById('index-section-placeholder')
   if (indexSectionEl) {
     tasks.push(
-      fetch('index/index-section.html')
+      fetch(`${basePath}/index/index-section.html`)
         .then(res => res.text())
         .then(data => {
           indexSectionEl.innerHTML = data
-
           loadLanguage(getLanguage())
         })
-        //Top Logo section
-        .then(() =>
-          fetch('top-logo/top-logo.html')
-            .then(res => res.text())
-            .then(data => {
-              const topLogoEl = document.getElementById('top-logo-placeholder')
-              topLogoEl.innerHTML = data
-            })
-            .catch(err => console.error('Erro ao carregar top-logo.html', err))
-        )
-
         // Stars section
         .then(() =>
-          fetch('stars/stars.html')
+          fetch(`${basePath}/stars/stars.html`)
             .then(res => res.text())
             .then(data => {
               const starsEl = document.getElementById('stars-placeholder')
-              starsEl.innerHTML = data
+              if (starsEl) starsEl.innerHTML = data
             })
             .catch(err => console.error('Erro ao carregar stars.html', err))
         )
-        .catch(err => console.error('Erro ao carregar index-section.html', err))
-
-        //Google button section
+        // Google review section
         .then(() =>
-          fetch('google-review/google.html')
+          fetch(`${basePath}/google-review/google.html`)
             .then(res => res.text())
             .then(data => {
               const googleEl = document.getElementById('google-placeholder')
-              googleEl.innerHTML = data
+              if (googleEl) googleEl.innerHTML = data
             })
             .catch(err => console.error('Erro ao carregar google.html', err))
         )
-        //Whatsapp button section
+        // Whatsapp section
         .then(() =>
-          fetch('whatsapp/whatsapp.html')
+          fetch(`${basePath}/whatsapp/whatsapp.html`)
             .then(res => res.text())
             .then(data => {
               const whatsappEl = document.getElementById('whatsapp-placeholder')
-              whatsappEl.innerHTML = data
+              if (whatsappEl) whatsappEl.innerHTML = data
             })
             .catch(err => console.error('Erro ao carregar whatsapp.html', err))
         )
-        //Email button section
+        // Email section
         .then(() =>
-          fetch('email/email.html')
+          fetch(`${basePath}/email/email.html`)
             .then(res => res.text())
             .then(data => {
               const emailEl = document.getElementById('email-placeholder')
-              emailEl.innerHTML = data
+              if (emailEl) emailEl.innerHTML = data
             })
             .catch(err => console.error('Erro ao carregar email.html', err))
         )
-        //Dashboard Contacts section
+        // Dashboard Contacts section
         .then(() =>
-          fetch('dashboards/contacts.html')
+          fetch(`${basePath}/dashboards/contacts.html`)
             .then(res => res.text())
             .then(data => {
               const dashboardEl = document.getElementById(
                 'contacts-placeholder'
               )
-              dashboardEl.innerHTML = data
+              if (dashboardEl) dashboardEl.innerHTML = data
             })
             .catch(err => console.error('Erro ao carregar dashboard.html', err))
         )
-        //Video section
+        // Video section
         .then(() =>
-          fetch('video/video.html')
+          fetch(`${basePath}/video/video.html`)
             .then(res => res.text())
             .then(data => {
               const videoEl = document.getElementById('video-placeholder')
-              videoEl.innerHTML = data
+              if (videoEl) videoEl.innerHTML = data
             })
             .catch(err => console.error('Erro ao carregar video.html', err))
         )
-        //Cartoes section
+        // Cartoes section
         .then(() =>
-          fetch('cartoes/cartoes.html')
+          fetch(`${basePath}/cartoes/cartoes.html`)
             .then(res => res.text())
             .then(data => {
               const cartoesEl = document.getElementById('cartoes-placeholder')
-              cartoesEl.innerHTML = data
+              if (cartoesEl) cartoesEl.innerHTML = data
             })
             .catch(err => console.error('Erro ao carregar cartoes.html', err))
         )
-        //Placas section
+        // Placas section
         .then(() =>
-          fetch('placas/placas.html')
+          fetch(`${basePath}/placas/placas.html`)
             .then(res => res.text())
             .then(data => {
               const placasEl = document.getElementById('placas-placeholder')
-              placasEl.innerHTML = data
+              if (placasEl) placasEl.innerHTML = data
             })
             .catch(err => console.error('Erro ao carregar placas.html', err))
         )
-        //Placas Modelos section
+        // Placas Modelos section
         .then(() =>
-          fetch('placas/placas-model.html')
+          fetch(`${basePath}/placas/placas-model.html`)
             .then(res => res.text())
             .then(data => {
               const placasModeloEl = document.getElementById(
                 'placas-modelo-placeholder'
               )
-              placasModeloEl.innerHTML = data
+              if (placasModeloEl) placasModeloEl.innerHTML = data
             })
             .catch(err =>
               console.error('Erro ao carregar placas-modelo.html', err)
             )
         )
-        //Empresa section
+        // Empresa section
         .then(() =>
-          fetch('empresa/empresa.html')
+          fetch(`${basePath}/empresa/empresa.html`)
             .then(res => res.text())
             .then(data => {
               const empresaEl = document.getElementById('empresa-placeholder')
-              empresaEl.innerHTML = data
+              if (empresaEl) empresaEl.innerHTML = data
             })
             .catch(err => console.error('Erro ao carregar empresa.html', err))
         )
+        .catch(err => console.error('Erro ao carregar index-section.html', err))
     )
   }
 
-  // Contacts section
-  const contactsectionEl = document.getElementById(
-    'contacts-section-placeholder'
+  // Clientes section
+  const clientsSectionEl = document.getElementById(
+    'clientes-section-placeholder'
   )
-  if (contactsectionEl) {
+  if (clientsSectionEl) {
     tasks.push(
-      fetch('contacts-section.html')
+      fetch('clientes-section.html')
         .then(res => res.text())
         .then(data => {
-          contactsectionEl.innerHTML = data
-          if (typeof setupContactFormValidation === 'function') {
-            setupContactFormValidation()
-          }
+          clientsSectionEl.innerHTML = data
+          loadLanguage(getLanguage())
         })
         .catch(err =>
-          console.error('Erro ao carregar contacts-section.html', err)
+          console.error('Erro ao carregar clientes-section.html', err)
         )
     )
   }
 
-  // Espera por todas as tarefas
+  // Wait for all tasks
   Promise.all(tasks).then(() => {
-    // call if available
     if (typeof window.setupScrollBehavior === 'function') {
       window.setupScrollBehavior()
     } else {
-      // fallback: dynamically load script then call it when loaded
       const s = document.createElement('script')
-      s.src = 'scriptscroll.js'
+      s.src = `${basePath}/scriptscroll.js`
       s.onload = () => {
         if (typeof window.setupScrollBehavior === 'function')
           window.setupScrollBehavior()
       }
       document.body.appendChild(s)
+    }
+    // ✅ NEW: handle hash navigation after architecture is fully built
+    if (window.location.hash) {
+      const target = document.querySelector(window.location.hash)
+      if (target) {
+        // Use a small delay to allow styles/layout to stabilize
+        setTimeout(() => {
+          target.scrollIntoView({ behavior: 'smooth' })
+        }, 200)
+      } else {
+        console.warn('No element found for hash', window.location.hash)
+      }
     }
 
     if (typeof callback === 'function') callback()

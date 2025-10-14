@@ -4,7 +4,8 @@
     "child_safety": "Sécurité Enfant",
     "autism_safety": "Sécurité Autisme",
     "signs": "Panneaux",
-    "about_us": "À Propos"
+    "about_us": "À Propos",
+    "customers": "Confiance & Partenariats"
   },
   "cta": {
     "leave_review": "Laissez-nous votre avis sur Google",
@@ -49,5 +50,9 @@
     "marketing_director_title": "Directrice Marketing et Réseaux Sociaux",
     "marketing_director_initials": "DMS"
 
-  }
+  },
+  "customers": {
+      "title": "Clients",
+      "description": "Nous sommes fiers de travailler avec une variété de clients, allant de petites entreprises locales à de grandes corporations internationales. Nous apprécions la confiance que nos clients nous accordent et nous nous engageons à fournir des solutions de haute qualité qui répondent à leurs besoins spécifiques."
+    } 
 }
