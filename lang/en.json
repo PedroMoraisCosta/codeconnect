@@ -1,6 +1,6 @@
 {
   "nav": {
-    "cards": "Cards",
+    "cards": "Our Cards",
     "child_safety": "Child Safety",
     "autism_safety": "Autism Safety",
     "signs": "Stand tables",
@@ -14,19 +14,19 @@
     "call_cost_international": "(cost of a call to an international mobile number)"
   },
    "cartoes": {
-    "card_range": "Card Range",
-    "offer_description": "When purchasing one of our customizable QR Code and NFC cards, <strong>we offer a card holder with neck strap</strong>.",
+    "card_range": "Our Cards",
+    "offer_description": "When purchasing one of our customizable QR code and Near Field Communication (NFC) cards, <strong>we offer a card holder with neck strap</strong>.",
      "child_safety": "Child Safety",
-     "child_safety_description": "Ideal for outdoor activities, <strong>Child Safety</strong> cards are designed to protect the little ones. These cards allow a quick response in case of loss or emergency. Through QR Code and NFC, access (Blood Type, Health Number, Regular Medication, Additional Contacts).",
-     "autism_title": "Autism",
-     "autism_description": "Designed with inclusion in mind, our <strong>Autism</strong> cards for people on the autism spectrum include identification, emergency contact, and through QR Code or NFC, it is possible to quickly access additional information that may be crucial in stressful or emergency situations (Blood Type, Health Number, Regular Medication, Additional Contacts, Medical Report).",
-     "after_qr_nfc": "After scanning the QR Code or using NFC",
-      "business_title": "Businesses",
-      "business_description": "Add technological professionalism with the <strong>Customizable Card</strong>, you can now also receive feedback outside the establishment, or even provide contact for a potential customer." 
+     "child_safety_description": "Ideal for outdoor activities, <strong>Child Safety</strong> cards are designed to protect the little ones. These cards allow a quick response in case of loss or emergency. Through QR code or Near Field Communication (NFC), access (Blood Type, Health Number, Regular Medication, Additional Contacts).",
+     "autism_title": "Autism Safety",
+     "autism_description": "Designed with inclusion in mind, our <strong>Autism</strong> cards for people on the autism spectrum include identification, emergency contact, and through QR code or Near Field Communication (NFC), it is possible to quickly access additional information that may be crucial in stressful or emergency situations (Blood Type, Health Number, Regular Medication, Additional Contacts, Medical Report).",
+     "after_qr_nfc": "After scanning the QR code or using Near Field Communication (NFC)",
+      "business_title": "Businesses Cards",
+      "business_description": "Add technological professionalism with the <strong>Customizable Card</strong>, you can now also receive feedback outside the headquarters, or even provide your contact for a potential customer." 
 
   },
   "placas": {
-    "title": "Our Signs",
+    "title": "Our Stand Table",
     "model_3d": "Our 3D Model",
     "description": "With a simple touch or scan, your customers instantly access reviews, menus, social media, or any link of your choice — fast, easy, and with no monthly fees.",
     "premium_range": "Premium Range",
