@@ -15,16 +15,6 @@ function buildArchitecture (callback) {
       .catch(err => console.error('Erro ao carregar header.html', err))
   )
 
-  tasks.push(
-    fetch(`${basePath}/top-logo/top-logo.html`)
-      .then(res => res.text())
-      .then(data => {
-        const topLogoEl = document.getElementById('top-logo-placeholder')
-        if (topLogoEl) topLogoEl.innerHTML = data
-      })
-      .catch(err => console.error('Erro ao carregar top-logo.html', err))
-  )
-
   // Index section
   const indexSectionEl = document.getElementById('index-section-placeholder')
   if (indexSectionEl) {
@@ -162,6 +152,16 @@ function buildArchitecture (callback) {
         )
     )
   }
+
+  tasks.push(
+    fetch(`${basePath}/top-logo/top-logo.html`)
+      .then(res => res.text())
+      .then(data => {
+        const topLogoEl = document.getElementById('top-logo-placeholder')
+        if (topLogoEl) topLogoEl.innerHTML = data
+      })
+      .catch(err => console.error('Erro ao carregar top-logo.html', err))
+  )
 
   // Wait for all tasks
   Promise.all(tasks).then(() => {
