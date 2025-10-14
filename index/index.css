@@ -15,6 +15,7 @@ html, body {
     border-spacing: 0;
     font-family: sans-serif;
     color: #171a1b;
+    overflow-y: hidden;
 }
 
 .main-color-bottom{
