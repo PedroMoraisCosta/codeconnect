@@ -25,6 +25,16 @@ function buildArchitecture (callback) {
           indexSectionEl.innerHTML = data
           loadLanguage(getLanguage())
         })
+        // Top logo section
+        .then(() =>
+          fetch(`${basePath}/top-logo/top-logo.html`)
+            .then(res => res.text())
+            .then(data => {
+              const topLogoEl = document.getElementById('top-logo-placeholder')
+              if (topLogoEl) topLogoEl.innerHTML = data
+            })
+            .catch(err => console.error('Erro ao carregar top-logo.html', err))
+        )
         // Stars section
         .then(() =>
           fetch(`${basePath}/stars/stars.html`)
@@ -150,18 +160,27 @@ function buildArchitecture (callback) {
         .catch(err =>
           console.error('Erro ao carregar clientes-section.html', err)
         )
+        .then(() =>
+          fetch(`${basePath}/top-logo/top-logo.html`)
+            .then(res => res.text())
+            .then(data => {
+              const topLogoEl = document.getElementById('top-logo-placeholder')
+              if (topLogoEl) topLogoEl.innerHTML = data
+            })
+            .catch(err => console.error('Erro ao carregar top-logo.html', err))
+        )
     )
   }
 
-  tasks.push(
-    fetch(`${basePath}/top-logo/top-logo.html`)
-      .then(res => res.text())
-      .then(data => {
-        const topLogoEl = document.getElementById('top-logo-placeholder')
-        if (topLogoEl) topLogoEl.innerHTML = data
-      })
-      .catch(err => console.error('Erro ao carregar top-logo.html', err))
-  )
+  // tasks.push(
+  //   fetch(`${basePath}/top-logo/top-logo.html`)
+  //     .then(res => res.text())
+  //     .then(data => {
+  //       const topLogoEl = document.getElementById('top-logo-placeholder')
+  //       if (topLogoEl) topLogoEl.innerHTML = data
+  //     })
+  //     .catch(err => console.error('Erro ao carregar top-logo.html', err))
+  // )
 
   // Wait for all tasks
   Promise.all(tasks).then(() => {
