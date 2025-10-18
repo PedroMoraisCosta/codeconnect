@@ -5,7 +5,8 @@
     "autism_safety": "Segurança Autismo",
     "signs": "Gama Placas",
     "about_us": "Quem Somos",
-    "customers": "Confiança & Parcerias"
+    "customers": "Confiança & Parcerias",
+    "functioning": "Como Funciona"
   },
    "cta": {
     "leave_review": "Deixe-nos a sua opinião no Google",
@@ -52,5 +53,17 @@
     "customers": {
       "title": "Clientes",
       "description": "Orgulhamo-nos da confiança que várias empresas depositaram em nós. As nossas soluções de placas, cartões com QR code e NFC estão hoje presentes em diversos negócios que escolheram inovar connosco."
+    },
+    "funcionamento": {
+      "title": "Como Funciona",
+      "subtitle": "Obtenha <strong>comentários instantaneamente</strong>",
+      "step1_title": "Encomendar",
+      "step1_description": "A nossa equipa Comercial irá ajudá-lo na seleção da melhor solução e personalização do produto",
+      "step2_title": "Imprimir e Enviar",
+      "step2_description": "Aprove o seu design, e nós iremos configurar, imprimir e enviar a sua personalização tão desejada",
+      "step3_title": "Recolher Comentários",
+      "step3_description": "Quando o seu produto chegar, coloque-o num local vísivel da sua loja e incentive os seus clientes a deixar um comentário",
+      "subtitle_2": "+ <strong>Avaliações</strong> + <strong>Clientes</strong> + <strong>Sucesso</strong>"
     }
+    
 }

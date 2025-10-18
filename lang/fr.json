@@ -5,7 +5,8 @@
     "autism_safety": "Sécurité Autisme",
     "signs": "Panneaux",
     "about_us": "À Propos",
-    "customers": "Confiance & Partenariats"
+    "customers": "Confiance & Partenariats",
+    "functioning": "Comment Ça Marche"
   },
   "cta": {
     "leave_review": "Laissez-nous votre avis sur Google",
@@ -54,5 +55,16 @@
   "customers": {
       "title": "Clients",
       "description": "Nous sommes fiers de la confiance que de nombreuses entreprises nous accordent. Nos solutions de plaques, cartes avec QR code et NFC sont aujourd’hui présentes dans de nombreuses entreprises qui ont choisi d’innover avec nous."
-    } 
+    },
+    "funcionamento": {
+      "title": "Comment ça fonctionne",
+      "subtitle": "Obtenez des <strong>avis instantanément</strong>",
+      "step1_title": "Commander",
+      "step1_description": "Notre équipe commerciale vous aidera à choisir la meilleure solution et à personnaliser votre produit.",
+      "step2_title": "Imprimer et expédier",
+      "step2_description": "Approuvez votre design, et nous configurerons, imprimerons et expédierons votre personnalisation souhaitée.",
+      "step3_title": "Recueillir des avis",
+      "step3_description": "Lorsque votre produit arrive, placez-le dans un endroit visible de votre magasin et encouragez vos clients à laisser un avis.",
+      "subtitle_2": "+ <strong>Avis</strong> + <strong>Clients</strong> + <strong>Succès</strong>"
+    }
 }

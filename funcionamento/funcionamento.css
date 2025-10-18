@@ -1,0 +1,102 @@
+.how-it-works {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px 50px;
+  max-width: 650px;
+  width: 90%;
+}
+
+.how-it-works h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.how-it-works .subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.steps .step {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+}
+.steps .step:first-child {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+
+.number {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+  min-width: 30px;
+}
+
+.content h3 {
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+
+.content p {
+  color: #444;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.step-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #000;
+}
+
+.text-description{
+text-align: justify;
+}
+
+.centerhorizontal {
+  display: flex;                /* ativa flexbox */
+  justify-content: center;      /* centraliza horizontalmente */
+  align-items: center;          /* alinha verticalmente */
+  text-align: center;           /* garante centralização do texto */
+  gap: 20px;                    /* espaço entre os dois itens */
+}
+
+.destaque-beneficio {
+  font-size: 1.2em;       
+  font-weight: 700;      
+  color: #28a745;        
+}
+
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .how-it-works {
+    padding: 30px 25px;
+  }
+
+  .number {
+    font-size: 22px;
+  }
+
+  .content h3 {
+    font-size: 16px;
+  }
+}

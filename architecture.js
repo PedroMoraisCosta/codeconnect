@@ -1,5 +1,6 @@
 // Determine base path depending on which HTML file is running this script
-const basePath = window.location.pathname.includes('/clientes/') ? '..' : '.'
+const depth = window.location.pathname.split('/').filter(Boolean).length - 1
+const basePath = depth > 0 ? '../'.repeat(depth) : '.'
 
 function buildArchitecture (callback) {
   const tasks = []
@@ -168,6 +169,53 @@ function buildArchitecture (callback) {
               if (topLogoEl) topLogoEl.innerHTML = data
             })
             .catch(err => console.error('Erro ao carregar top-logo.html', err))
+        )
+    )
+  }
+
+  //Funcionamento
+  const funcionamentoSectionEl = document.getElementById(
+    'funcionamento-section-placeholder'
+  )
+  if (funcionamentoSectionEl) {
+    tasks.push(
+      fetch('funcionamento-section.html')
+        .then(res => res.text())
+        .then(data => {
+          funcionamentoSectionEl.innerHTML = data
+          loadLanguage(getLanguage())
+        })
+        .catch(err =>
+          console.error('Erro ao carregar funcionamento-section.html', err)
+        )
+        .then(() =>
+          fetch(`${basePath}/top-logo/top-logo.html`)
+            .then(res => res.text())
+            .then(data => {
+              const topLogoEl = document.getElementById('top-logo-placeholder')
+              if (topLogoEl) topLogoEl.innerHTML = data
+            })
+            .catch(err => console.error('Erro ao carregar top-logo.html', err))
+        )
+        // Whatsapp section
+        .then(() =>
+          fetch(`${basePath}/whatsapp/whatsapp.html`)
+            .then(res => res.text())
+            .then(data => {
+              const whatsappEl = document.getElementById('whatsapp-placeholder')
+              if (whatsappEl) whatsappEl.innerHTML = data
+            })
+            .catch(err => console.error('Erro ao carregar whatsapp.html', err))
+        )
+        // Email section
+        .then(() =>
+          fetch(`${basePath}/email/email.html`)
+            .then(res => res.text())
+            .then(data => {
+              const emailEl = document.getElementById('email-placeholder')
+              if (emailEl) emailEl.innerHTML = data
+            })
+            .catch(err => console.error('Erro ao carregar email.html', err))
         )
     )
   }
