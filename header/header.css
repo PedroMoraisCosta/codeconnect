@@ -119,8 +119,11 @@
   .navbar-nav .dropdown-item:focus,
   .navbar-nav .dropdown-item:active {
     background-color: transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
     color: white; 
   }
+  
 
   /* redes sociais à direita */
   #redesSociais {
