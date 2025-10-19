@@ -15,7 +15,7 @@
     </head>
     <body>
         
-        <div class="container-fluid main main-color-bottom">
+        <div class="container-fluid  main-color-bottom remove-overflow">
             <div id="header-placeholder"></div>
              <div id="top-logo-placeholder"></div>
               <div class="row justify-content-center">
@@ -45,11 +45,7 @@
         <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
          
         <script>
-             AOS.init({
-            duration: 1000,
-            easing: 'ease-in-out',
-            once: true
-        });
+             AOS.init();
         // // Se AOS já estava inicializado antes, use refresh para garantir que os novos elementos sejam detectados
         // AOS.Hardrefresh();
         </script>

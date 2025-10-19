@@ -1,3 +1,7 @@
+.remove-overflow {
+  overflow: hidden;
+}
+
 .how-it-works {
   background: #fff;
   border-radius: 16px;
