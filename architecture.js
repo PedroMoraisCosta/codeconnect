@@ -1,8 +1,7 @@
-// Determine base path depending on which HTML file is running this script
-const depth = window.location.pathname.split('/').filter(Boolean).length - 1
-const basePath = depth > 0 ? '../'.repeat(depth) : '.'
-
 function buildArchitecture (callback) {
+  const depth = window.location.pathname.split('/').filter(Boolean).length - 1
+  const basePath = depth > 0 ? '../'.repeat(depth) : '.'
+
   const tasks = []
 
   // Header
@@ -24,125 +23,74 @@ function buildArchitecture (callback) {
         .then(res => res.text())
         .then(data => {
           indexSectionEl.innerHTML = data
-          loadLanguage(getLanguage())
         })
-        // Top logo section
-        .then(() =>
-          fetch(`${basePath}/top-logo/top-logo.html`)
-            .then(res => res.text())
-            .then(data => {
-              const topLogoEl = document.getElementById('top-logo-placeholder')
-              if (topLogoEl) topLogoEl.innerHTML = data
-            })
-            .catch(err => console.error('Erro ao carregar top-logo.html', err))
-        )
-        // Stars section
-        .then(() =>
-          fetch(`${basePath}/stars/stars.html`)
-            .then(res => res.text())
-            .then(data => {
-              const starsEl = document.getElementById('stars-placeholder')
-              if (starsEl) starsEl.innerHTML = data
-            })
-            .catch(err => console.error('Erro ao carregar stars.html', err))
-        )
-        // Google review section
-        .then(() =>
-          fetch(`${basePath}/google-review/google.html`)
-            .then(res => res.text())
-            .then(data => {
-              const googleEl = document.getElementById('google-placeholder')
-              if (googleEl) googleEl.innerHTML = data
-            })
-            .catch(err => console.error('Erro ao carregar google.html', err))
-        )
-        // Whatsapp section
-        .then(() =>
-          fetch(`${basePath}/whatsapp/whatsapp.html`)
-            .then(res => res.text())
-            .then(data => {
-              const whatsappEl = document.getElementById('whatsapp-placeholder')
-              if (whatsappEl) whatsappEl.innerHTML = data
-            })
-            .catch(err => console.error('Erro ao carregar whatsapp.html', err))
-        )
-        // Email section
-        .then(() =>
-          fetch(`${basePath}/email/email.html`)
-            .then(res => res.text())
-            .then(data => {
-              const emailEl = document.getElementById('email-placeholder')
-              if (emailEl) emailEl.innerHTML = data
-            })
-            .catch(err => console.error('Erro ao carregar email.html', err))
-        )
-        // Dashboard Contacts section
-        .then(() =>
-          fetch(`${basePath}/dashboards/contacts.html`)
-            .then(res => res.text())
-            .then(data => {
-              const dashboardEl = document.getElementById(
-                'contacts-placeholder'
-              )
-              if (dashboardEl) dashboardEl.innerHTML = data
-            })
-            .catch(err => console.error('Erro ao carregar dashboard.html', err))
-        )
-        // Video section
-        .then(() =>
-          fetch(`${basePath}/video/video.html`)
-            .then(res => res.text())
-            .then(data => {
-              const videoEl = document.getElementById('video-placeholder')
-              if (videoEl) videoEl.innerHTML = data
-            })
-            .catch(err => console.error('Erro ao carregar video.html', err))
-        )
-        // Cartoes section
-        .then(() =>
-          fetch(`${basePath}/cartoes/cartoes.html`)
-            .then(res => res.text())
-            .then(data => {
-              const cartoesEl = document.getElementById('cartoes-placeholder')
-              if (cartoesEl) cartoesEl.innerHTML = data
-            })
-            .catch(err => console.error('Erro ao carregar cartoes.html', err))
-        )
-        // Placas section
-        .then(() =>
-          fetch(`${basePath}/placas/placas.html`)
-            .then(res => res.text())
-            .then(data => {
-              const placasEl = document.getElementById('placas-placeholder')
-              if (placasEl) placasEl.innerHTML = data
-            })
-            .catch(err => console.error('Erro ao carregar placas.html', err))
-        )
-        // Placas Modelos section
-        .then(() =>
-          fetch(`${basePath}/placas/placas-model.html`)
-            .then(res => res.text())
-            .then(data => {
-              const placasModeloEl = document.getElementById(
-                'placas-modelo-placeholder'
-              )
-              if (placasModeloEl) placasModeloEl.innerHTML = data
-            })
-            .catch(err =>
-              console.error('Erro ao carregar placas-modelo.html', err)
-            )
-        )
-        // Empresa section
-        .then(() =>
-          fetch(`${basePath}/empresa/empresa.html`)
-            .then(res => res.text())
-            .then(data => {
-              const empresaEl = document.getElementById('empresa-placeholder')
-              if (empresaEl) empresaEl.innerHTML = data
-            })
-            .catch(err => console.error('Erro ao carregar empresa.html', err))
-        )
-        .catch(err => console.error('Erro ao carregar index-section.html', err))
+        .then(() => fetch(`${basePath}/top-logo/top-logo.html`))
+        .then(res => res.text())
+        .then(data => {
+          const el = document.getElementById('top-logo-placeholder')
+          if (el) el.innerHTML = data
+        })
+        .then(() => fetch(`${basePath}/stars/stars.html`))
+        .then(res => res.text())
+        .then(data => {
+          const el = document.getElementById('stars-placeholder')
+          if (el) el.innerHTML = data
+        })
+        .then(() => fetch(`${basePath}/google-review/google.html`))
+        .then(res => res.text())
+        .then(data => {
+          const el = document.getElementById('google-placeholder')
+          if (el) el.innerHTML = data
+        })
+        .then(() => fetch(`${basePath}/whatsapp/whatsapp.html`))
+        .then(res => res.text())
+        .then(data => {
+          const el = document.getElementById('whatsapp-placeholder')
+          if (el) el.innerHTML = data
+        })
+        .then(() => fetch(`${basePath}/email/email.html`))
+        .then(res => res.text())
+        .then(data => {
+          const el = document.getElementById('email-placeholder')
+          if (el) el.innerHTML = data
+        })
+        .then(() => fetch(`${basePath}/dashboards/contacts.html`))
+        .then(res => res.text())
+        .then(data => {
+          const el = document.getElementById('contacts-placeholder')
+          if (el) el.innerHTML = data
+        })
+        .then(() => fetch(`${basePath}/video/video.html`))
+        .then(res => res.text())
+        .then(data => {
+          const el = document.getElementById('video-placeholder')
+          if (el) el.innerHTML = data
+        })
+        .then(() => fetch(`${basePath}/cartoes/cartoes.html`))
+        .then(res => res.text())
+        .then(data => {
+          const el = document.getElementById('cartoes-placeholder')
+          if (el) el.innerHTML = data
+        })
+        .then(() => fetch(`${basePath}/placas/placas.html`))
+        .then(res => res.text())
+        .then(data => {
+          const el = document.getElementById('placas-placeholder')
+          if (el) el.innerHTML = data
+        })
+        .then(() => fetch(`${basePath}/placas/placas-model.html`))
+        .then(res => res.text())
+        .then(data => {
+          const el = document.getElementById('placas-modelo-placeholder')
+          if (el) el.innerHTML = data
+        })
+        .then(() => fetch(`${basePath}/empresa/empresa.html`))
+        .then(res => res.text())
+        .then(data => {
+          const el = document.getElementById('empresa-placeholder')
+          if (el) el.innerHTML = data
+        })
+        .catch(err => console.error('Erro ao carregar seções', err))
     )
   }
 
@@ -156,24 +104,20 @@ function buildArchitecture (callback) {
         .then(res => res.text())
         .then(data => {
           clientsSectionEl.innerHTML = data
-          loadLanguage(getLanguage())
+        })
+        .then(() => fetch(`${basePath}/top-logo/top-logo.html`))
+        .then(res => res.text())
+        .then(data => {
+          const el = document.getElementById('top-logo-placeholder')
+          if (el) el.innerHTML = data
         })
         .catch(err =>
           console.error('Erro ao carregar clientes-section.html', err)
         )
-        .then(() =>
-          fetch(`${basePath}/top-logo/top-logo.html`)
-            .then(res => res.text())
-            .then(data => {
-              const topLogoEl = document.getElementById('top-logo-placeholder')
-              if (topLogoEl) topLogoEl.innerHTML = data
-            })
-            .catch(err => console.error('Erro ao carregar top-logo.html', err))
-        )
     )
   }
 
-  //Funcionamento
+  // Funcionamento
   const funcionamentoSectionEl = document.getElementById(
     'funcionamento-section-placeholder'
   )
@@ -183,55 +127,34 @@ function buildArchitecture (callback) {
         .then(res => res.text())
         .then(data => {
           funcionamentoSectionEl.innerHTML = data
-          loadLanguage(getLanguage())
+        })
+        .then(() => fetch(`${basePath}/top-logo/top-logo.html`))
+        .then(res => res.text())
+        .then(data => {
+          const el = document.getElementById('top-logo-placeholder')
+          if (el) el.innerHTML = data
+        })
+        .then(() => fetch(`${basePath}/whatsapp/whatsapp.html`))
+        .then(res => res.text())
+        .then(data => {
+          const el = document.getElementById('whatsapp-placeholder')
+          if (el) el.innerHTML = data
+        })
+        .then(() => fetch(`${basePath}/email/email.html`))
+        .then(res => res.text())
+        .then(data => {
+          const el = document.getElementById('email-placeholder')
+          if (el) el.innerHTML = data
         })
         .catch(err =>
           console.error('Erro ao carregar funcionamento-section.html', err)
         )
-        .then(() =>
-          fetch(`${basePath}/top-logo/top-logo.html`)
-            .then(res => res.text())
-            .then(data => {
-              const topLogoEl = document.getElementById('top-logo-placeholder')
-              if (topLogoEl) topLogoEl.innerHTML = data
-            })
-            .catch(err => console.error('Erro ao carregar top-logo.html', err))
-        )
-        // Whatsapp section
-        .then(() =>
-          fetch(`${basePath}/whatsapp/whatsapp.html`)
-            .then(res => res.text())
-            .then(data => {
-              const whatsappEl = document.getElementById('whatsapp-placeholder')
-              if (whatsappEl) whatsappEl.innerHTML = data
-            })
-            .catch(err => console.error('Erro ao carregar whatsapp.html', err))
-        )
-        // Email section
-        .then(() =>
-          fetch(`${basePath}/email/email.html`)
-            .then(res => res.text())
-            .then(data => {
-              const emailEl = document.getElementById('email-placeholder')
-              if (emailEl) emailEl.innerHTML = data
-            })
-            .catch(err => console.error('Erro ao carregar email.html', err))
-        )
     )
   }
 
-  // tasks.push(
-  //   fetch(`${basePath}/top-logo/top-logo.html`)
-  //     .then(res => res.text())
-  //     .then(data => {
-  //       const topLogoEl = document.getElementById('top-logo-placeholder')
-  //       if (topLogoEl) topLogoEl.innerHTML = data
-  //     })
-  //     .catch(err => console.error('Erro ao carregar top-logo.html', err))
-  // )
-
-  // Wait for all tasks
+  // Espera todas as tarefas terminarem
   Promise.all(tasks).then(() => {
+    // Scroll behavior
     if (typeof window.setupScrollBehavior === 'function') {
       window.setupScrollBehavior()
     } else {
@@ -243,17 +166,20 @@ function buildArchitecture (callback) {
       }
       document.body.appendChild(s)
     }
-    // ✅ NEW: handle hash navigation after architecture is fully built
+
+    // Scroll para âncora se existir
     if (window.location.hash) {
       const target = document.querySelector(window.location.hash)
       if (target) {
-        // Use a small delay to allow styles/layout to stabilize
-        setTimeout(() => {
-          target.scrollIntoView({ behavior: 'smooth' })
-        }, 200)
-      } else {
-        console.warn('No element found for hash', window.location.hash)
+        setTimeout(() => target.scrollIntoView({ behavior: 'smooth' }), 200)
       }
+    }
+
+    if (
+      typeof loadLanguage === 'function' &&
+      typeof getLanguage === 'function'
+    ) {
+      loadLanguage(getLanguage())
     }
 
     if (typeof callback === 'function') callback()
