@@ -45,9 +45,15 @@
         <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
          
         <script>
-             AOS.init();
-        // // Se AOS já estava inicializado antes, use refresh para garantir que os novos elementos sejam detectados
-        // AOS.Hardrefresh();
+          AOS.init({
+                duration: 100,        // Duração da animação (em ms)
+                easing: 'ease-in-out', // Tipo de easing (suavidade da animação)
+                once: true,           // Se true, anima só na primeira vez (melhora performance)
+                mirror: false,        // Se true, anima novamente ao fazer scroll para cima
+                offset: 100,          // Distância (px) antes do elemento entrar na tela para iniciar animação
+                delay: 0,             // Atraso padrão (podes sobrescrever via data-aos-delay)
+                anchorPlacement: 'top-bottom', // Onde o trigger ocorre
+                })
         </script>
         <style>
 
