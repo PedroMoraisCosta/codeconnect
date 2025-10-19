@@ -1,12 +1,17 @@
 {
   "nav": {
     "cards": "Our Cards",
+    "companies": "Business Cards",
     "child_safety": "Child Safety",
     "autism_safety": "Autism Safety",
-    "signs": "Stand tables",
+    "signs": "Stand Table",
     "about_us": "About Us",
     "customers": "Clients & Partnerships",
-    "functioning": "How It Works"
+    "functioning": "How It Works",
+    "premium": "Premium",
+    "connect_hub": "Connect Hub",
+    "superior": "Superior",
+    "classic": "Classic"
   },
   "cta": {
     "leave_review": "Leave us your feedback on Google",
@@ -31,13 +36,13 @@
     "title": "Our Stand Table",
     "model_3d": "Our 3D Model",
     "description": "With a simple touch or scan, your customers instantly access reviews, menus, social media, or any link of your choice — fast, easy, and with no monthly fees.",
-    "premium_range": "Premium Range",
+    "premium_range": "Premium",
     "premium_description": "Highlight your business with the <strong>Customizable Sign</strong>, the premium version of our signs, allowing you to customize the entire sign with icons that reflect your brand's style and identity.",
-    "connect_hub_range": "Connect Hub Range",
+    "connect_hub_range": "Connect Hub",
     "connect_hub_description": "Take the first step in digitizing your business with the <strong>Connect Hub</strong>, ideal for businesses looking to centralize all networks into a single point of contact.",
-    "superior_range": "Superior Range",
+    "superior_range": "Superior",
     "superior_description": "Highlight your business with the <strong>Duo Color</strong>, the superior version of our signs, allowing you to customize the circle color and background color to create a unique combination that reflects your brand's style and identity.",
-    "classic_range": "Classic Range",
+    "classic_range": "Classic",
     "classic_description": "Take the first step in digitizing your business with the <strong>Ring Color</strong>, customize the circle color to match your space's environment and show a touch of visual identity."
   },
    "about_us": {

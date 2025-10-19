@@ -1,60 +1,57 @@
 ;(function (global) {
   function setupScrollBehavior () {
-    if (global.__setupScrollBehaviorDone) return // avoid double init
+    if (global.__setupScrollBehaviorDone) return
 
     const navbar = document.querySelector('.navbar')
-    if (!navbar) {
-      console.warn('setupScrollBehavior: .navbar not found')
-      return
-    }
+    if (!navbar) return console.warn('.navbar not found')
 
     const navbarNav = document.getElementById('navbarNav')
-    const navLinks = document.querySelectorAll('.navbar-nav .nav-link')
+    if (!navbarNav) return
 
-    // Collapse on mobile when a link is clicked
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
+    // Select all links inside the navbar, including dropdown items
+    const allLinks = navbarNav.querySelectorAll('a.nav-link, .dropdown-item')
+
+    allLinks.forEach(link => {
+      link.addEventListener('click', e => {
         const bsCollapse = bootstrap.Collapse.getInstance(navbarNav)
+
+        // If link is a dropdown toggle parent → do nothing
+        if (link.classList.contains('dropdown-toggle')) return
+
+        // Otherwise → collapse the entire navbar (including submenu)
         if (bsCollapse) bsCollapse.hide()
       })
     })
 
-    // Change color of nav links (you can adjust this if needed)
     function updateNavLinkColor () {
       const isScrolled = navbar.classList.contains('navbar-scrolled')
+      const navLinks = navbarNav.querySelectorAll('.nav-link')
       navLinks.forEach(link => {
-        // link.style.setProperty(
-        //   'color',
-        //   isScrolled ? 'black' : 'white',
-        //   'important'
-        // )
+        // Customize colors if needed
+        // link.style.setProperty('color', isScrolled ? 'black' : 'white', 'important')
       })
     }
 
-    // Handle scroll color
     function handleScroll () {
       if (window.scrollY >= 56) {
         navbar.classList.add('navbar-scrolled')
       } else {
-        // only remove if the menu is NOT open
         const isMenuOpen = navbarNav.classList.contains('show')
         if (!isMenuOpen) navbar.classList.remove('navbar-scrolled')
       }
       updateNavLinkColor()
     }
 
-    // --- NEW: handle menu open/close ---
+    // Handle menu open/close
     navbarNav.addEventListener('show.bs.collapse', () => {
-      navbar.classList.add('navbar-scrolled') // yellow when menu opens
+      navbar.classList.add('navbar-scrolled')
       updateNavLinkColor()
     })
 
     navbarNav.addEventListener('hidden.bs.collapse', () => {
-      // if user is at top and closes menu → remove yellow
       if (window.scrollY < 56) navbar.classList.remove('navbar-scrolled')
       updateNavLinkColor()
     })
-    // -----------------------------------
 
     handleScroll()
     window.addEventListener('scroll', handleScroll)
@@ -63,26 +60,16 @@
   }
 
   function handleInitialHashScroll () {
-    // Wait until the page finishes loading all DOM content
     window.addEventListener('load', () => {
       setTimeout(() => {
         if (window.location.hash) {
           const target = document.querySelector(window.location.hash)
-          if (target) {
-            target.scrollIntoView({ behavior: 'smooth' })
-          } else {
-            console.warn(
-              'handleInitialHashScroll: target not found for',
-              window.location.hash
-            )
-          }
+          if (target) target.scrollIntoView({ behavior: 'smooth' })
         }
-      }, 300) // Adjust delay if architecture.js takes longer
+      }, 300)
     })
   }
 
-  // Expose globally so you can call it when architecture.js finishes
   global.handleInitialHashScroll = handleInitialHashScroll
-  // expose
   global.setupScrollBehavior = setupScrollBehavior
 })(window)

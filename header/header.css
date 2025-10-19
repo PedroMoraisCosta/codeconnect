@@ -77,8 +77,10 @@
     transform: rotate(0);
 }
 
+ .navbar-nav .dropdown-menu {
+  background-color:white;
+}
 
-/* ====== POSICIONAMENTO DO CONTEÚDO ====== */
 
 /* Desktop: redes sociais à esquerda, menu à direita */
 #redesSociais {
@@ -107,6 +109,17 @@
   .button-size{
     width: 27px;
     height: 27px;
+  }
+  .navbar-nav .dropdown-menu {
+    background-color: transparent !important;
+  }
+
+  .navbar-nav .dropdown-item,
+  .navbar-nav .dropdown-item:hover,
+  .navbar-nav .dropdown-item:focus,
+  .navbar-nav .dropdown-item:active {
+    background-color: transparent !important;
+    color: white; 
   }
 
   /* redes sociais à direita */

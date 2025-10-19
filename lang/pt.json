@@ -1,12 +1,17 @@
 {
   "nav": {
     "cards": "Gama Cartões",
+    "companies": "Cartões Empresas",
     "child_safety": "Segurança Infantil",
     "autism_safety": "Segurança Autismo",
     "signs": "Gama Placas",
     "about_us": "Quem Somos",
     "customers": "Confiança & Parcerias",
-    "functioning": "Como Funciona"
+    "functioning": "Como Funciona",
+    "premium": "Gama Premium",
+    "connect_hub": "Gama Connect Hub",
+    "superior": "Gama Superior",
+    "classic": "Gama Clássica"
   },
    "cta": {
     "leave_review": "Deixe-nos a sua opinião no Google",
