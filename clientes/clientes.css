@@ -1,3 +1,23 @@
+.row.testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem; /* espaço entre os blocos */
+}
+
+.row.testimonials .col {
+    display: flex;
+    justify-content: center;
+}
+
+blockquote.testimonial {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    height: 100%; /* faz todos terem mesma altura */
+    padding: 2rem;
+}
+
+
 blockquote.testimonial {
   background-color: #1a1113;
   color: #fff;
@@ -8,6 +28,7 @@ blockquote.testimonial {
   position: relative;
   overflow: hidden;          /* Prevents text from leaking out */
   word-break: break-word;    /* Breaks long unspaced words */
+   
 }
 
 blockquote.testimonial .quote-header {
@@ -36,6 +57,7 @@ blockquote.testimonial p {
   line-height: 1.4;
   margin-bottom: 1.5rem;
   text-align: justify;  
+  
 }
 
 blockquote.testimonial footer {
@@ -48,6 +70,7 @@ blockquote.testimonial footer {
   font-weight: 400;
   color: white;
   font-family: "Poppins", cursive;
+  margin-top: auto; 
 }
 
 blockquote.testimonial footer img {
