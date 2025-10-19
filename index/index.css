@@ -1,19 +1,20 @@
 html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: auto !important;
   overflow-x: hidden;
-  width: 100%;
 }
 
 /* * {
   max-width: 100%;
   box-sizing: border-box;
 } */
-
-.main{          
+ /* .main{          
     border-spacing: 0;
     font-family: sans-serif;
     color: #171a1b;
     overflow-y: hidden;
-}
+} */
 
 .main-color-bottom{
     background: linear-gradient(to bottom,  #303468, #000000);
@@ -31,7 +32,9 @@ html, body {
     font-family: 'Poppins', sans-serif;
 }
 
-
+.remove-overflow {
+  overflow: hidden;
+}
 
 .text.aos-init.aos-animate:hover {
     transform: scale(1.1);
