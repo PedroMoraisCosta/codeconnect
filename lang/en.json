@@ -4,7 +4,7 @@
     "companies": "Business Cards",
     "child_safety": "Child Safety",
     "autism_safety": "Autism Safety",
-    "signs": "Stand Table",
+    "signs": "Display Stand",
     "about_us": "About Us",
     "customers": "Clients & Partnerships",
     "functioning": "How It Works",
@@ -33,7 +33,7 @@
 
   },
   "placas": {
-    "title": "Our Stand Table",
+    "title": "Our Display Stand",
     "model_3d": "Our 3D Model",
     "description": "With a simple touch or scan, your customers instantly access reviews, menus, social media, or any link of your choice — fast, easy, and with no monthly fees.",
     "premium_range": "Premium",
