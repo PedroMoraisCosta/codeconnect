@@ -5,18 +5,77 @@
  
 
 .text{
-width:40%;
-max-width: 75%;
+  width:40%;
+  max-width:75%;
+}
+
+.text1 {
+  width:39%;
+  max-width:74%;
+}
+
+.palette {
+ display: flex;
+ gap: 5px;
+ width: auto;
+ justify-content: start !important;
+}
+
+.color-box {
+ width: 30px;
+ height: 30px;
+ border-radius: 6px;
+ cursor: pointer;
+ border: 1px solid #ccc;
+}
+
+.overlay-img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.optionTitleText {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0px;
+    width: 75%;
 }
 
 @media (max-width: 478px) { 
   .cardsize{
     width: 45%;
   }
+  .text1{
+    width:41%;
+  }
+  .palette {
+    display: grid;
+    grid-template-columns: repeat(5, 30px);
+    gap: 10px;
+    justify-content: center !important;
+  }
+}
+
+.diagonal-line {
+  background:
+    linear-gradient(45deg,
+      transparent 47%,
+      white 49%,
+      transparent 51%
+    ),
+    black;
 }
 
 @media (max-width: 952px) { 
-  .text{
+  .text {
     width:75%;
+  }
+  .text1{
+    width:73%;
+    }
+  .optionTitleText{
+     margin: 0 auto;
+     justify-content: center !important;
   }
 }

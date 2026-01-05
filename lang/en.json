@@ -43,7 +43,10 @@
     "superior_range": "Superior",
     "superior_description": "Highlight your business with the <strong>Duo Color</strong>, the superior version of our signs, allowing you to customize the circle color and background color to create a unique combination that reflects your brand's style and identity.",
     "classic_range": "Classic",
-    "classic_description": "Take the first step in digitizing your business with the <strong>Ring Color</strong>, customize the circle color to match your space's environment and show a touch of visual identity."
+    "classic_description": "Take the first step in digitizing your business with the <strong>Ring Color</strong>, customize the circle color to match your space's environment and show a touch of visual identity.",
+    "classic_ring_options": "Circle Color",
+    "classic_star_options": "Stars Color",
+    "classic_hands_options": "Hands Color"
   },
    "about_us": {
     "title": "About Us",
