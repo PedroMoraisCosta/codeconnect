@@ -46,7 +46,9 @@
     "classic_description": "Take the first step in digitizing your business with the <strong>Ring Color</strong>, customize the circle color to match your space's environment and show a touch of visual identity.",
     "classic_ring_options": "Circle Color",
     "classic_star_options": "Stars Color",
-    "classic_hands_options": "Hands Color"
+    "classic_hands_options": "Hands Color",
+    "classic_background_options": "Background Color",
+    "classic_other_options": "Other"
   },
    "about_us": {
     "title": "About Us",

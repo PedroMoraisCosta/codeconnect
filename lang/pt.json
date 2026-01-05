@@ -45,7 +45,9 @@
     "classic_description": "Dê o primeiro passo na digitalização do seu negócio com a <strong>Ring Color</strong>, personalize a cor do círculo para combinar com o ambiente do seu espaço e mostrar um toque de identidade visual.",
     "classic_ring_options": "Cor do Círculo",
     "classic_star_options": "Cor das Estrelas",
-    "classic_hands_options": "Cor das Mãos"
+    "classic_hands_options": "Cor das Mãos",
+    "classic_background_options": "Cor de Fundo",
+    "classic_other_options": "Outros"
   },
    "about_us": {
     "title": "Quem Somos",
