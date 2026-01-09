@@ -11,4 +11,17 @@ document.addEventListener('click', event => {
   if (!targetImage) return
 
   targetImage.src = 'img/' + box.dataset.img
+
+  if (targetImage.id === 'backgroundImage') {
+    const targetQrCode = document.getElementById('othersImage')
+    if (!targetQrCode) return
+    let qrcodeimage = ''
+
+    if (box.dataset.img === 'Base_Fundo_2.png') {
+      qrcodeimage = 'PlacaSemCor_2.png'
+    } else {
+      qrcodeimage = 'PlacaSemCor_3.png'
+    }
+    targetQrCode.src = 'img/' + qrcodeimage
+  }
 })
