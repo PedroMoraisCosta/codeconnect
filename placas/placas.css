@@ -14,12 +14,13 @@
   max-width:74%;
 }
 
-.palette {
+.palette, .colorpicker {
  display: flex;
  gap: 5px;
  width: auto;
  justify-content: start !important;
 }
+
 
 .color-box {
  width: 30px;
@@ -87,6 +88,9 @@
     display: grid;
     grid-template-columns: repeat(5, 30px);
     gap: 10px;
+    justify-content: center !important;
+  }
+  .colorpicker{
     justify-content: center !important;
   }
 }
