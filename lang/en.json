@@ -48,7 +48,8 @@
     "classic_star_options": "Stars Color",
     "classic_hands_options": "Hands Color",
     "classic_background_options": "Background Color",
-    "classic_other_options": "Other"
+    "classic_other_options": "Other",
+    "classic_upload_options": "Upload Logo"
   },
    "about_us": {
     "title": "About Us",

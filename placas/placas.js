@@ -25,3 +25,31 @@ document.addEventListener('click', event => {
     targetQrCode.src = 'img/' + qrcodeimage
   }
 })
+
+document.addEventListener('click', e => {
+  if (!e.target.classList.contains('preview')) return
+
+  e.target.closest('.palette').querySelector('.imageUpload').click()
+})
+
+document.addEventListener('change', e => {
+  if (!e.target.classList.contains('imageUpload')) return
+
+  const file = e.target.files[0]
+  if (!file) return
+
+  if (!file.type.startsWith('image/')) {
+    showToast('Invalid image type', 'danger')
+    e.target.value = ''
+    return
+  }
+
+  // get target from palette
+  const palette = e.target.closest('.palette')
+  const targetId = palette.dataset.target
+
+  // find the image with that ID
+  const targetImage = document.getElementById(targetId)
+
+  targetImage.src = URL.createObjectURL(file)
+})

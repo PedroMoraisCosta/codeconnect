@@ -42,6 +42,31 @@
     width: 75%;
 }
 
+.img-thumbnail {
+    padding: .25rem;
+    background-color: var(--bs-body-bg);
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    max-width: 100%;
+    height: auto;
+}
+
+.img-size {
+    max-width: 120px;
+    max-height: 120px;
+    padding: 0px 0px 0px 0px;
+}
+
+
+ .logoposition {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 @media (max-width: 478px) { 
   .cardsize{
     width: 45%;

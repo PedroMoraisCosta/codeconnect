@@ -48,7 +48,8 @@
     "classic_star_options": "Couleur des Étoiles",
     "classic_hands_options": "Couleur des Mains",
     "classic_background_options": "Couleur de Fond",
-    "classic_other_options": "Autres"
+    "classic_other_options": "Autres",
+    "classic_upload_options": "Télécharger le Logo"
   },
   "about_us": {
     "title": "Qui Nous Sommes",
