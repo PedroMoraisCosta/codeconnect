@@ -78,6 +78,13 @@ function buildArchitecture (callback) {
           const el = document.getElementById('placas-placeholder')
           if (el) el.innerHTML = data
         })
+        .then(() => fetch('placas/circle.html'))
+        .then(res => res.text())
+        .then(svg => {
+          document
+            .querySelectorAll('.svg-holder')
+            .forEach(el => (el.innerHTML = svg))
+        })
         .then(() => fetch(`${basePath}/placas/placas-model.html`))
         .then(res => res.text())
         .then(data => {

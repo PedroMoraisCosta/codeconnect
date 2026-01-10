@@ -73,18 +73,24 @@
             src="img/Base_Fundo_3.png" alt="placa qrcode preta nfc codeconnect" style="border: 1px solid white;" class="text1 overlay-img">
             <img id="othersImage" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300"
             src="img/PlacaSemCor_3.png" alt="placa qrcode preta nfc codeconnect" class="text">
-            <img id="circleImage" 
-            src="img/Base_Circulo_4.png" alt="placa qrcode preta nfc codeconnect" class="text1 overlay-img">
+             <!-- <img id="circleImage" 
+            src="img/Base_Circulo_4.png" alt="placa qrcode preta nfc codeconnect" class="text1 overlay-img">  -->
+            <!-- <div class="svg-holder"></div> -->
+             
               <img id="starImage" 
             src="img/Base_Estrelas_2.png" alt="placa qrcode preta nfc codeconnect" class="text1 overlay-img">
               <img id="handImage" 
             src="img/Base_Maos_1.png" alt="placa qrcode preta nfc codeconnect" class="text1 overlay-img">
              <img id="preview" src="img/favicon.ico"  class="logoposition overlay-img">
+             <div class="svg-holder"></div>
       </div>
       <div class="col-md-6 col-10 text-center">
         <p class="optionTitleText d-flex justify-content-start" data-i18n="placas.classic_ring_options">
-        </p>    
-        <div class="palette" data-target="circleImage">      
+        </p>
+        <div class="colorpicker">
+          <input type="color" id="pickerpremiumcolor" value="#0066ff">      
+        </div>    
+        <!-- <div class="palette" data-target="circleImage">      
               <div class="color-box" style="background:blue" data-img="Base_Circulo_2.png"></div>
               <div class="color-box" style="background:#bf9900ff" data-img="Base_Circulo_4.png"></div>
               <div class="color-box" style="background:red" data-img="Base_Circulo_1.png"></div>
@@ -96,7 +102,7 @@
               <div class="color-box" style="background: #aaeeff;" data-img="Base_Circulo_9.png"></div>
               <div class="color-box" style="background: #ab37c8;" data-img="Base_Circulo_10.png"></div>
               
-        </div>
+        </div> -->
         <p class="optionTitleText d-flex justify-content-start" data-i18n="placas.classic_star_options">
         </p>
         <div class="palette" data-target="starImage">      
@@ -149,33 +155,17 @@
     </div>
    
     <div class="col-md-6 col-10 text-center tdsectionspace position-relative">
-      <img data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300" src="img/PlacaSemCor.png" alt="placa qrcode preta nfc codeconnect" class="text">
+      <img src="img/PlacaSemCor.png" alt="placa qrcode preta nfc codeconnect" class="text">
       <!-- <img id="circleImageRingColor"   src="img/Base_Circulo_2.png" alt="placa qrcode preta nfc codeconnect" class="text1 overlay-img"> -->
       <img id="starImage" src="img/Base_Estrelas_1.png" alt="placa qrcode preta nfc codeconnect" class="text1 overlay-img">
       <img id="handImage"  src="img/Base_Maos_3.png" alt="placa qrcode preta nfc codeconnect" class="text1 overlay-img">
-    
-      <svg
-     
-      viewBox="0 -4 300 300"
-      xmlns="http://www.w3.org/2000/svg"
-      class="circle-svg text1 overlay-img circleposition"
-    >
-      <circle
-        cx="150"
-        cy="150"
-        r="137"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="8"
-        vector-effect="non-scaling-stroke"
-      />
-    </svg>
+      <div class="svg-holder"></div>
     </div>
     <div class="col-md-6 col-10 text-center">
       <p class="optionTitleText d-flex justify-content-start" data-i18n="placas.classic_ring_options">
       </p>    
       <div class="colorpicker">
-        <input type="color" id="picker" value="#0066ff">      
+        <input type="color" id="pickerringcolor" value="#0066ff">      
       </div>
            
     </div>

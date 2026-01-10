@@ -27,10 +27,23 @@ document.addEventListener('click', event => {
 })
 
 document.addEventListener('input', e => {
-  if (!e.target.id === 'picker') return
+  if (
+    !e.target.id === 'pickerringcolor' ||
+    !e.target.id === 'pickerpremiumcolor'
+  )
+    return
 
-  const svg = document.querySelector('.circle-svg')
-  svg.style.color = e.target.value
+  document
+    .querySelectorAll('.circle-svg')
+    .forEach(el => (el.style.color = e.target.value))
+
+  ringcolorelement = document.getElementById('pickerringcolor')
+  premiumcolorelement = document.getElementById('pickerpremiumcolor')
+  ringcolorelement.value = e.target.value
+  premiumcolorelement.value = e.target.value
+
+  // const svg = document.querySelector('.circle-svg')
+  // svg.style.color = e.target.value
 })
 
 document.addEventListener('click', e => {

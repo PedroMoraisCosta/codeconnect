@@ -14,13 +14,17 @@
   max-width:74%;
 }
 
-.palette, .colorpicker {
+.palette {
  display: flex;
  gap: 5px;
  width: auto;
- justify-content: start !important;
+ justify-content: center !important;
 }
 
+.colorpicker{
+  display: flex;
+  justify-content: center !important;
+}
 
 .color-box {
  width: 30px;
@@ -77,6 +81,16 @@
   transform: translate(-50%, -50%);
 }
 
+.diagonal-line {
+  background:
+    linear-gradient(45deg,
+      transparent 47%,
+      white 49%,
+      transparent 51%
+    ),
+    black;
+}
+
 @media (max-width: 478px) { 
   .cardsize{
     width: 45%;
@@ -90,22 +104,11 @@
     gap: 10px;
     justify-content: center !important;
   }
-  .colorpicker{
-    justify-content: center !important;
-  }
+  
 }
 
-.diagonal-line {
-  background:
-    linear-gradient(45deg,
-      transparent 47%,
-      white 49%,
-      transparent 51%
-    ),
-    black;
-}
 
-@media (max-width: 952px) { 
+@media (max-width: 952px) {
   .text {
     width:75%;
   }
@@ -115,5 +118,16 @@
   .optionTitleText{
      margin: 0 auto;
      justify-content: center !important;
+  }
+ 
+}
+
+/* Desktop / Large screens */
+@media (min-width: 953px) {
+  .colorpicker{
+    justify-content: start !important;
+  }
+  .palette {
+    justify-content: start !important;
   }
 }
