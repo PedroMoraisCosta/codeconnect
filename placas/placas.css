@@ -67,6 +67,12 @@
   transform: translate(-50%, -50%);
 }
 
+.circleposition {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 @media (max-width: 478px) { 
   .cardsize{
     width: 45%;

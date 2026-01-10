@@ -26,6 +26,13 @@ document.addEventListener('click', event => {
   }
 })
 
+document.addEventListener('input', e => {
+  if (!e.target.id === 'picker') return
+
+  const svg = document.querySelector('.circle-svg')
+  svg.style.color = e.target.value
+})
+
 document.addEventListener('click', e => {
   if (!e.target.classList.contains('preview')) return
 
