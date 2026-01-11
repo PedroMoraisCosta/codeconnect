@@ -17,7 +17,7 @@ function updateMaxLength () {
   const charInfos = document.querySelectorAll('.charInfoClassInJS')
 
   charInfos.forEach(charInfo => {
-    charInfo.textContent = `Max ${input.maxLength} chars`
+    charInfo.textContent = `Max ${input.maxLength}`
   })
 }
 
