@@ -85,6 +85,13 @@ function buildArchitecture (callback) {
             .querySelectorAll('.svg-holder')
             .forEach(el => (el.innerHTML = svg))
         })
+        .then(() => fetch('placas/title.html'))
+        .then(res => res.text())
+        .then(svg => {
+          document
+            .querySelectorAll('.title-holder')
+            .forEach(el => (el.innerHTML = svg))
+        })
         .then(() => fetch(`${basePath}/placas/placas-model.html`))
         .then(res => res.text())
         .then(data => {

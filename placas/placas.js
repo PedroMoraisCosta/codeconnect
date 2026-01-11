@@ -8,11 +8,17 @@ function updateMaxLength () {
 
   if (input.value.length > input.maxLength) {
     input.value = input.value.slice(0, input.maxLength)
-    const el = document.getElementById('title')
+    const el = document.getElementById('titlepremiumcolor')
     el.textContent = input.value
+    const el2 = document.getElementById('titleringcolor')
+    el2.textContent = input.value
   }
 
-  charInfo.textContent = `Max ${input.maxLength} chars`
+  const charInfos = document.querySelectorAll('.charInfoClassInJS')
+
+  charInfos.forEach(charInfo => {
+    charInfo.textContent = `Max ${input.maxLength} chars`
+  })
 }
 
 document.addEventListener('click', event => {
@@ -34,10 +40,16 @@ document.addEventListener('click', event => {
     if (!targetQrCode) return
     let qrcodeimage = ''
 
+    const titlepremiumcolorElement =
+      document.getElementById('titlepremiumcolor')
+
     if (box.dataset.img === 'Base_Fundo_2.png') {
       qrcodeimage = 'PlacaSemCor_2.png'
+      titlepremiumcolorElement.classList.remove('text-black')
+      titlepremiumcolorElement.style.color = 'white'
     } else {
       qrcodeimage = 'PlacaSemCor_3.png'
+      titlepremiumcolorElement.classList.add('text-black')
     }
     targetQrCode.src = 'img/' + qrcodeimage
   }
@@ -45,17 +57,23 @@ document.addEventListener('click', event => {
 
 document.addEventListener('input', e => {
   if (
-    !e.target.id === 'pickerringcolor' ||
-    !e.target.id === 'pickerpremiumcolor' ||
-    !e.target.id === 'name' ||
+    !e.target.id === 'pickerringcolor' &&
+    !e.target.id === 'pickerpremiumcolor' &&
     !e.target.id === 'name'
   )
     return
 
   if (e.target.id === 'name' || e.target.id === 'name') {
     updateMaxLength()
-    const el = document.getElementById('title')
+    const el = document.getElementById('titlepremiumcolor')
     el.textContent = e.target.value
+    const el2 = document.getElementById('titleringcolor')
+    el2.textContent = e.target.value
+    const titleinputs = document.querySelectorAll('.nametitleinputInJS')
+
+    titleinputs.forEach(name => {
+      name.value = e.target.value
+    })
 
     return
   }
