@@ -1,3 +1,20 @@
+function updateMaxLength () {
+  const charInfo = document.getElementById('charInfo')
+  const input = document.getElementById('name')
+
+  if (charInfo === null || input === null) return
+
+  input.maxLength = 45
+
+  if (input.value.length > input.maxLength) {
+    input.value = input.value.slice(0, input.maxLength)
+    const el = document.getElementById('title')
+    el.textContent = input.value
+  }
+
+  charInfo.textContent = `Max ${input.maxLength} chars`
+}
+
 document.addEventListener('click', event => {
   const box = event.target.closest('.color-box')
   if (!box) return
@@ -29,21 +46,28 @@ document.addEventListener('click', event => {
 document.addEventListener('input', e => {
   if (
     !e.target.id === 'pickerringcolor' ||
-    !e.target.id === 'pickerpremiumcolor'
+    !e.target.id === 'pickerpremiumcolor' ||
+    !e.target.id === 'name' ||
+    !e.target.id === 'name'
   )
     return
+
+  if (e.target.id === 'name' || e.target.id === 'name') {
+    updateMaxLength()
+    const el = document.getElementById('title')
+    el.textContent = e.target.value
+
+    return
+  }
 
   document
     .querySelectorAll('.circle-svg')
     .forEach(el => (el.style.color = e.target.value))
 
-  ringcolorelement = document.getElementById('pickerringcolor')
-  premiumcolorelement = document.getElementById('pickerpremiumcolor')
+  const ringcolorelement = document.getElementById('pickerringcolor')
+  const premiumcolorelement = document.getElementById('pickerpremiumcolor')
   ringcolorelement.value = e.target.value
   premiumcolorelement.value = e.target.value
-
-  // const svg = document.querySelector('.circle-svg')
-  // svg.style.color = e.target.value
 })
 
 document.addEventListener('click', e => {
@@ -72,4 +96,9 @@ document.addEventListener('change', e => {
   const targetImage = document.getElementById(targetId)
 
   targetImage.src = URL.createObjectURL(file)
+})
+
+document.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('resize', updateMaxLength)
+  updateMaxLength()
 })

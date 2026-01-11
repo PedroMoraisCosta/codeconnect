@@ -82,6 +82,13 @@
   transform: translate(-50%, -50%);
 }
 
+.title{
+  color: white;
+  font-size: 10px;
+  margin-top: 7px;
+  text-transform: uppercase;
+}
+
 .diagonal-line {
   background:
     linear-gradient(45deg,
@@ -90,6 +97,14 @@
       transparent 51%
     ),
     black;
+}
+
+.size-input{
+  width: 100%
+}
+
+.text-6{
+  font-size: 9px;
 }
 
 @media (max-width: 478px) { 
@@ -104,6 +119,10 @@
     grid-template-columns: repeat(5, 30px);
     gap: 10px;
     justify-content: center !important;
+  }
+ .title{
+   font-size: 7px;
+   margin-top: 7px;
   }
   
 }
@@ -121,6 +140,7 @@
      justify-content: center !important;
   }
  
+ 
 }
 
 /* Desktop / Large screens */
@@ -131,4 +151,8 @@
   .palette {
     justify-content: start !important;
   }
+  .size-input{
+    width: 50%
+  }
+  
 }
