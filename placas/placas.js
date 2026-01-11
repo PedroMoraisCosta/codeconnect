@@ -57,9 +57,9 @@ document.addEventListener('click', event => {
 
 document.addEventListener('input', e => {
   if (
-    !e.target.id === 'pickerringcolor' &&
-    !e.target.id === 'pickerpremiumcolor' &&
-    !e.target.id === 'name'
+    e.target.id !== 'pickerringcolor' &&
+    e.target.id !== 'pickerpremiumcolor' &&
+    e.target.id !== 'name'
   )
     return
 
@@ -89,9 +89,9 @@ document.addEventListener('input', e => {
 })
 
 document.addEventListener('click', e => {
-  if (!e.target.classList.contains('preview')) return
-
-  e.target.closest('.palette').querySelector('.imageUpload').click()
+  if (!e.target.classList.contains('icon')) return
+  const uploads = document.querySelectorAll('.imageUpload')
+  uploads.forEach(input => input.click())
 })
 
 document.addEventListener('change', e => {
@@ -106,14 +106,10 @@ document.addEventListener('change', e => {
     return
   }
 
-  // get target from palette
-  const palette = e.target.closest('.palette')
-  const targetId = palette.dataset.target
-
-  // find the image with that ID
-  const targetImage = document.getElementById(targetId)
-
-  targetImage.src = URL.createObjectURL(file)
+  const premium = document.getElementById('iconpremiumcolor')
+  premium.src = URL.createObjectURL(file)
+  const ring = document.getElementById('iconringcolor')
+  ring.src = URL.createObjectURL(file)
 })
 
 document.addEventListener('DOMContentLoaded', () => {
