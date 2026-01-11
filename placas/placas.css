@@ -21,7 +21,7 @@
  justify-content: center !important;
 }
 
-.colorpicker{
+.alignment{
   display: flex;
   justify-content: center !important;
 }
@@ -145,7 +145,7 @@
 
 /* Desktop / Large screens */
 @media (min-width: 953px) {
-  .colorpicker{
+  .alignment{
     justify-content: start !important;
   }
   .palette {
