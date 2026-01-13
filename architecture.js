@@ -82,7 +82,14 @@ function buildArchitecture (callback) {
         .then(res => res.text())
         .then(svg => {
           document
-            .querySelectorAll('.svg-holder')
+            .querySelectorAll('.circle-holder')
+            .forEach(el => (el.innerHTML = svg))
+        })
+        .then(() => fetch('placas/estrelas.html'))
+        .then(res => res.text())
+        .then(svg => {
+          document
+            .querySelectorAll('.star-holder')
             .forEach(el => (el.innerHTML = svg))
         })
         .then(() => fetch('placas/logo.html'))

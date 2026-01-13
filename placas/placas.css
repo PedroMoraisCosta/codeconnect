@@ -107,6 +107,20 @@
   font-size: 9px;
 }
 
+.star-position{
+  left: 50%;
+  top: 23%;
+  transform: translate(-50%, -50%);
+}
+
+.star-size{
+  width: 35%
+}
+
+.stars-svg{
+  color: #A0A234;
+}
+
 @media (max-width: 478px) { 
   .cardsize{
     width: 45%;
@@ -139,6 +153,9 @@
      margin: 0 auto;
      justify-content: center !important;
   }
+  .star-size{
+    width: 35%
+  }
  
  
 }
@@ -154,5 +171,13 @@
   .size-input{
     width: 50%
   }
-  
+  .star-size{
+    width: 19%
+  }
+  .star-position{
+    top:23%
+  }
+  .circleposition{
+    top:50%
+  }
 }

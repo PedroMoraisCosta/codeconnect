@@ -59,7 +59,8 @@ document.addEventListener('input', e => {
   if (
     e.target.id !== 'pickerringcolor' &&
     e.target.id !== 'pickerpremiumcolor' &&
-    e.target.id !== 'name'
+    e.target.id !== 'name' &&
+    e.target.id !== 'starpickercolor'
   )
     return
 
@@ -78,14 +79,26 @@ document.addEventListener('input', e => {
     return
   }
 
-  document
-    .querySelectorAll('.circle-svg')
-    .forEach(el => (el.style.color = e.target.value))
+  if (
+    e.target.id === 'pickerringcolor' ||
+    e.target.id === 'pickerpremiumcolor'
+  ) {
+    document
+      .querySelectorAll('.circle-svg')
+      .forEach(el => (el.style.color = e.target.value))
 
-  const ringcolorelement = document.getElementById('pickerringcolor')
-  const premiumcolorelement = document.getElementById('pickerpremiumcolor')
-  ringcolorelement.value = e.target.value
-  premiumcolorelement.value = e.target.value
+    const ringcolorelement = document.getElementById('pickerringcolor')
+    const premiumcolorelement = document.getElementById('pickerpremiumcolor')
+    ringcolorelement.value = e.target.value
+    premiumcolorelement.value = e.target.value
+
+    return
+  }
+
+  if (e.target.id === 'starpickercolor') {
+    document.querySelector('.stars-svg').style.color = e.target.value
+    return
+  }
 })
 
 document.addEventListener('click', e => {
