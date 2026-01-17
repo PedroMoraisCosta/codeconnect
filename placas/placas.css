@@ -82,6 +82,12 @@
   transform: translate(-50%, -50%);
 }
 
+.hand-position{
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .title{
   color: white;
   font-size: 10px;
@@ -112,13 +118,17 @@
   top: 23%;
   transform: translate(-50%, -50%);
 }
-
+  
 .star-size{
   width: 35%
 }
 
-.stars-svg{
+.stars-svg, hands-color {
   color: #A0A234;
+}
+
+.hand-size{
+  width: 100%
 }
 
 @media (max-width: 478px) { 
@@ -156,8 +166,9 @@
   .star-size{
     width: 35%
   }
- 
- 
+  .hand-size{
+    width: 75%
+  }
 }
 
 /* Desktop / Large screens */
@@ -179,5 +190,8 @@
   }
   .circleposition{
     top:50%
+  }
+ .hand-size{
+    width: 40%
   }
 }

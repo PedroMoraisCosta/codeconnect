@@ -60,7 +60,8 @@ document.addEventListener('input', e => {
     e.target.id !== 'pickerringcolor' &&
     e.target.id !== 'pickerpremiumcolor' &&
     e.target.id !== 'name' &&
-    e.target.id !== 'starpickercolor'
+    e.target.id !== 'starpickercolor' &&
+    e.target.id !== 'handspickercolor'
   )
     return
 
@@ -97,6 +98,11 @@ document.addEventListener('input', e => {
 
   if (e.target.id === 'starpickercolor') {
     document.querySelector('.stars-svg').style.color = e.target.value
+    return
+  }
+
+  if (e.target.id === 'handspickercolor') {
+    document.querySelector('.hands-svg').style.color = e.target.value
     return
   }
 })

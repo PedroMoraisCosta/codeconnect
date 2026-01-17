@@ -85,6 +85,13 @@ function buildArchitecture (callback) {
             .querySelectorAll('.circle-holder')
             .forEach(el => (el.innerHTML = svg))
         })
+        .then(() => fetch('placas/hands.html'))
+        .then(res => res.text())
+        .then(svg => {
+          document
+            .querySelectorAll('.hands-holder')
+            .forEach(el => (el.innerHTML = svg))
+        })
         .then(() => fetch('placas/estrelas.html'))
         .then(res => res.text())
         .then(svg => {
