@@ -187,6 +187,41 @@ function buildArchitecture (callback) {
     )
   }
 
+  // Precario
+  const precarioSectionEl = document.getElementById(
+    'precario-section-placeholder'
+  )
+  if (precarioSectionEl) {
+    tasks.push(
+      fetch('precario-section.html')
+        .then(res => res.text())
+        .then(data => {
+          precarioSectionEl.innerHTML = data
+        })
+        .then(() => fetch(`${basePath}/top-logo/top-logo.html`))
+        .then(res => res.text())
+        .then(data => {
+          const el = document.getElementById('top-logo-placeholder')
+          if (el) el.innerHTML = data
+        })
+        .then(() => fetch(`${basePath}/whatsapp/whatsapp.html`))
+        .then(res => res.text())
+        .then(data => {
+          const el = document.getElementById('whatsapp-placeholder')
+          if (el) el.innerHTML = data
+        })
+        .then(() => fetch(`${basePath}/email/email.html`))
+        .then(res => res.text())
+        .then(data => {
+          const el = document.getElementById('email-placeholder')
+          if (el) el.innerHTML = data
+        })
+        .catch(err =>
+          console.error('Erro ao carregar precario-section.html', err)
+        )
+    )
+  }
+
   // Espera todas as tarefas terminarem
   Promise.all(tasks).then(() => {
     // Scroll behavior

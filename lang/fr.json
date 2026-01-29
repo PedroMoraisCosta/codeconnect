@@ -5,7 +5,7 @@
     "child_safety": "Sécurité Enfant",
     "autism_safety": "Sécurité Autisme",
     "signs": "Panneaux",
-    "about_us": "À Propos",
+    "price": "Tarifs",
     "customers": "Confiance & Partenariats",
     "functioning": "Comment ça Marche",
     "premium": "Premium",
@@ -80,5 +80,28 @@
       "subtitle_2": "+ <strong>Avis</strong> + <strong>Clients</strong> + <strong>Succès</strong>",
       "subtitle_mensalidade": "Sans frais mensuels",
       "subtitle_anuidade": "Sans frais annuels"
+    }
+    ,
+    "price": {
+      "footer": "Idéal pour mettre en valeur votre entreprise et encourager les clients à laisser des avis positifs. Payez une seule fois pour votre produit personnalisé.",
+      "five":"jusqu'à 5 Unités",
+      "ten":"jusqu'à 10 Unités",
+      "twenty":"jusqu'à 20 Unités",
+      "other":"Plus de quantités, contactez-nous pour un devis personnalisé",
+      "title1":"Quantité",
+      "title2":"Prix par Unité",
+      "primeira_placa_premium": "1er panneau — 18 €",
+      "enquadramento": "✓ Cadre visuel",
+      "personalizado": "✓ Mise en page personnalisée (couleurs, typographie)",
+      "quantidade":"Prix par quantité",
+      "next":"(à partir du 2ème panneau)",
+      "primeira_placa_superior": "1er panneau — 15 €",
+      "primeira_placa_classica": "1er panneau — 13 €",
+      "cor_circulo_personalizado": "✓ Couleur du cercle personnalisée",
+      "cor_fundo_personalizado": "✓ Couleur de fond personnalisée",
+      "sem_mensalidades": "✓ Sans frais mensuels ni annuels",
+      "iva_incluido": "Tous les prix indiqués incluent la TVA",
+      "primeira_placa_connecthub": "1er panneau — 18 €",
+      "social_media": "✓ Intégration avec les réseaux sociaux"
     }
 }

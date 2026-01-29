@@ -5,7 +5,7 @@
     "child_safety": "Child Safety",
     "autism_safety": "Autism Safety",
     "signs": "Display Stand",
-    "about_us": "About Us",
+    "price": "Prices",
     "customers": "Clients & Partnerships",
     "functioning": "How It Works",
     "premium": "Premium",
@@ -79,5 +79,28 @@
       "subtitle_2": "+ <strong>Reviews</strong> + <strong>Customers</strong> + <strong>Success</strong>",
       "subtitle_mensalidade": "No monthly fees",
       "subtitle_anuidade": "No annual fees"
+    }
+    ,
+    "price": {
+      "footer": "Ideal for highlighting your business and encouraging customers to leave positive reviews. Just pay once for your customized product.",
+      "five":"until 5 Units",
+      "ten":"until 10 Units",
+      "twenty":"until 20 Units",
+      "other":"For more quantities, contact us for a personalized quote",
+      "title1":"Quantity",
+      "title2":"Price per Unit",
+      "primeira_placa_premium": "1st sign — 18 €",
+      "enquadramento": "✓ Visual framing",
+      "personalizado": "✓ Customized layout (colors, typography)",
+      "quantidade":"Prices by quantity",
+      "next":"(from the 2nd sign)",
+      "primeira_placa_superior": "1st sign — 15 €",
+      "primeira_placa_classica": "1st sign — 13 €",
+      "cor_circulo_personalizado": "✓ Customized circle color",
+      "cor_fundo_personalizado": "✓ Customized background color",
+      "sem_mensalidades": "✓ No monthly or annual fees",
+      "iva_incluido": "All displayed prices include VAT",
+      "primeira_placa_connecthub": "1st sign — 18 €",
+      "social_media": "✓ Social media integration"
     }
 } 

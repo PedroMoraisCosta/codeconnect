@@ -1,0 +1,87 @@
+.pricing-box {
+  background: #fff;
+  border-radius: 12px;
+}
+
+.pricing-row {
+  border-top: 1px solid #f1c232; /* amarelo suave */
+}
+
+.pricing-row:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color:white;/* amarelo CodeConnect */
+}
+
+.section-title .line {
+  flex: 1;
+  height: 2px;
+  background-color: #f5c400;
+  max-width: 60px;
+}
+
+.section-title .title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+.section-title .subtitle {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.feature-card {
+  max-width: 420px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #1e2255, #15183f);
+  border: 2px solid #f5c400;
+  color: #fff;
+}
+
+/* Header */
+.feature-card-header {
+  background-color: #f5c400;
+  color: #111;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 1px 0px;
+}
+
+/* Body */
+.feature-card-body {
+  padding: 16px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.feature-card-body p {
+  margin-bottom: 8px;
+}
+
+
+
+.feature-card-body .note {
+  color: #ddd;
+  font-size: 0.85rem;
+}
+
+.feature-card-body .note_small {
+  color: #ddd;
+  font-size: 0.55rem;
+  text-align: center;
+}
+
+
+.title{
+  text-align: center;
+  padding-top: 2px;
+  font-family: 'Poppins', sans-serif;
+}

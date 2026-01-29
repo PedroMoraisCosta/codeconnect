@@ -5,7 +5,7 @@
     "child_safety": "Segurança Infantil",
     "autism_safety": "Segurança Autismo",
     "signs": "Gama Placas",
-    "about_us": "Quem Somos",
+    "price": "Preços",
     "customers": "Confiança & Parcerias",
     "functioning": "Como Funciona",
     "premium": "Premium",
@@ -78,6 +78,28 @@
       "subtitle_2": "+ <strong>Avaliações</strong> + <strong>Clientes</strong> + <strong>Sucesso</strong>",
       "subtitle_mensalidade": "Sem mensalidades",
       "subtitle_anuidade": "Sem anuidades"
+    },
+    "price": {
+      "footer": "Ideal para destacar o seu negócio e incentivar os clientes a deixar avaliações positivas. Pague apenas uma vez pelo seu produto personalizado.",
+      "five":"até 5 Unidades",
+      "ten":"até 10 Unidades",
+      "twenty":"até 20 Unidades",
+      "other":"Mais quantidades, contacte-nos para um orçamento personalizado",
+      "title1":"Quantidade",
+      "title2":"Preço por Unidade",
+      "primeira_placa_premium": "1ª placa — 18 €",
+      "enquadramento": "✓ Enquadramento visual",
+      "personalizado": "✓ Layout personalizado (cores, tipografia)",
+      "quantidade":"Preços por quantidade",
+      "next":"(a partir da 2ª placa)",
+      "primeira_placa_superior": "1ª placa — 15 €",
+      "primeira_placa_classica": "1ª placa — 13 €",
+      "cor_circulo_personalizado": "✓ Cor do círculo personalizada",
+      "cor_fundo_personalizado": "✓ Cor de fundo personalizada",
+      "sem_mensalidades": "✓ Sem mensalidades nem anuidades",
+      "iva_incluido": "Todos os preços apresentados incluem IVA à taxa legal em vigor",
+      "primeira_placa_connecthub": "1ª placa — 18 €",
+      "social_media": "✓ Integração com redes sociais"
     }
     
 }
