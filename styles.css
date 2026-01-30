@@ -198,13 +198,13 @@ background-size: cover;
 /* width: 25px; */
 /* height: 25px; */
 }
-.productdescriptionText {
+/* .productdescriptionText {
     color: white;
     font-family: 'Poppins', sans-serif;
     text-align: center;
     margin: 0 auto;
     width: 75%;
-    }
+    } */
 
 .button-container {
 display: flex;

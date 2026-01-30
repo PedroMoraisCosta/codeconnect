@@ -127,6 +127,12 @@ html, body {
     width:280px;
     max-width: 75%
     }
+    
+}
+@media (min-width: 953px) {
+    .productdescriptionText {
+       font-size: 1.1rem;
+    }
 }
 
 @media (max-width: 478px) { 
