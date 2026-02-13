@@ -1,254 +1,150 @@
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
 
-  .wrapper{
-    /* background-image: url(../aut/img/fundo.png); */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #f0ebeb;
-    width: 100%;
-    /* height: 100vh;  */
-    position: relative;    
-    flex-direction: column; /* alinha o conteúdo na vertical */
-    justify-content: flex-start; /* centra verticalmente */
-    align-items: center;     /* centra horizontalmente */
-    text-align: center;
-    box-sizing: border-box;
+body, html {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden; /* para evitar scroll horizontal */
+}
+
+.header-opaco {
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo preto com 60% de opacidade */
+    height: 35px; /* Ajusta conforme necessário */
     display: flex;
-    min-height: 100vh;
-    }
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto; 
+    border-radius: 43px;
+   
+}
+.header-opaco h4 {
+    text-transform: uppercase;
+}
+.contact-name{
+  color: red !important;
+}
 
-  .titleName{
-    padding-top: 10px;
-    font-weight: 700;
-  }
-  .titleAbout{
+.contact-button {
+    border: 1px solid black;
+    border-radius: 8px;
+    font-size: 1.1em;
+    max-width: none;
+    min-width: 200px; */
+    /* align-content: center;
+    padding-left: 5px; */
+    opacity: 0.9;
+    color: black;
+    background-color: deepskyblue;
+    text-align: center;
+    width: 100%;
+}
+
+ .titleAbout{
     font-weight: 400;
     margin-left: 15px;
     padding-top: 20px;
     padding-bottom: 5px;
     text-align: left;
     height: 30px;
-    
   }
-  
-  .containerTop {
-    display: flex;
-    align-items: center;
-    justify-content: space-between
+
+  .info-box {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  padding: 5px;
+  overflow-x: hidden;
+  max-height: 300px;
+  overflow-y: auto; 
+  margin: 0 auto;
+  min-height: 10rem
+}
+
+   .footer {
+      color: black; 
+      padding: 10px;
+      font-size: x-large;
   }
-  
-  .containerTop.reverse {
-    justify-content: flex-end;  /* Se você quiser a imagem à direita, mude para 'flex-end' */
+
+  .middle-esquerda{
+     background-image: url('img/esquerda.jpg');
+     /* background-size: cover;
+       background-position: center;*/
+      background-size: unset; 
+     background-position: center;
+     
   }
-  
-  .imgPuzzle{
-    background-image: url(../aut/img/puzzle.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 50px;
-    height: 50px;
-    position: relative; 
-    top: 10px; 
-    right: 0;     
+ .middle-top{
+     background-image: url('img/header.jpg');
+      background-size: cover;
+      background-position: center;
+      border: 1px solid #ccc;
   }
+  .middle-footer{
+ background-image: url('img/footer.jpg');
+      background-size: cover;
+      background-position: center;
+  }
+.set-opacity{
+  opacity: 0.9;
+}
+
+
+.setNext{
+  display: flex;
+  align-items: left;
+  gap:3px;
+}
+
+.new-div {
+  background-color: #e3f2fd;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
  
-  .info-box {    
-    background-color: white;
-    border-radius: 10px;
-    background:  #f9f9f9;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    padding-left: 5px;
-    padding-top: 1px;
-    padding-bottom: 5px; 
-    overflow-x: hidden;
-    max-height: 170px;
-    overflow-y: scroll;
-    scrollbar-gutter: stable;
-     min-height: 13rem  
-    }
-
-  .titleDescription{
-    text-align: left;
-    margin-right: 5px;
-  }
-
-  .fontFamily{
-
-  }
-.obrigado{
-  font-color:black
-}
-.marcaId{
-  font-color:black
-}
-  .contact-name{
-    color: lightcoral !important;
-  }
-   
-  .container {
-    padding: 10px;
-  }
-
-  .utente{
-    margin: auto;
-    padding-right: 10px;
-  }
-  
-  .contact-button {
-    margin: 10px 0 10px auto; /* empurra para a direita */
-    padding: 10px 5px;
-   
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    
-    min-width: 160px;
-  }
-
-  .attachment-button{
-   
-    padding: 10px 5px;
-   
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    
-    min-width: 160px;
-  }
-
-  .contact-button i {
-    margin-right: 10px;
-  }
-
-  .contact-name {
-    font-weight: 600; 
-  }
-
-  .footer {
-    margin: 20px 0 10px auto;
-    padding: 10px 5px;
-    width: 45%;
-    max-width: 200px;
-    min-width: 160px;
-  }
-  .footerTamanho1 {
-    font-weight: 700;
-  }
-  .footerTamanho2 {
-    font-weight: 300;
-  }
-
-  /* .child-image {
-    max-width: 200px;
-    margin: 20px auto;
-  } */
-
-/* Estilo das barras de rolagem no Firefox */
-.info-box {
-  scrollbar-width: thin;  /* Torna a barra de rolagem mais fina */
-  scrollbar-color: #888 #f1f1f1;  /* Cor da barra e do fundo da barra de rolagem */
-}
-
-/* Estilo das barras de rolagem no Webkit (Chrome, Safari, etc.) */
-.info-box::-webkit-scrollbar {
-  width: 10px;  /* Largura da barra de rolagem */
-}
-
-.info-box::-webkit-scrollbar-thumb {
-  background-color: #888;  /* Cor do "polegar" da barra de rolagem */
-  border-radius: 10px;  /* Bordas arredondadas no polegar */
-}
-
-.info-box::-webkit-scrollbar-track {
-  background: #f1f1f1;  /* Cor de fundo da barra de rolagem */
 }
 
 
-.medicacao-container {
-  text-align: left;
-}
 
 .text-value{
-  color:black
+  color:salmon
 }
 .text-value-bold{
     font-weight: 600;
     color: red;
-    font-size: 1.1rem;
+    font-size: 20px;
 }
 
-.values-list{
-  margin-left: 0;
-  text-align: left;
-}
 
-.headerTitle{
-  color: lightcoral;
-  text-align: left;
-}
-.headerTitleLost{
-   color: red;
-   letter-spacing: 2px;
-}
-
-.modal.show {
-  display: flex !important;
-  align-items: center;       /* Alinha verticalmente */
-  justify-content: center;   /* Alinha horizontalmente */
-}
-
-/*smartphones <478*/
-  @media (max-width: 478px) { 
-    .headerTitle{
-      text-align: left;
-    }
-    .headerTitleLost{
-      text-align: left;
-    }
-    .info-box {   
-      font-size: 0.8em;
+/*smartphones <768px*/
+@media(max-width:768px){
+  .header-opaco {
+      width: 100%;
   }
-  .wrapper{
-    overflow: hidden;
+  .info-box{
+    width: 100%;
   }
-  
 }
-
 /*tablets >=768px*/
 @media(min-width:768px){
-  
-  .info-box {   
-    font-size: 0.85em;
-      max-height: 250px;
-       padding-left: 10px;
+  .header-opaco {
+      width: 50%;
+  }
+  .info-box{
+    width: 40%;
   }
 }
 
 /*desktops >=992px*/
 @media(min-width:992px){
- 
-  .info-box {   
-    font-size: 0.95em;
-     max-height: 310px;
-      padding-left: 10px;
+  .header-opaco {
+    width: 50%;
+  }
+  .info-box{
+    width: 30%;
   }
 }
 
-/*desktops >=992px*/
-@media(min-width:993px){
  
-  .info-box {   
-    font-size: 1em;
-    max-height: 310px;
-    padding-left: 10px;
-  }
-}

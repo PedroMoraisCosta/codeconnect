@@ -1,29 +1,27 @@
+document.addEventListener('DOMContentLoaded', () => {
+  buildArchitecture(() => {
+    let chave = getParametroURL('p4')
+    const file = getParametroURL('p5')
+
+    if (file && chave) {
+      document.getElementById('pai').style.display = 'none'
+      document.getElementById('mae').style.display = 'none'
+      document.getElementById('avo').style.display = 'none'
+      document.getElementById('avo2').style.display = 'none'
+      document
+        .getElementById('medicacao')
+        .style.setProperty('display', 'none', 'important')
+      document.getElementById('sangue').style.display = 'none'
+      document.getElementById('utente').style.display = 'none'
+
+      carregarContactos(file, chave)
+    }
+  })
+})
+
 function getParametroURL (nome) {
   const params = new URLSearchParams(window.location.search)
   return params.get(nome)
-}
-
-document.getElementById('anexosRow').style.display = 'none'
-document.getElementById('contactoRow1').style.display = 'none'
-document.getElementById('contactoRow2').style.display = 'none'
-document.getElementById('contactoRow3').style.display = 'none'
-document.getElementById('contactoRow4').style.display = 'none'
-document.getElementById('medicacao').style.display = 'none'
-document.getElementById('sangue').style.display = 'none'
-document.getElementById('utente').style.display = 'none'
-document.getElementById('dtnasc').style.display = 'none'
-document.getElementById('alertaDescricao').style.display = 'none'
-
-let chave = getParametroURL('p4')
-const file = getParametroURL('p5')
-
-if (file && chave) {
-  if (file == 'f11') {
-    //Fix Bug Cartao do Guilherme nao tem encoded
-    chave = chave.replace(' ', '+')
-  }
-
-  carregarContactos(file, chave)
 }
 
 function carregarContactos (file, chave) {
@@ -32,42 +30,32 @@ function carregarContactos (file, chave) {
   fetch(file + '.json')
     .then(response => response.text())
     .then(data => {
-      const firstLine = data.split('\n')[0]
       let key = GetKey(chave)
-      const decrypted = CryptoJS.AES.decrypt(firstLine, key).toString(
+      const decrypted = CryptoJS.AES.decrypt(data, key).toString(
         CryptoJS.enc.Utf8
       )
 
       if (decrypted) {
         const ficheiro = JSON.parse(decrypted)
 
-        PreencherNome(ficheiro)
+        PreencherPrimeiroNome(ficheiro)
+
+        PreencherUltimoNome(ficheiro)
+
+        PreencherDtNascimento(ficheiro)
 
         PreencherContactos(ficheiro)
 
-        let isLost = VerificarPerdido(ficheiro)
+        PreencherMedicacao(ficheiro)
 
-        if (isLost) {
-          PreencherAlertaDescricao(ficheiro)
-        } else {
-          PreencherDataNascimento(ficheiro)
+        PreencherSangue(ficheiro)
 
-          PreencherDescricao(ficheiro)
-
-          PreencherMedicacao(ficheiro)
-
-          PreencherSangue(ficheiro)
-
-          PreencherUtente(ficheiro)
-
-          PreencherAnexo(ficheiro)
-
-          PreencherFundo(ficheiro)
-        }
+        PreencherUtente(ficheiro)
       }
     })
     .catch(error => {
-      console.error('Erro ao carregar o ficheiro: ', error)
+      // console.error("Erro ao carregar o ficheiro: ", error);
+      // document.body.innerHTML = "<p>Erro ao carregar o ficheiro!</p>";
     })
 }
 
@@ -102,51 +90,33 @@ function GetKey (chave) {
   }
 }
 
-function PreencherFundo (ficheiro) {
-  let fundo = ficheiro.fundoadultos
-  let el = document.getElementById('backgroundId')
-  let elobrigado = document.getElementById('obrigadoId')
-  let elmarca = document.getElementById('marcaId')
+function PreencherPrimeiroNome (ficheiro) {
+  let nome = ficheiro.primeironome
 
-  if (fundo) {
-    el.style.backgroundImage = `url('../aut/img/adultos.png')`
-    elobrigado.style.color = 'white'
-    elmarca.style.color = 'white'
-    document.getElementById('puzzleId').style.display = 'none'
-  } else {
-    el.style.backgroundImage = `url('../aut/img/fundo.png')`
-  }
+  const ul = document.getElementById('pnome')
+  ul.innerHTML = nome
 }
 
-function PreencherAnexo (ficheiro) {
-  let anexo = ficheiro.mostraranexo
+function PreencherUltimoNome (ficheiro) {
+  let nome = ficheiro.ultimonome
 
-  if (anexo) {
-    document.getElementById('anexosRow').style.display = 'flex'
-    let img = document.querySelector('#anexosRow img')
-    if (img) {
-      img.src = '/aut/attachments/' + file + '/' + file + '.jpg'
-    }
-  }
+  const ul = document.getElementById('unome')
+  ul.innerHTML = '&nbsp' + nome
 }
 
-function PreencherNome (ficheiro) {
-  let nomeCompleto = ficheiro.primeironome + ' ' + ficheiro.ultimonome
-  document.getElementById('name').innerHTML = nomeCompleto
+function PreencherDtNascimento (ficheiro) {
+  let texto = ficheiro.nascimento
+
+  const ul = document.getElementById('dtnascList')
+  ul.innerHTML = texto
+
+  traducao('dtnascLabel', ficheiro.traduzirdtnascimento)
 }
 
-function PreencherDataNascimento (ficheiro) {
-  let nascimento = ficheiro.nascimento
-
-  const ul = document.getElementById('dtnascimento')
-  ul.innerHTML = ''
-
-  if (nascimento && nascimento.length > 0) {
-    const li = document.createElement('li')
-    li.textContent = nascimento.trim()
-    ul.appendChild(li)
-
-    document.getElementById('dtnasc').style.display = 'block'
+function traducao (fieldId, name) {
+  if (name && name.length > 0) {
+    let component = document.getElementById(fieldId)
+    component.textContent = name + ':'
   }
 }
 
@@ -168,187 +138,65 @@ function PreencherMedicacao (ficheiro) {
         .replace(/[\u0300-\u036f]/g, '')
         .toLowerCase()
 
-      if (normalized.includes('alergic')) {
+      if (normalized.includes('alergico')) {
         li.classList.add('text-value-bold')
       } else {
         li.classList.add('text-value')
       }
 
       ul.appendChild(li)
-
-      // li.textContent = med.trim()
-      // ul.appendChild(li)
     }
   })
-}
-
-function VerificarPerdido (ficheiro) {
-  let perdido = ficheiro.perdido
-
-  if (perdido) {
-    return perdido
-  }
-  return false
-}
-
-function PreencherAlertaDescricao (ficheiro) {
-  document.getElementById('about').style.display = 'none'
-
-  let value = ficheiro.textoperdido
-
-  const ul = document.getElementById('alertaText')
-  ul.innerHTML = ''
-
-  if (value && value.length > 0) {
-    const li = document.createElement('li')
-    li.textContent = value.trim()
-    ul.appendChild(li)
-    document.getElementById('alertaDescricao').style.display = 'block'
-  }
 }
 
 function PreencherContactos (ficheiro) {
   ficheiro.telefones.forEach((tel, index) => {
     const el = document.getElementById('tel' + (index + 1))
-    const elnome = document.getElementById('contactonNameRow' + (index + 1))
-    const contactLink = document.getElementById('contactNameRow' + (index + 1))
-    const contactoRow = document.getElementById('contactoRow' + (index + 1))
-
-    if (el && tel > 0) {
-      const nome =
-        ficheiro.nomestelefones?.[index] || ['Pai', 'Mãe', 'Avó', 'Avô'][index]
-      elnome.textContent = nome
-      el.textContent = formatarTelefone(tel)
-      contactoRow.style.display = 'block'
-
-      // Guarda o número num data-atributo
-      contactLink.setAttribute('data-tel', tel)
-      contactLink.setAttribute(
-        'title',
-        `Ligar para ${nome} (${formatarTelefone(tel)})`
-      )
-
-      // Adiciona evento de clique (uma vez só)
-      contactLink.addEventListener(
-        'click',
-        function (e) {
-          e.preventDefault()
-          const numero = contactLink.getAttribute('data-tel')
-          if (numero) {
-            window.location.href = 'tel:' + numero
-          }
-        },
-        { once: true }
-      ) // adiciona só uma vez
-    }
-  })
-}
-
-function PreencherContactosOld (ficheiro) {
-  ficheiro.telefones.forEach((tel, index) => {
-    const el = document.getElementById('tel' + (index + 1))
-    const elnome = document.getElementById('contactonNameRow' + (index + 1))
-    const contactLink = document.getElementById('contactNameRow' + (index + 1))
-
     if (el && tel) {
+      const nome = ficheiro.nomestelefones[index]
+
+      const telformated = Number(tel.replace(/\s+/g, ''))
       switch (index) {
-        case 0: //PAI
-          if (tel > 0) {
-            elnome.textContent = ficheiro.nomestelefones?.[0] || 'Pai'
-            document.getElementById('contactoRow' + (index + 1)).style.display =
-              'block'
-            contactLink.href = 'tel:' + tel
-            contactLink.title = `Ligar para ${
-              elnome.textContent
-            } (${formatarTelefone(tel)})`
-          }
-          break
-        case 1: //MAE
-          if (tel > 0) {
-            elnome.textContent = ficheiro.nomestelefones?.[1] || 'Mãe'
-            document.getElementById('contactoRow' + (index + 1)).style.display =
-              'block'
-            contactLink.href = 'tel:' + tel
-            contactLink.title = `Ligar para ${
-              elnome.textContent
-            } (${formatarTelefone(tel)})`
-          }
-          break
-        case 2: //AVO
-          if (tel > 0) {
-            elnome.textContent = ficheiro.nomestelefones?.[2] || 'Avó'
-            document.getElementById('contactoRow' + (index + 1)).style.display =
-              'block'
-            contactLink.href = 'tel:' + tel
-            contactLink.title = `Ligar para ${
-              elnome.textContent
-            } (${formatarTelefone(tel)})`
-          }
+        case 0:
+          if (telformated > 0)
+            document.getElementById('pai').style.display = 'block'
 
           break
-        case 3: //AVó
-          if (tel > 0) {
-            elnome.textContent = ficheiro.nomestelefones?.[3] || 'Avô'
-            document.getElementById('contactoRow' + (index + 1)).style.display =
-              'block'
-            contactLink.href = 'tel:' + tel
-            contactLink.title = `Ligar para ${
-              elnome.textContent
-            } (${formatarTelefone(tel)})`
-          }
-
+        case 1:
+          if (telformated > 0)
+            document.getElementById('mae').style.display = 'block'
+          break
+        case 2:
+          if (telformated > 0)
+            document.getElementById('avo').style.display = 'block'
+          break
+        case 3:
+          if (telformated > 0)
+            document.getElementById('avo2').style.display = 'block'
           break
       }
-      el.textContent = formatarTelefone(tel)
+      el.textContent = nome + ' ' + tel
     }
   })
-}
-
-function formatarTelefone (tel) {
-  // Remove tudo que não for número
-  tel = tel.replace(/\D/g, '')
-
-  // Adiciona um espaço a cada 3 dígitos
-  return tel.replace(/(\d{3})(?=\d)/g, '$1 ')
 }
 
 function PreencherSangue (ficheiro) {
-  let sangue = ficheiro.sangue
+  let texto = ficheiro.sangue
 
   const ul = document.getElementById('sanguelist')
-  ul.innerHTML = ''
-
-  if (sangue && sangue.length > 0) {
-    const li = document.createElement('li')
-    li.textContent = sangue.trim()
-    ul.appendChild(li)
-
+  ul.innerHTML = texto
+  if (texto) {
     document.getElementById('sangue').style.display = 'block'
   }
 }
 
 function PreencherUtente (ficheiro) {
-  let utente = ficheiro.utente
-  const ul = document.getElementById('utentelist')
-  ul.innerHTML = ''
-  if (utente && utente.length > 0) {
-    const li = document.createElement('li')
-    li.textContent = utente.trim()
-    ul.appendChild(li)
+  let texto = ficheiro.utente
 
+  const ul = document.getElementById('utentelist')
+  ul.innerHTML = texto
+
+  if (texto) {
     document.getElementById('utente').style.display = 'block'
   }
 }
-
-function PreencherDescricao (ficheiro) {
-  document.getElementById('titleDescription').innerHTML = ficheiro.descricao
-}
-
-const modalEl = document.getElementById('imageModal')
-
-modalEl.addEventListener('hide.bs.modal', () => {
-  const activeEl = document.activeElement
-  if (modalEl.contains(activeEl)) {
-    activeEl.blur() // remove focus from any focused element inside modal
-  }
-})
