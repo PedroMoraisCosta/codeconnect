@@ -1,0 +1,254 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .wrapper{
+    /* background-image: url(../aut/img/fundo.png); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #f0ebeb;
+    width: 100%;
+    /* height: 100vh;  */
+    position: relative;    
+    flex-direction: column; /* alinha o conteúdo na vertical */
+    justify-content: flex-start; /* centra verticalmente */
+    align-items: center;     /* centra horizontalmente */
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    min-height: 100vh;
+    }
+
+  .titleName{
+    padding-top: 10px;
+    font-weight: 700;
+  }
+  .titleAbout{
+    font-weight: 400;
+    margin-left: 15px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    text-align: left;
+    height: 30px;
+    
+  }
+  
+  .containerTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+  }
+  
+  .containerTop.reverse {
+    justify-content: flex-end;  /* Se você quiser a imagem à direita, mude para 'flex-end' */
+  }
+  
+  .imgPuzzle{
+    background-image: url(../aut/img/puzzle.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    position: relative; 
+    top: 10px; 
+    right: 0;     
+  }
+ 
+  .info-box {    
+    background-color: white;
+    border-radius: 10px;
+    background:  #f9f9f9;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    padding-left: 5px;
+    padding-top: 1px;
+    padding-bottom: 5px; 
+    overflow-x: hidden;
+    max-height: 170px;
+    overflow-y: scroll;
+    scrollbar-gutter: stable;
+     min-height: 13rem  
+    }
+
+  .titleDescription{
+    text-align: left;
+    margin-right: 5px;
+  }
+
+  .fontFamily{
+
+  }
+.obrigado{
+  font-color:black
+}
+.marcaId{
+  font-color:black
+}
+  .contact-name{
+    color: lightcoral !important;
+  }
+   
+  .container {
+    padding: 10px;
+  }
+
+  .utente{
+    margin: auto;
+    padding-right: 10px;
+  }
+  
+  .contact-button {
+    margin: 10px 0 10px auto; /* empurra para a direita */
+    padding: 10px 5px;
+   
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    
+    min-width: 160px;
+  }
+
+  .attachment-button{
+   
+    padding: 10px 5px;
+   
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    
+    min-width: 160px;
+  }
+
+  .contact-button i {
+    margin-right: 10px;
+  }
+
+  .contact-name {
+    font-weight: 600; 
+  }
+
+  .footer {
+    margin: 20px 0 10px auto;
+    padding: 10px 5px;
+    width: 45%;
+    max-width: 200px;
+    min-width: 160px;
+  }
+  .footerTamanho1 {
+    font-weight: 700;
+  }
+  .footerTamanho2 {
+    font-weight: 300;
+  }
+
+  /* .child-image {
+    max-width: 200px;
+    margin: 20px auto;
+  } */
+
+/* Estilo das barras de rolagem no Firefox */
+.info-box {
+  scrollbar-width: thin;  /* Torna a barra de rolagem mais fina */
+  scrollbar-color: #888 #f1f1f1;  /* Cor da barra e do fundo da barra de rolagem */
+}
+
+/* Estilo das barras de rolagem no Webkit (Chrome, Safari, etc.) */
+.info-box::-webkit-scrollbar {
+  width: 10px;  /* Largura da barra de rolagem */
+}
+
+.info-box::-webkit-scrollbar-thumb {
+  background-color: #888;  /* Cor do "polegar" da barra de rolagem */
+  border-radius: 10px;  /* Bordas arredondadas no polegar */
+}
+
+.info-box::-webkit-scrollbar-track {
+  background: #f1f1f1;  /* Cor de fundo da barra de rolagem */
+}
+
+
+.medicacao-container {
+  text-align: left;
+}
+
+.text-value{
+  color:black
+}
+.text-value-bold{
+    font-weight: 600;
+    color: red;
+    font-size: 1.1rem;
+}
+
+.values-list{
+  margin-left: 0;
+  text-align: left;
+}
+
+.headerTitle{
+  color: lightcoral;
+  text-align: left;
+}
+.headerTitleLost{
+   color: red;
+   letter-spacing: 2px;
+}
+
+.modal.show {
+  display: flex !important;
+  align-items: center;       /* Alinha verticalmente */
+  justify-content: center;   /* Alinha horizontalmente */
+}
+
+/*smartphones <478*/
+  @media (max-width: 478px) { 
+    .headerTitle{
+      text-align: left;
+    }
+    .headerTitleLost{
+      text-align: left;
+    }
+    .info-box {   
+      font-size: 0.8em;
+  }
+  .wrapper{
+    overflow: hidden;
+  }
+  
+}
+
+/*tablets >=768px*/
+@media(min-width:768px){
+  
+  .info-box {   
+    font-size: 0.85em;
+      max-height: 250px;
+       padding-left: 10px;
+  }
+}
+
+/*desktops >=992px*/
+@media(min-width:992px){
+ 
+  .info-box {   
+    font-size: 0.95em;
+     max-height: 310px;
+      padding-left: 10px;
+  }
+}
+
+/*desktops >=992px*/
+@media(min-width:993px){
+ 
+  .info-box {   
+    font-size: 1em;
+    max-height: 310px;
+    padding-left: 10px;
+  }
+}
