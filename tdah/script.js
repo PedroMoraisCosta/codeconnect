@@ -51,6 +51,8 @@ function carregarContactos (file, chave) {
         PreencherSangue(ficheiro)
 
         PreencherUtente(ficheiro)
+
+        PreencherAnexo(ficheiro, file)
       }
     })
     .catch(error => {
@@ -110,18 +112,23 @@ function PreencherDtNascimento (ficheiro) {
   const ul = document.getElementById('dtnascList')
   ul.innerHTML = texto
 
-  traducao('dtnascLabel', ficheiro.traduzirdtnascimento)
+  traducao(true, 'dtnascLabel', ficheiro.traduzirdtnascimento)
 }
 
-function traducao (fieldId, name) {
+function traducao (addextra, fieldId, name) {
   if (name && name.length > 0) {
     let component = document.getElementById(fieldId)
-    component.textContent = name + ':'
+
+    component.textContent = name
+
+    if (addextra) {
+      component.textContent += ':'
+    }
   }
 }
 
 function PreencherMedicacao (ficheiro) {
-  traducao('medicacaoLabel', ficheiro.traduzirmedicacao)
+  traducao(true, 'medicacaoLabel', ficheiro.traduzirmedicacao)
 
   const ul = document.getElementById('medlist')
   ul.innerHTML = ''
@@ -199,5 +206,15 @@ function PreencherUtente (ficheiro) {
 
   if (texto) {
     document.getElementById('utente').style.display = 'block'
+  }
+}
+
+function PreencherAnexo (ficheiro, file) {
+  let anexo = ficheiro.mostraranexo
+
+  if (anexo) {
+    traducao(false, 'abrirAnexos', ficheiro.traduzirbtanexo)
+    document.getElementById('anexosRow').style.display = 'flex'
+    PreencherModal(file)
   }
 }

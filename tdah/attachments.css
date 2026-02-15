@@ -1,0 +1,25 @@
+.image-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+}
+
+.image-modal img {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.close, .prev, .next {
+  position: absolute;
+  color: #FBD82E;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.close { top: 20px; right: 30px; }
+.prev { left: 30px; }
+.next { right: 30px; }
+

@@ -1,29 +1,3 @@
-// document.addEventListener('DOMContentLoaded', function () {
-//   fetch('header.html')
-//     .then(res => res.text())
-//     .then(
-//       data => (document.getElementById('header-placeholder').innerHTML = data)
-//     )
-
-//   fetch('phones.html')
-//     .then(res => res.text())
-//     .then(
-//       data => (document.getElementById('phones-placeholder').innerHTML = data)
-//     )
-
-//     fetch('middle.html')
-//     .then(res => res.text())
-//     .then(
-//       data => (document.getElementById('middle-placeholder').innerHTML = data)
-//     )
-
-//   fetch('footer.html')
-//     .then(res => res.text())
-//     .then(
-//       data => (document.getElementById('footer-placeholder').innerHTML = data)
-//     )
-
-// })
 // Expose a build function globally
 function buildArchitecture (callback) {
   // List of fetches
@@ -38,6 +12,12 @@ function buildArchitecture (callback) {
       .then(res => res.text())
       .then(data => {
         document.getElementById('phones-placeholder').innerHTML = data
+      }),
+
+    fetch('attachments.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('attachments-placeholder').innerHTML = data
       }),
 
     fetch('middle.html')
@@ -63,3 +43,9 @@ function buildArchitecture (callback) {
 
 // Make it accessible in other scripts
 window.buildArchitecture = buildArchitecture
+
+// document.addEventListener('DOMContentLoaded', function () {
+//   buildArchitecture(function () {
+    
+//   })
+// })

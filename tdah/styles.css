@@ -50,10 +50,10 @@ body, html {
 
   .info-box {
   background-color: #f9f9f9;
-  border: 1px solid #ddd;
+  border: 1px solid #FBD82E;
   border-radius: 8px;
   margin-bottom: 5px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  box-shadow: 0 0 5px #FBD82E;
   padding: 5px;
   overflow-x: hidden;
   max-height: 300px;
@@ -148,6 +148,27 @@ body, html {
     .sunflower-right {
         right: 20px;
     }
+
+.button{
+    background-color: #FBD82E;
+    color: black;
+    /* padding: 5px; */
+    border-radius: 5px;
+    cursor: pointer;
+    /* display: flex; */
+    align-items: center;
+    gap: 20px;
+    /* background-color: #ffffff; */
+    padding: 0px 15px;
+    /* border-radius: 5px; */
+    max-width: 500px;
+    margin: 2px auto;
+    /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); */
+    /* border-left: 6px solid #2E7D32;
+}
+
+
+
 
 
   @media (max-width: 600px) {
