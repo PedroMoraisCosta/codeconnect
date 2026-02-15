@@ -152,19 +152,12 @@ body, html {
 .button{
     background-color: #FBD82E;
     color: black;
-    /* padding: 5px; */
     border-radius: 5px;
-    cursor: pointer;
-    /* display: flex; */
     align-items: center;
     gap: 20px;
-    /* background-color: #ffffff; */
     padding: 0px 15px;
-    /* border-radius: 5px; */
     max-width: 500px;
     margin: 2px auto;
-    /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); */
-    /* border-left: 6px solid #2E7D32;
 }
 
 

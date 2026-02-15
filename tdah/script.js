@@ -168,19 +168,26 @@ function PreencherContactos (ficheiro) {
         case 0:
           if (telformated > 0)
             document.getElementById('pai-box').style.display = 'flex'
-
+          document.getElementById('tel1-link').href =
+            'tel:' + tel.replace(/\s+/g, '')
           break
         case 1:
           if (telformated > 0)
             document.getElementById('mae-box').style.display = 'flex'
+          document.getElementById('tel2-link').href =
+            'tel:' + tel.replace(/\s+/g, '')
           break
         case 2:
           if (telformated > 0)
             document.getElementById('avo-box').style.display = 'flex'
+          document.getElementById('tel3-link').href =
+            'tel:' + tel.replace(/\s+/g, '')
           break
         case 3:
           if (telformated > 0)
             document.getElementById('avo2-box').style.display = 'flex'
+          document.getElementById('tel4-link').href =
+            'tel:' + tel.replace(/\s+/g, '')
           break
       }
       el.textContent = nome + ' ' + tel

@@ -22,6 +22,11 @@
     color: #1B5E20;
 }
 
+.link{
+    text-decoration: none;
+    padding: 5px;
+}
+
 .separador{
     background-image: url('img/separador.png');
     background-size: cover; 
