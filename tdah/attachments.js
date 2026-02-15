@@ -1,10 +1,10 @@
 function PreencherModal (file) {
   const images = []
-  const maxImages = 10
+  const maxImages = 6
   let checkedCount = 0 // how many images have been checked
 
   for (let i = 1; i <= maxImages; i++) {
-    const imgPath = `attachments/${file}/${i}.jpeg`
+    const imgPath = `attachments/${file}/${i}.webp`
     const img = new Image()
 
     img.onload = () => {
