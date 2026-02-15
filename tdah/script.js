@@ -4,10 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const file = getParametroURL('p5')
 
     if (file && chave) {
-      document.getElementById('pai').style.display = 'none'
-      document.getElementById('mae').style.display = 'none'
-      document.getElementById('avo').style.display = 'none'
-      document.getElementById('avo2').style.display = 'none'
+      document.getElementById('pai-box').style.display = 'none'
+      document.getElementById('mae-box').style.display = 'none'
+      document.getElementById('avo-box').style.display = 'none'
+      document.getElementById('avo2-box').style.display = 'none'
       document
         .getElementById('medicacao')
         .style.setProperty('display', 'none', 'important')
@@ -159,20 +159,20 @@ function PreencherContactos (ficheiro) {
       switch (index) {
         case 0:
           if (telformated > 0)
-            document.getElementById('pai').style.display = 'block'
+            document.getElementById('pai-box').style.display = 'flex'
 
           break
         case 1:
           if (telformated > 0)
-            document.getElementById('mae').style.display = 'block'
+            document.getElementById('mae-box').style.display = 'flex'
           break
         case 2:
           if (telformated > 0)
-            document.getElementById('avo').style.display = 'block'
+            document.getElementById('avo-box').style.display = 'flex'
           break
         case 3:
           if (telformated > 0)
-            document.getElementById('avo2').style.display = 'block'
+            document.getElementById('avo2-box').style.display = 'flex'
           break
       }
       el.textContent = nome + ' ' + tel

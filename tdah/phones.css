@@ -1,0 +1,44 @@
+.info-box1 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #ffffff;
+    padding: 0px 15px;
+    border-radius: 15px;
+    max-width: 500px;
+    margin: 2px auto; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border-left: 6px solid #2E7D32; /* verde principal */
+}
+
+.icon {
+    font-size: 32px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-size: 1.1em;
+    color: #4CAF50;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.value {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #1B5E20;
+}
+
+.separador{
+    background-image: url('img/separador.png');
+    background-size: cover; 
+    background-position: top;
+    height: 25px;
+    width: 100%;
+    margin-top:2px
+}
