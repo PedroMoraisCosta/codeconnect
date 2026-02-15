@@ -26,6 +26,12 @@ function PreencherModal (file) {
 function setupModal (images) {
   if (!images || images.length === 0) return
 
+  images = images.sort((a, b) => {
+    const numA = parseInt(a.match(/\/(\d+)\.webp$/)[1], 10)
+    const numB = parseInt(b.match(/\/(\d+)\.webp$/)[1], 10)
+    return numA - numB
+  })
+
   const modal = document.getElementById('imageModal')
   const modalImg = document.getElementById('modalImage')
   const openBtn = document.getElementById('abrirAnexos')
@@ -49,17 +55,30 @@ function setupModal (images) {
   })
 
   nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % images.length
+    if (currentIndex >= images.length - 1) return
+    currentIndex++
     modalImg.src = images[currentIndex]
+    updateArrows()
   })
 
   prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + images.length) % images.length
+    if (currentIndex <= 0) return
+    currentIndex--
     modalImg.src = images[currentIndex]
+    updateArrows()
   })
 
   if (images.length <= 1) {
     prevBtn.style.display = 'none'
     nextBtn.style.display = 'none'
+  }
+
+  function updateArrows () {
+    prevBtn.style.opacity = currentIndex === 0 ? '0.3' : '1'
+    nextBtn.style.opacity = currentIndex === images.length - 1 ? '0.3' : '1'
+
+    prevBtn.style.pointerEvents = currentIndex === 0 ? 'none' : 'auto'
+    nextBtn.style.pointerEvents =
+      currentIndex === images.length - 1 ? 'none' : 'auto'
   }
 }
