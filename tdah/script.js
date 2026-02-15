@@ -121,8 +121,9 @@ function traducao (fieldId, name) {
 }
 
 function PreencherMedicacao (ficheiro) {
-  const ul = document.getElementById('medlist')
+  traducao('medicacaoLabel', ficheiro.traduzirmedicacao)
 
+  const ul = document.getElementById('medlist')
   ul.innerHTML = ''
 
   ficheiro.medicacao.forEach(med => {
