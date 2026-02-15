@@ -13,11 +13,37 @@
 }
 
 .prev, .next {
-  position: absolute;
+  /* position: absolute;
   color: #FBD82E;
   font-size: 30px;
+  cursor: pointer; */
+  
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: black;
+  font-size: 15px;
   cursor: pointer;
+  background: rgba(251, 216, 46,0.9);
+  padding: 10px;
+  border-radius: 50%; 
+  user-select: none;
+  z-index: 10;
+  font-size: 24px;
+  display: flex;
+  width: 30px; 
+  height: 30px;
+  align-items: center;
+  justify-content: center;
 }
+.prev {
+  left: 15px; /* position from left edge */
+}
+
+.next {
+  right: 15px; /* position from right edge */
+}
+
 
 .close { top: 20px; right: 30px; }
 .prev { left: 30px; }
@@ -33,14 +59,14 @@
 }
 
 .close {
-   color: #FBD82E;
+   color: black;
   position: absolute;
   top: 20px;
   right: 20px;
   font-size: 40px;
   width: 44px;
   height: 44px;
-  background: rgba(255,255,255,1);
+  background: rgba(251, 216, 46,0.9);
   border-radius: 50%;
   display: flex;
   align-items: center;
