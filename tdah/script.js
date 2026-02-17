@@ -222,7 +222,7 @@ function PreencherAnexo (ficheiro, file) {
   let anexo = ficheiro.mostraranexo
 
   if (anexo) {
-    traducao(false, 'abrirAnexos', ficheiro.traduzirbtanexo)
+    traducao(false, 'abrirAnexosLabel', ficheiro.traduzirbtanexo)
     document.getElementById('anexosRow').style.display = 'flex'
     PreencherModal(file)
   }
