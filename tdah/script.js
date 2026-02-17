@@ -44,6 +44,8 @@ function carregarContactos (file, chave) {
 
         PreencherDtNascimento(ficheiro)
 
+        PreencherDescricao(ficheiro)
+
         PreencherContactos(ficheiro)
 
         PreencherMedicacao(ficheiro)
@@ -224,4 +226,8 @@ function PreencherAnexo (ficheiro, file) {
     document.getElementById('anexosRow').style.display = 'flex'
     PreencherModal(file)
   }
+}
+
+function PreencherDescricao (ficheiro) {
+  document.getElementById('titleDescription').innerHTML = ficheiro.descricao
 }
