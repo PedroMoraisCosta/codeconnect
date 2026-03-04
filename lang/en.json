@@ -4,6 +4,7 @@
     "companies": "Business Cards",
     "child_safety": "Child Safety",
     "autism_safety": "Autism Safety",
+    "tdah_safety": "ADHD Safety",
     "signs": "Display Stand",
     "price": "Prices",
     "customers": "Clients & Partnerships",
@@ -29,7 +30,9 @@
      "autism_description": "Designed with inclusion in mind, our <strong>Autism</strong> cards for people on the autism spectrum include identification, emergency contact, and through QR code or Near Field Communication (NFC), it is possible to quickly access additional information that may be crucial in stressful or emergency situations (Blood Type, Health Number, Regular Medication, Additional Contacts, Medical Report).",
      "after_qr_nfc": "After scanning the QR code or using Near Field Communication (NFC)",
       "business_title": "Businesses Cards",
-      "business_description": "Add technological professionalism with the <strong>Customizable Card</strong>, you can now also receive feedback outside the headquarters, or even provide your contact for a potential customer." 
+      "business_description": "Add technological professionalism with the <strong>Customizable Card</strong>, you can now also receive feedback outside the headquarters, or even provide your contact for a potential customer." ,
+      "tdah_safety_title": "ADHD Safety",
+      "tdah_safety_description": "Designed for children and young people with <strong>Attention Deficit Hyperactivity Disorder (ADHD)</strong>, these cards help facilitate communication in everyday situations. Ideal for school, outdoor activities or events, they allow you to quickly and discreetly explain the child's condition, promoting understanding and appropriate support, you also have access to extra information through the website (Regular Medication, Additional Contacts, Medical Report)" 
 
   },
   "placas": {

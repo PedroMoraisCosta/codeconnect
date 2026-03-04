@@ -4,6 +4,7 @@
     "companies": "Cartes Entreprises",
     "child_safety": "Sécurité Enfant",
     "autism_safety": "Sécurité Autisme",
+      "tdah_safety": "Sécurité TDAH",
     "signs": "Panneaux",
     "price": "Tarifs",
     "customers": "Confiance & Partenariats",
@@ -29,8 +30,10 @@
     "autism_description": "Conçues dans un esprit d'inclusion, nos cartes <strong>Autisme</strong> pour les personnes du spectre autistique incluent l'identification, un contact d'urgence et, via le QR Code ou le NFC, il est possible d'accéder rapidement à des informations supplémentaires qui peuvent être cruciales en cas de stress ou d'urgence (Groupe Sanguin, Numéro d'Utilisateur, Médication Régulière, Contacts Supplémentaires, Rapport Médical).",
     "after_qr_nfc": "Après lecture du QR Code ou utilisation du NFC",
     "business_title": "Entreprises",
-    "business_description": "Ajoutez du professionnalisme technologique avec la <strong>Carte Personnalisable</strong>, vous pouvez désormais également recevoir des commentaires en dehors de l'établissement, ou même fournir un contact pour un client potentiel."
-
+    "business_description": "Ajoutez du professionnalisme technologique avec la <strong>Carte Personnalisable</strong>, vous pouvez désormais également recevoir des commentaires en dehors de l'établissement, ou même fournir un contact pour un client potentiel.",
+    "tdah_safety_title": "Sécurité TDAH",
+    "tdah_safety_description": "Conçues pour les enfants et les jeunes atteints de <strong>Trouble du Déficit de l'Attention avec Hyperactivité (TDAH)</strong>, ces cartes aident à faciliter la communication dans les situations quotidiennes. Idéales pour l'école, les activités en plein air ou les événements, elles permettent d'expliquer rapidement et discrètement la condition de l'enfant, favorisant la compréhension et un soutien approprié, vous avez également accès à (Médication Régulière, Contacts Supplémentaires, Rapport Médical)" 
+    
   },
   "placas": {
     "title": "Nos Panneaux",

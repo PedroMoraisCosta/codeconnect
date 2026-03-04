@@ -4,6 +4,7 @@
     "companies": "Cartões Empresas",
     "child_safety": "Segurança Infantil",
     "autism_safety": "Segurança Autismo",
+    "tdah_safety": "Segurança TDAH",
     "signs": "Gama Placas",
     "price": "Preços",
     "customers": "Confiança & Parcerias",
@@ -29,7 +30,9 @@
      "autism_description": "Pensados na inclusão, os nossos cartões <strong>Autismo</strong> para pessoas incluídas no espectro de autismo incluem identificação, contato de emergência e através do QR Code ou NFC, é possível aceder rapidamente a informações adicionais que podem ser cruciais em situações de stress ou emergência (Tipo de Sangue, Nr. de Utente, Medicação Regular, Contatos Extra, Relatório Médico)",
      "after_qr_nfc": "Após leitura de Qr Code ou NFC",
       "business_title": "Empresas",
-      "business_description": "Acrescente profissionalismo tecnológico com o <strong>Cartão Personalizável</strong>, agora também pode receber comentários fora do estabelecimento, ou até fornecer o contato para um possível cliente."
+      "business_description": "Acrescente profissionalismo tecnológico com o <strong>Cartão Personalizável</strong>, agora também pode receber comentários fora do estabelecimento, ou até fornecer o contato para um possível cliente.",
+      "tdah_safety_title": "Segurança TDAH",
+      "tdah_safety_description": "Pensados para crianças e jovens com <strong>Transtorno do Déficit de Atenção com Hiperatividade (TDAH) ou Perturbação de Hiperatividade e Défice de Atenção (PHDA)</strong>, estes cartões ajudam a facilitar a comunicação em situações do dia a dia. Ideais para a escola, atividades ao ar livre ou eventos, permitem explicar de forma rápida e discreta a condição da criança, promovendo compreensão e apoio adequado, tem ainda acesso a pelo site a informação extra (Medicação Regular, Contatos Extra, Relatório Médico)" 
   },
   "placas": {
     "title": "As Nossas Placas",
