@@ -52,8 +52,19 @@
           
           <li class="nav-item"><a class="nav-link text-white" data-i18n="nav.functioning" href="/funcionamento/funcionamento.html"></a></li>
           <li class="nav-item"><a class="nav-link text-white" data-i18n="nav.customers" href="/clientes/clientes.html"></a></li>
-          <li class="nav-item"><a class="nav-link text-white" data-i18n="nav.price" href="/precario/precario.html"></a></li>
-
+ 
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="precosDropdown" data-i18n="nav.price" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Precos
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="precosDropdown">
+              <li><a class="dropdown-item" data-i18n="nav.signs" href="/precario/precario-placas.html"></a></li>
+              <!-- <li><a class="dropdown-item" data-i18n="nav.cards" href="/precario/precario-cartoes.html"></a></li>
+              <li><a class="dropdown-item" data-i18n="nav.price" href="/precario/precario.html"></a></li> -->
+              
+            </ul>
+          </li>
 
            <li class="nav-item d-flex align-items-center ms-lg-3 mt-2 mt-lg-0">
             <button class="btn btn-sm p-0 border-0 d-inline-flex align-items-center" type="button" aria-label="frances codeconnect" onclick="loadLanguage('pt'); closeNavbar();">

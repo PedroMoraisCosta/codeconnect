@@ -86,7 +86,8 @@
     }
     ,
     "price": {
-      "footer": "Idéal pour mettre en valeur votre entreprise et encourager les clients à laisser des avis positifs. Payez une seule fois pour votre produit personnalisé.",
+      "title_placas": "Idéal pour mettre en valeur votre entreprise et encourager les clients à laisser des avis positifs. Payez une seule fois pour votre produit personnalisé.",
+      "title_cartoes": "Découvrez notre gamme de cartes personnalisables avec QR Code et NFC, conçues pour allier sécurité, inclusion et innovation en un seul produit. Idéales pour les enfants, les personnes sur le spectre de l'autisme, les jeunes atteints de TDAH/PHDA et les entreprises cherchant à moderniser leur façon de communiquer. Avec un accès rapide à des informations importantes, des contacts d'urgence et des fonctionnalités numériques, nos cartes offrent praticité et tranquillité d'esprit au quotidien.",
       "five":"jusqu'à 5 Unités",
       "ten":"jusqu'à 10 Unités",
       "twenty":"jusqu'à 20 Unités",
@@ -105,6 +106,15 @@
       "sem_mensalidades": "✓ Sans frais mensuels ni annuels",
       "iva_incluido": "Tous les prix indiqués incluent la TVA",
       "primeira_placa_connecthub": "1er panneau — 18 €",
-      "social_media": "✓ Intégration avec les réseaux sociaux"
+      "social_media": "✓ Intégration avec les réseaux sociaux",
+      "cartao_seguranca_descricao1": "✓ Contacts d'urgence",
+      "cartao_seguranca_descricao2": "✓ Rapport médical",
+      "cartao_seguranca_descricao3": "✓ Autres informations (groupe sanguin, allergies, médication régulière)",
+      "cartao_empresas_descricao1": "✓ Réception de commentaires en dehors de l'établissement",
+      "cartao_empresas_descricao2": "✓ Fournir votre contact pour les clients potentiels",
+      "cartao_preco": "1ère carte — 15 €",
+      "next_cartao":"(à partir de la 2ème carte)",
+      "seguranca":"Sécurité et Inclusion",
+      "empresas":"Entreprises"
     }
 }

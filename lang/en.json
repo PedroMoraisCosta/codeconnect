@@ -85,7 +85,8 @@
     }
     ,
     "price": {
-      "footer": "Ideal for highlighting your business and encouraging customers to leave positive reviews. Just pay once for your customized product.",
+      "title_placas": "Ideal for highlighting your business and encouraging customers to leave positive reviews. Just pay once for your customized product.",
+      "title_cartoes  ": "Discover our range of customizable QR Code and NFC cards, designed to combine safety, inclusion, and innovation in a single product. Ideal for children, people on the autism spectrum, young people with ADHD/PHDA, and businesses looking to modernize their way of communicating. With quick access to important information, emergency contacts, and digital features, our cards offer convenience and peace of mind in everyday life.",
       "five":"until 5 Units",
       "ten":"until 10 Units",
       "twenty":"until 20 Units",
@@ -104,6 +105,15 @@
       "sem_mensalidades": "✓ No monthly or annual fees",
       "iva_incluido": "All displayed prices include VAT",
       "primeira_placa_connecthub": "1st sign — 18 €",
-      "social_media": "✓ Social media integration"
+      "social_media": "✓ Social media integration",
+      "cartao_seguranca_descricao1": "✓ Emergency contacts",
+      "cartao_seguranca_descricao2": "✓ Medical report",
+      "cartao_seguranca_descricao3": "✓ Other information (blood type, allergies, regular medication)",
+      "cartao_empresas_descricao1": "✓ Receive Reviews outside the establishment",
+      "cartao_empresas_descricao2": "✓ Provide Your Contact for Potential Customers",    
+      "cartao_preco": "1st card — 15 €",
+      "next_cartao":"(from the 2nd card)",
+      "seguranca":"Safety and Inclusion",
+      "empresas":"Businesses"
     }
 } 

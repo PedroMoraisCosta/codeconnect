@@ -83,7 +83,8 @@
       "subtitle_anuidade": "Sem anuidades"
     },
     "price": {
-      "footer": "Ideal para destacar o seu negócio e incentivar os clientes a deixar avaliações positivas. Pague apenas uma vez pelo seu produto personalizado.",
+      "title_placas": "Ideal para destacar o seu negócio e incentivar os clientes a deixar avaliações positivas. Pague apenas uma vez pelo seu produto personalizado.",
+      "title_cartoes": "Descubra a nossa gama de cartões personalizáveis com QR Code e NFC, pensados para unir segurança, inclusão e inovação num único produto. Ideais para crianças, pessoas no espectro do autismo, jovens com TDAH/PHDA e empresas que procuram modernizar a forma de comunicar. Com acesso rápido a informações importantes, contatos de emergência e funcionalidades digitais, os nossos cartões oferecem praticidade e tranquilidade no dia a dia.",
       "five":"até 5 Unidades",
       "ten":"até 10 Unidades",
       "twenty":"até 20 Unidades",
@@ -102,7 +103,16 @@
       "sem_mensalidades": "✓ Sem mensalidades nem anuidades",
       "iva_incluido": "Todos os preços apresentados incluem IVA à taxa legal em vigor",
       "primeira_placa_connecthub": "1ª placa — 18 €",
-      "social_media": "✓ Integração com redes sociais"
+      "social_media": "✓ Integração com redes sociais",
+      "cartao_seguranca_descricao1": "✓ Vários Contatos de emergência",
+      "cartao_seguranca_descricao2": "✓ Relatório médico",
+      "cartao_seguranca_descricao3": "✓ Outras informações (tipo de sangue, alergias, medicação regular)",
+      "cartao_empresas_descricao1": "✓ Receber Comentários fora do estabelecimento",
+      "cartao_empresas_descricao2": "✓ Dar o seu Contato para possíveis clientes",
+      "cartao_preco": "1º cartão — 15 €",
+      "next_cartao":"(a partir do 2º cartão)",
+      "seguranca":"Segurança e Inclusão",
+      "empresas":"Empresas"
     }
     
 }

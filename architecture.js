@@ -187,16 +187,51 @@ function buildArchitecture (callback) {
     )
   }
 
-  // Precario
-  const precarioSectionEl = document.getElementById(
-    'precario-section-placeholder'
+  // Precario - Placas
+  const precarioPlacasSectionEl = document.getElementById(
+    'precario-placas-section-placeholder'
   )
-  if (precarioSectionEl) {
+  if (precarioPlacasSectionEl) {
     tasks.push(
-      fetch('precario-section.html')
+      fetch('precario-placas-section.html')
         .then(res => res.text())
         .then(data => {
-          precarioSectionEl.innerHTML = data
+          precarioPlacasSectionEl.innerHTML = data
+        })
+        .then(() => fetch(`${basePath}/top-logo/top-logo.html`))
+        .then(res => res.text())
+        .then(data => {
+          const el = document.getElementById('top-logo-placeholder')
+          if (el) el.innerHTML = data
+        })
+        .then(() => fetch(`${basePath}/whatsapp/whatsapp.html`))
+        .then(res => res.text())
+        .then(data => {
+          const el = document.getElementById('whatsapp-placeholder')
+          if (el) el.innerHTML = data
+        })
+        .then(() => fetch(`${basePath}/email/email.html`))
+        .then(res => res.text())
+        .then(data => {
+          const el = document.getElementById('email-placeholder')
+          if (el) el.innerHTML = data
+        })
+        .catch(err =>
+          console.error('Erro ao carregar precario-section.html', err)
+        )
+    )
+  }
+
+  // Precario - Cartoes
+  const precarioCartoesSectionEl = document.getElementById(
+    'precario-cartoes-section-placeholder'
+  )
+  if (precarioCartoesSectionEl) {
+    tasks.push(
+      fetch('precario-cartoes-section.html')
+        .then(res => res.text())
+        .then(data => {
+          precarioCartoesSectionEl.innerHTML = data
         })
         .then(() => fetch(`${basePath}/top-logo/top-logo.html`))
         .then(res => res.text())
