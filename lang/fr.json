@@ -114,6 +114,11 @@
       "cartao_preco": "1ère carte — 15 €",
       "next_cartao":"(à partir de la 2ème carte)",
       "seguranca":"Sécurité et Inclusion",
-      "empresas":"Entreprises"
+      "empresas":"Entreprises",
+      "capas":"Protèges-cartes",
+      "capas_preco": "3 €",
+      "capa_descricao1": "✓ Transparent, noir, bleu",
+      "capa_descricao2": "✓ Autisme, TDAH/PHDA",
+      "capa_descricao3": "Voir ici nos options de protèges-cartes"
     }
 }

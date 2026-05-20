@@ -113,6 +113,12 @@
       "cartao_preco": "1st card — 15 €",
       "next_cartao":"(from the 2nd card)",
       "seguranca":"Safety and Inclusion",
-      "empresas":"Businesses"
+      "empresas":"Businesses",
+      "capas":"Covers",
+      "capas_preco": "3 €",
+      "capa_descricao1": "✓ Transparent, black, blue",
+      "capa_descricao2": "✓ Autism, ADHD/PHDA",
+      "capa_descricao3": "See here our cover options"
+    
     }
 } 

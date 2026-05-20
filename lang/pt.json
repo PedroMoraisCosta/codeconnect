@@ -111,7 +111,13 @@
       "cartao_preco": "15 €",
       "next_cartao":"(a partir do 2º cartão)",
       "seguranca":"Segurança e Inclusão",
-      "empresas":"Empresas"
+      "empresas":"Empresas",
+      "capas":"Capa de Proteção",
+      "capas_preco": "3 €",
+      "capa_descricao1": "✓ Transparente, preto, azul",
+      "capa_descricao2": "✓ Autismo, TDAH/PHDA",
+      "capa_descricao3": "Ver aqui as nossas opções de capas"
+    
     }
     
 }

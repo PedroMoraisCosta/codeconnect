@@ -73,6 +73,14 @@
   font-size: 0.85rem;
 }
 
+.feature-card-body .note-center {
+  display: block;
+    width: 100%;
+    color: #ddd;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
 .feature-card-body .note_small {
   color: #ddd;
   font-size: 0.55rem;
