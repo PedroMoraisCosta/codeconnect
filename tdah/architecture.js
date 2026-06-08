@@ -8,6 +8,12 @@ function buildArchitecture (callback) {
         document.getElementById('header-placeholder').innerHTML = data
       }),
 
+    fetch('translate.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('translate-placeholder').innerHTML = data
+      }),
+
     fetch('phones.html')
       .then(res => res.text())
       .then(data => {
@@ -46,6 +52,6 @@ window.buildArchitecture = buildArchitecture
 
 // document.addEventListener('DOMContentLoaded', function () {
 //   buildArchitecture(function () {
-    
+
 //   })
 // })

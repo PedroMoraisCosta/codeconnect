@@ -1,3 +1,5 @@
+let ficheiroGlobal = null
+
 document.addEventListener('DOMContentLoaded', () => {
   buildArchitecture(() => {
     let chave = getParametroURL('p4')
@@ -13,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .style.setProperty('display', 'none', 'important')
       document.getElementById('sangue').style.display = 'none'
       document.getElementById('utente').style.display = 'none'
+      document.getElementById('traducoesId').style.display = 'none'
 
       carregarContactos(file, chave)
     }
@@ -38,6 +41,8 @@ function carregarContactos (file, chave) {
       if (decrypted) {
         const ficheiro = JSON.parse(decrypted)
 
+        ficheiroGlobal = ficheiro
+
         PreencherPrimeiroNome(ficheiro)
 
         PreencherUltimoNome(ficheiro)
@@ -55,6 +60,8 @@ function carregarContactos (file, chave) {
         PreencherUtente(ficheiro)
 
         PreencherAnexo(ficheiro, file)
+
+        MostrarTraducoes(ficheiro)
       }
     })
     .catch(error => {
@@ -230,4 +237,24 @@ function PreencherAnexo (ficheiro, file) {
 
 function PreencherDescricao (ficheiro) {
   document.getElementById('titleDescription').innerHTML = ficheiro.descricao
+}
+
+function MostrarTraducoes (ficheiro) {
+  let traducoes = ficheiro.translatefiles
+  if (traducoes) {
+    document.getElementById('traducoesId').style.display = 'flex'
+  }
+}
+
+function loadLanguage (langPos) {
+  let lang = ficheiroGlobal.translatefiles
+  if (lang) {
+    const langarray = lang.split(',').map(item => item.trim())
+
+    fileVariable = langarray[langPos]
+
+    redirectUrl = window.location.href.replace(/p5=f\d+/, `p5=f${fileVariable}`)
+
+    window.location.href = redirectUrl
+  }
 }
