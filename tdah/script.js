@@ -62,6 +62,8 @@ function carregarContactos (file, chave) {
         PreencherAnexo(ficheiro, file)
 
         MostrarTraducoes(ficheiro)
+
+        PreencherFundo(ficheiro)
       }
     })
     .catch(error => {
@@ -243,6 +245,36 @@ function MostrarTraducoes (ficheiro) {
   let traducoes = ficheiro.translatefiles
   if (traducoes) {
     document.getElementById('traducoesId').style.display = 'flex'
+  }
+}
+
+function PreencherFundo (ficheiro) {
+  let autismoAdulto = ficheiro.fundoautismoadultos
+  if (autismoAdulto) {
+    ReplaceImages(false, true)
+  } else {
+  }
+}
+
+function ReplaceImages (tdah, autismoAdulto) {
+  const sunflowerLeft = document.getElementById('tdah-sunflower-left')
+  const sunflowerRight = document.getElementById('sunflower-right')
+
+  if (tdah) {
+    document.querySelectorAll('.separador').forEach(separador => {
+      separador.style.backgroundImage = "url('img/girassois.png')"
+    })
+
+    document.body.classList.add('girassois')
+  }
+  if (autismoAdulto) {
+    document.querySelectorAll('.separador').forEach(separador => {
+      separador.style.backgroundImage = "url('img/separador-puzzle.png')"
+    })
+
+    sunflowerLeft.src = './img/puzzle.png'
+    sunflowerRight.src = './img/puzzle.png'
+    document.body.classList.add('autismoadultos')
   }
 }
 

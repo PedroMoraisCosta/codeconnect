@@ -68,14 +68,23 @@ body, html {
       font-size: x-large;
   }
 
-  .middle-esquerda{
+  .girassois{
      background-image: url('img/girassois.png');
-     /* background-size: cover;
-       background-position: center;*/
       background-size: cover; 
      background-position: top;
-     
   }
+
+  .autismoadultos{
+     background-image: url('img/puzzle-fundo.png');
+      background-size: cover; 
+     background-position: top;
+  }
+
+.vazio{
+  background-size: cover; 
+  background-position: top;
+}
+
  .middle-top{
      background-image: url('img/header.jpg');
       background-size: cover;
