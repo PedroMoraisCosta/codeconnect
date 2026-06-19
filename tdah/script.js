@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('sangue').style.display = 'none'
       document.getElementById('utente').style.display = 'none'
       document.getElementById('traducoesId').style.display = 'none'
+      document.getElementById('anexosRow').style.display = 'none'
 
       carregarContactos(file, chave)
     }
