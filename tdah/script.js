@@ -251,18 +251,19 @@ function MostrarTraducoes (ficheiro) {
 function PreencherFundo (ficheiro) {
   let autismoAdulto = ficheiro.fundoautismoadultos
   if (autismoAdulto) {
-    ReplaceImages(false, true)
+    ReplaceImages(ficheiro.fundoautismoadultos, true)
   } else {
+    ReplaceImages(false, true)
   }
 }
 
-function ReplaceImages (tdah, autismoAdulto) {
+function ReplaceImages (autismoAdulto, tdah) {
   const sunflowerLeft = document.getElementById('tdah-sunflower-left')
   const sunflowerRight = document.getElementById('sunflower-right')
 
   if (tdah) {
     document.querySelectorAll('.separador').forEach(separador => {
-      separador.style.backgroundImage = "url('img/girassois.png')"
+      separador.style.backgroundImage = "url('img/separador.png')"
     })
 
     document.body.classList.add('girassois')
