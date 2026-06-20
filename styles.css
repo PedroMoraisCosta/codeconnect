@@ -256,8 +256,9 @@ margin-bottom: -5vh;
 visibility: visible;
 }
 .email{
-display: flex; 
+display: flex;
 gap: 10px;
+word-break: break-word;
 }
 #zoomVideo {
 object-fit: cover;
@@ -324,9 +325,7 @@ max-height: 100%; /* Keeps it within the model3d-container */
     font-size: 1.1rem;
   }
 
-  .email {
-    word-break: break-word;
-  }
+
   .cardsize{
     width: 15%;
   }
