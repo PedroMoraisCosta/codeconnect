@@ -85,10 +85,10 @@ body {
 
   }
 .obrigado{
-  font-color:black
+  color:black
 }
 .marcaId{
-  font-color:black
+  color:black
 }
   .contact-name{
     color: lightcoral !important;
@@ -235,18 +235,8 @@ body {
 
 /*desktops >=992px*/
 @media(min-width:992px){
- 
-  .info-box {   
-    font-size: 0.95em;
-     max-height: 310px;
-      padding-left: 10px;
-  }
-}
 
-/*desktops >=992px*/
-@media(min-width:993px){
- 
-  .info-box {   
+  .info-box {
     font-size: 1em;
     max-height: 310px;
     padding-left: 10px;

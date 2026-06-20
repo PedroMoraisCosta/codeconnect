@@ -244,65 +244,6 @@ function PreencherContactos (ficheiro) {
   })
 }
 
-function PreencherContactosOld (ficheiro) {
-  ficheiro.telefones.forEach((tel, index) => {
-    const el = document.getElementById('tel' + (index + 1))
-    const elnome = document.getElementById('contactonNameRow' + (index + 1))
-    const contactLink = document.getElementById('contactNameRow' + (index + 1))
-
-    if (el && tel) {
-      switch (index) {
-        case 0: //PAI
-          if (tel > 0) {
-            elnome.textContent = ficheiro.nomestelefones?.[0] || 'Pai'
-            document.getElementById('contactoRow' + (index + 1)).style.display =
-              'block'
-            contactLink.href = 'tel:' + tel
-            contactLink.title = `Ligar para ${
-              elnome.textContent
-            } (${formatarTelefone(tel)})`
-          }
-          break
-        case 1: //MAE
-          if (tel > 0) {
-            elnome.textContent = ficheiro.nomestelefones?.[1] || 'Mãe'
-            document.getElementById('contactoRow' + (index + 1)).style.display =
-              'block'
-            contactLink.href = 'tel:' + tel
-            contactLink.title = `Ligar para ${
-              elnome.textContent
-            } (${formatarTelefone(tel)})`
-          }
-          break
-        case 2: //AVO
-          if (tel > 0) {
-            elnome.textContent = ficheiro.nomestelefones?.[2] || 'Avó'
-            document.getElementById('contactoRow' + (index + 1)).style.display =
-              'block'
-            contactLink.href = 'tel:' + tel
-            contactLink.title = `Ligar para ${
-              elnome.textContent
-            } (${formatarTelefone(tel)})`
-          }
-
-          break
-        case 3: //AVó
-          if (tel > 0) {
-            elnome.textContent = ficheiro.nomestelefones?.[3] || 'Avô'
-            document.getElementById('contactoRow' + (index + 1)).style.display =
-              'block'
-            contactLink.href = 'tel:' + tel
-            contactLink.title = `Ligar para ${
-              elnome.textContent
-            } (${formatarTelefone(tel)})`
-          }
-
-          break
-      }
-      el.textContent = formatarTelefone(tel)
-    }
-  })
-}
 
 function formatarTelefone (tel) {
   // Remove tudo que não for número

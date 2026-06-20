@@ -285,9 +285,9 @@ function loadLanguage (langPos) {
   if (lang) {
     const langarray = lang.split(',').map(item => item.trim())
 
-    fileVariable = langarray[langPos]
+    const fileVariable = langarray[langPos]
 
-    redirectUrl = window.location.href.replace(/p5=f\d+/, `p5=f${fileVariable}`)
+    const redirectUrl = window.location.href.replace(/p5=f\d+/, `p5=f${fileVariable}`)
 
     window.location.href = redirectUrl
   }

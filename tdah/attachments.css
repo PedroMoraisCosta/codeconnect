@@ -37,17 +37,12 @@
   justify-content: center;
 }
 .prev {
-  left: 15px; /* position from left edge */
+  left: 30px;
 }
 
 .next {
-  right: 15px; /* position from right edge */
+  right: 30px;
 }
-
-
-.close { top: 20px; right: 30px; }
-.prev { left: 30px; }
-.next { right: 30px; }
 
 .color{
     color: #1B5E20;;
@@ -59,7 +54,7 @@
 }
 
 .close {
-   color: black;
+  color: black;
   position: absolute;
   top: 20px;
   right: 20px;
