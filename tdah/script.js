@@ -225,6 +225,7 @@ function PreencherUtente (ficheiro) {
 
   if (texto) {
     document.getElementById('utente').style.display = 'block'
+    traducao(true, 'utenteLabel', ficheiro.traduzirutente)
   }
 }
 
@@ -287,7 +288,10 @@ function loadLanguage (langPos) {
 
     const fileVariable = langarray[langPos]
 
-    const redirectUrl = window.location.href.replace(/p5=f\d+/, `p5=f${fileVariable}`)
+    const redirectUrl = window.location.href.replace(
+      /p5=f\d+/,
+      `p5=f${fileVariable}`
+    )
 
     window.location.href = redirectUrl
   }
