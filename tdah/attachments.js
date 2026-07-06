@@ -1,6 +1,6 @@
 function PreencherModal (file) {
   const images = []
-  const maxImages = 7
+  const maxImages = 14
   let checkedCount = 0 // how many images have been checked
 
   for (let i = 1; i <= maxImages; i++) {
