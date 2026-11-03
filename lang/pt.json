@@ -63,7 +63,9 @@
 		"benelux_director_title": "Diretor de Vendas e Expansão em Benelux",
 		"benelux_director_initials": "DE",
 		"marketing_director_title": "Diretora de Marketing e Redes Sociais",
-		"marketing_director_initials": "DMS"
+		"marketing_director_initials": "DMS",
+		"finance_director_title": "Diretora Administrativa e Financeira",
+		"finance_director_initials": "DAF"
 	},
 	"customers": {
 		"title": "Clientes",

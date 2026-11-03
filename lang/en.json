@@ -63,7 +63,9 @@
 		"benelux_director_title": "Sales and Expansion Director in Benelux",
 		"benelux_director_initials": "SED",
 		"marketing_director_title": "Marketing and Social Media Director",
-		"marketing_director_initials": "MMSD"
+		"marketing_director_initials": "MMSD",
+		"finance_director_title": "Administrative and Financial Director",
+		"finance_director_initials": "AFD"
 	},
 	"customers": {
 		"title": "Clients",
